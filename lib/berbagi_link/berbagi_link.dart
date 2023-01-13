@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/tab_berbagi_link.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/tab_dashboard.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
+import 'package:manfaa_apps/contants/text.dart';
 // ignore: unused_import
 
 class BerbagiLink extends StatefulWidget {
@@ -41,96 +42,83 @@ class _BerbagiLinkState extends State<BerbagiLink>
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor:
             const Color.fromRGBO(255, 255, 255, 1).withOpacity(0.4),
         elevation: 0,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // ignore: avoid_unnecessary_containers
-            Container(
-              child: IconButton(
-                icon: const Icon(
-                  Icons.arrow_back,
-                  color: Colors.black,
+            Row(
+              children: [
+                Image(
+                  image: const AssetImage(
+                    'assets/images/iconback.png',
+                  ),
+                  color: black1Color,
                 ),
-                onPressed: () {
-                  Navigator.of(context).pop(BerbagiLink());
-
-                  //statements
-                },
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(right: 20),
-              child: Text(
-                'Berbagi.link',
-                style: TextStyle(
-                    fontStyle: FontStyle.normal,
-                    // color: black1Color,
-                    color: black1Color,
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700),
-              ),
+                SizedBox(
+                  width: size.width * 0.068,
+                ),
+                Text(
+                  SetText.berbagilink,
+                  style: appbarStyle,
+                ),
+              ],
             ),
           ],
         ),
         actions: [
-          // ignore: avoid_unnecessary_containers
-          Container(
-            child: IconButton(
-              iconSize: 65,
-              icon: CircleAvatar(
-                backgroundImage: const AssetImage("assets/images/orang.png"),
-                backgroundColor: biruColor,
-              ), //Circl,
-              onPressed: () {},
+          IconButton(
+            iconSize: 65,
+            onPressed: () {},
+            icon: CircleAvatar(
+              backgroundColor: biruBgColor,
+              backgroundImage: const AssetImage(
+                "assets/images/orang.png",
+              ),
             ),
           ),
         ],
       ),
-      body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                // margin: const EdgeInsets.only(left: 25),
-                height: 48,
-                width: 350,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: Colors.pink[50],
-                ),
-                child: Container(
-                  margin: const EdgeInsets.only(left: 15),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(
-                        Icons.help,
-                        color: orangeColor,
-                        size: 25,
-                      ),
-                      const SizedBox(
-                        width: 12,
-                      ),
-                      Container(
-                        child: Text(
-                          "Pelajari cara kerja Berbagi.link",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                            fontStyle: FontStyle.normal,
-                            color: orangeColor,
-                          ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+              child: Column(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: dangerColor,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.help,
+                              color: orangeColor,
+                              size: 30,
+                            ),
+                            SizedBox(
+                              width: size.width * 0.020,
+                            ),
+                            Text(
+                              SetText.pelajari,
+                              style: pelajariStyle,
+                            ),
+                          ],
                         ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(left: 25),
-                        child: IconButton(
+                        IconButton(
                           onPressed: () {},
                           icon: Icon(
                             Icons.keyboard_arrow_right_rounded,
@@ -138,70 +126,52 @@ class _BerbagiLinkState extends State<BerbagiLink>
                             color: orangeColor,
                           ),
                         ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 000.02,
+                  ),
+                  Container(
+                    height: size.height * 0.0020,
+                    decoration: BoxDecoration(
+                      color: greyColor,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 000.02,
+                  ),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      SetText.linkpunyamu,
+                      style: linkpunyamuStyle,
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 000.02,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(
+                        16,
                       ),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              Container(
-                // margin: const EdgeInsets.only(left: 25),
-                width: 350,
-                height: 2,
-                decoration: BoxDecoration(
-                  color: greyColor,
-                  borderRadius: BorderRadius.circular(16),
-                ),
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              const Align(
-                alignment: Alignment.topLeft,
-                // padding: const EdgeInsets.only(right: 220),
-                child: Text(
-                  "Link punyamu",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 16,
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              Container(
-                height: 48,
-                width: 350,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24),
-                  color: const Color(0xFFE3F2FD),
-                ),
-                // ignore: avoid_unnecessary_containers
-                child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(left: 20),
-                        child: Text(
-                          "berbagi.link/yoga",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                            fontStyle: FontStyle.normal,
-                            color: biruColor,
-                          ),
+                      color: const Color(0xFFE3F2FD),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          SetText.linkberbagi,
+                          style: berbagiStyle,
                         ),
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            // margin: const EdgeInsets.only(left: 90),
-                            child: IconButton(
+                        Row(
+                          children: [
+                            IconButton(
                               onPressed: () {},
                               icon: Icon(
                                 Icons.file_copy_rounded,
@@ -209,10 +179,7 @@ class _BerbagiLinkState extends State<BerbagiLink>
                                 color: biruColor,
                               ),
                             ),
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(right: 10),
-                            child: IconButton(
+                            IconButton(
                               onPressed: () {},
                               icon: Icon(
                                 Icons.qr_code_2,
@@ -220,34 +187,38 @@ class _BerbagiLinkState extends State<BerbagiLink>
                                 color: biruColor,
                               ),
                             ),
-                          )
-                        ],
-                      ),
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                ),
+                ],
               ),
-              _tabsWidget(),
-
-              // Expanded(child: _tesTaba(context))
-            ],
-          ),
+            ),
+            _tabsWidget(),
+          ],
         ),
       ),
+
+      //
     );
   }
 
   Container _tabsWidget() {
+    Size size = MediaQuery.of(context).size;
+
     // ignore: sized_box_for_whitespace
     return Container(
-      // padding: EdgeInsets.symmetric(horizontal: 15),
-      height: MediaQuery.of(context).size.height,
+      height: size.height,
       child: Column(
         children: [
-          const SizedBox(height: 16),
+          SizedBox(
+            height: size.height * 000.02,
+          ),
           // ignore: sized_box_for_whitespace
           Container(
-            width: MediaQuery.of(context).size.height,
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            width: size.width,
             child: Column(
               children: [
                 Container(
@@ -255,17 +226,17 @@ class _BerbagiLinkState extends State<BerbagiLink>
                     // color: Color.fromARGB(255, 173, 169, 169),
                     borderRadius: BorderRadius.circular(64),
                     border: Border.all(
-                      color: Colors.black, //color of border
+                      color: grey1Color, //color of border
                       width: 1, //width of border
                     ),
                   ),
                   child: TabBar(
-                    unselectedLabelColor: Colors.black,
+                    unselectedLabelColor: grey1Color,
                     labelColor: Colors.white,
-                    indicatorColor: Colors.white,
+                    indicatorColor: Colors.orange,
                     indicatorWeight: 2,
                     indicator: BoxDecoration(
-                      color: Colors.black,
+                      color: orangeColor,
                       borderRadius: BorderRadius.circular(64),
                     ),
                     controller: tabController,
@@ -274,7 +245,7 @@ class _BerbagiLinkState extends State<BerbagiLink>
                         text: 'Dashboard',
                       ),
                       Tab(
-                        text: 'Menu Berbagi.link',
+                        text: SetText.menuberbagilink,
                       ),
                     ],
                   ),

@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/manajemen_user.dart';
-import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/tambahkan%20akun/tambahkan_akun1.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
+import 'package:manfaa_apps/contants/text.dart';
+import 'package:manfaa_apps/widgets/table_user_terhubung.dart';
+// import 'package:manfaa_apps/widgets/border_container2.dart';
+// import 'package:manfaa_apps/widgets/list_container2.dart';
+// import 'package:manfaa_apps/widgets/listdata2.dart';
+import 'package:manfaa_apps/widgets/user_mengaitkan.dart';
 
 class UserYangTerhubung extends StatefulWidget {
   const UserYangTerhubung({Key? key}) : super(key: key);
@@ -13,47 +18,53 @@ class UserYangTerhubung extends StatefulWidget {
 class _UserYangTerhubungState extends State<UserYangTerhubung> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor:
             const Color.fromRGBO(255, 255, 255, 1).withOpacity(0.4),
         elevation: 0,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // ignore: avoid_unnecessary_containers
-            Container(
-              // padding: EdgeInsets.only(),
-              child: IconButton(
-                icon: const Icon(
-                  Icons.arrow_back,
-                  color: Colors.black,
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pop(const ManajemenUser());
+                  },
+                  child: Image(
+                    image: const AssetImage(
+                      'assets/images/iconback.png',
+                    ),
+                    color: black1Color,
+                  ),
                 ),
-                onPressed: () {
-                  Navigator.of(context).pop(const ManajemenUser());
-                  //statements
-                },
-              ),
-            ),
-            Text(
-              'User Terhubung',
-              style: TextStyle(
-                  fontStyle: FontStyle.normal,
-                  color: black1Color,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w700),
+                SizedBox(
+                  width: size.width * 0.040,
+                ),
+                Text(
+                  SetText.user_yang_terhubung,
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: black1Color,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
         actions: [
-          // ignore: avoid_unnecessary_containers
-          Container(
-            child: IconButton(
-              iconSize: 65,
-              icon: CircleAvatar(
-                backgroundImage: const AssetImage("assets/images/orang.png"),
-                backgroundColor: biruColor,
-              ), //Circl,
-              onPressed: () {},
+          IconButton(
+            iconSize: 65,
+            onPressed: () {},
+            icon: CircleAvatar(
+              backgroundColor: biruBgColor,
+              backgroundImage: const AssetImage(
+                "assets/images/orang.png",
+              ),
             ),
           ),
         ],
@@ -62,598 +73,42 @@ class _UserYangTerhubungState extends State<UserYangTerhubung> {
         child: Column(
           children: [
             Container(
-              padding: const EdgeInsets.only(left: 23),
-              child: Row(
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+              child: Column(
                 children: [
-                  Text(
-                    "Manajemen User",
-                    style: TextStyle(
-                      fontStyle: FontStyle.normal,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16,
-                      color: black1Color,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 12,
-                  ),
-                  const Icon(
-                    Icons.arrow_forward_ios,
-                    size: 15,
-                  ),
-                  const SizedBox(
-                    width: 12,
-                  ),
-                  const Text(
-                    "User Yang Terhubung",
-                    style: TextStyle(
-                      fontStyle: FontStyle.normal,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 16,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            Container(
-              // margin: const EdgeInsets.only(left: 25),
-              height: 55,
-              width: 357,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20.0),
-                    topRight: Radius.circular(20.0)),
-                color: Color(0xFFE3F2FD),
-              ),
-              child: Container(
-                margin: const EdgeInsets.only(left: 15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(
-                      Icons.person,
-                      color: biruColor,
-                      size: 25,
-                    ),
-                    const SizedBox(
-                      width: 12,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //       builder: (context) => const TambahkanAkun()),
-                        // );
-                      },
-                      child: Text(
-                        "User Mengaitkan Akun Anda",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 16,
-                          fontStyle: FontStyle.normal,
-                          color: biruColor,
-                        ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        SetText.manajemen_user,
+                        style: header1Style,
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 50),
-                      child: IconButton(
-                        onPressed: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //       builder: (context) => const TambahkanAkun()),
-                          // );
-                        },
-                        icon: Icon(
-                          Icons.circle_rounded,
-                          size: 25,
-                          color: biruColor,
-                        ),
+                      SizedBox(
+                        width: size.width * 0.010,
                       ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Row(
-              children: [
-                Container(
-                  color: greyColor,
-                  width: 357,
-                  margin: const EdgeInsets.only(left: 18),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: const [
-                        SizedBox(
-                          width: 17,
-                        ),
-                        Text(
-                          'Nama',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 58,
-                        ),
-                        Text(
-                          'Email',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 58,
-                        ),
-                        Text(
-                          'Peran',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 58,
-                        ),
-                        Text(
-                          'Action',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 0,
-            ),
-            Container(
-              width: 357,
-              margin: const EdgeInsets.only(left: 10.100, right: 10),
-              child: Row(
-                children: [
-                  const SizedBox(
-                    width: 22,
-                  ),
-                  const Text(
-                    'Ahmad',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 35,
-                  ),
-                  const Text(
-                    'ahmadx@gm..',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  const Text(
-                    'Admin',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.edit,
-                    ),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.delete,
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              color: greyColor,
-              width: 357,
-              margin: const EdgeInsets.only(left: 10.100, right: 10),
-              child: Row(
-                children: [
-                  const SizedBox(
-                    width: 22,
-                  ),
-                  const Text(
-                    'Ahmad',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 35,
-                  ),
-                  const Text(
-                    'ahmadx@gm..',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  const Text(
-                    'Admin',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.edit,
-                    ),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.delete,
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              width: 357,
-              margin: const EdgeInsets.only(left: 10.100, right: 10),
-              child: Row(
-                children: [
-                  const SizedBox(
-                    width: 22,
-                  ),
-                  const Text(
-                    'Ahmad',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 35,
-                  ),
-                  const Text(
-                    'ahmadx@gm..',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  const Text(
-                    'Admin',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.edit,
-                    ),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.delete,
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              color: greyColor,
-              width: 357,
-              margin: const EdgeInsets.only(left: 10.100, right: 10),
-              child: Row(
-                children: [
-                  const SizedBox(
-                    width: 22,
-                  ),
-                  const Text(
-                    'Ahmad',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 35,
-                  ),
-                  const Text(
-                    'ahmadx@gm..',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  const Text(
-                    'Admin',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.edit,
-                    ),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.delete,
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              width: 357,
-              margin: const EdgeInsets.only(left: 10.100, right: 10),
-              child: Row(
-                children: [
-                  const SizedBox(
-                    width: 22,
-                  ),
-                  const Text(
-                    'Ahmad',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 35,
-                  ),
-                  const Text(
-                    'ahmadx@gm..',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  const Text(
-                    'Admin',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.edit,
-                    ),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.delete,
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              color: greyColor,
-              width: 357,
-              margin: const EdgeInsets.only(left: 10.100, right: 10),
-              child: Row(
-                children: [
-                  const SizedBox(
-                    width: 22,
-                  ),
-                  const Text(
-                    'Ahmad',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 35,
-                  ),
-                  const Text(
-                    'ahmadx@gm..',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  const Text(
-                    'Admin',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.edit,
-                    ),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.delete,
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              width: 357,
-              margin: const EdgeInsets.only(left: 10.100, right: 10),
-              child: Row(
-                children: [
-                  const SizedBox(
-                    width: 22,
-                  ),
-                  const Text(
-                    'Ahmad',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 35,
-                  ),
-                  const Text(
-                    'ahmadx@gm..',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  const Text(
-                    'Admin',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.edit,
-                    ),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.delete,
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                      bottomRight: Radius.circular(20.0),
-                      bottomLeft: Radius.circular(20.0)),
-                  color: greyColor),
-              width: 357,
-              margin: const EdgeInsets.only(left: 10.100, right: 10),
-              child: Row(
-                children: [
-                  const SizedBox(
-                    width: 22,
-                  ),
-                  const Text(
-                    'Ahmad',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 35,
-                  ),
-                  const Text(
-                    'ahmadx@gm..',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  const Text(
-                    'Admin',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.edit,
-                    ),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.delete,
-                    ),
-                    onPressed: () {},
+                      const Icon(
+                        Icons.arrow_forward_ios,
+                        size: 15,
+                      ),
+                      SizedBox(
+                        width: size.width * 0.010,
+                      ),
+                      Text(
+                        SetText.user_yang_terhubung,
+                        style: header2Style,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: size.height * 00.03,
+                  ),
+                  Column(
+                    children: const [
+                      TableUserTerhubung(),
+                    ],
+                  ),
+                  SizedBox(
+                    height: size.height * 0.3,
                   ),
                 ],
               ),
