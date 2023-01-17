@@ -28,11 +28,11 @@ class _ManajemenUserState extends State<ManajemenUser> {
           children: [
             Row(
               children: [
-                GestureDetector(
-                  onTap: () {
+                IconButton(
+                  onPressed: () {
                     Navigator.of(context).pop(BerbagiLink());
                   },
-                  child: Image(
+                  icon: Image(
                     image: const AssetImage(
                       'assets/images/iconback.png',
                     ),
@@ -97,12 +97,9 @@ class _ManajemenUserState extends State<ManajemenUser> {
                               SizedBox(
                                 width: size.width * 0.030,
                               ),
-                              GestureDetector(
-                                onTap: () {},
-                                child: Text(
-                                  SetText.tambahkan_akun,
-                                  style: biru1Style,
-                                ),
+                              Text(
+                                SetText.tambahkan_akun,
+                                style: biru1Style,
                               ),
                             ],
                           ),
@@ -238,8 +235,6 @@ class _ManajemenUserState extends State<ManajemenUser> {
                         borderRadius: BorderRadius.circular(16),
                         color: const Color(0xFFE3F2FD),
                       ),
-
-                      // margin: const EdgeInsets.only(left: 25),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [

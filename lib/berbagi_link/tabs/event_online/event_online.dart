@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:manfaa_apps/berbagi_link/berbagi_link.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/manajemen_user.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
 import 'dart:io';
@@ -27,6 +28,7 @@ class _EventOnlineState extends State<EventOnline> {
 
   bool isDisabled = false;
   bool isDisabled1 = false;
+  bool isDisabled2 = false;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -41,11 +43,11 @@ class _EventOnlineState extends State<EventOnline> {
           children: [
             Row(
               children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).pop(const ManajemenUser());
+                IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop(BerbagiLink());
                   },
-                  child: Image(
+                  icon: Image(
                     image: const AssetImage(
                       'assets/images/iconback.png',
                     ),
@@ -150,79 +152,38 @@ class _EventOnlineState extends State<EventOnline> {
                     height: size.height * 00.02,
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                      vertical: 8,
-                    ),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                       color: const Color(0xFFE3F2FD),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    child: Column(
+                      // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Status Halaman Event',
-                              style: eventStyle,
+                              'Status Halaman Event\nAktifkan & matikan Halaman Event dengan sekali klik',
+                              style: TextStyle(
+                                fontSize: 10,
+                                color: black1Color,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                            Text(
-                              'Aktifkan & matikan Halaman Event dengan sekali klik',
-                              style: aktifStyle,
-                            ),
+                            Switch(
+                                focusColor: black1Color,
+                                activeColor: biruColor,
+                                value: isDisabled,
+                                onChanged: (check) {
+                                  setState(() {
+                                    isDisabled = check;
+                                  });
+                                }),
                           ],
                         ),
-                        Switch(
-                            // focusColor: hijauBgColor,
-                            focusColor: black1Color,
-                            activeColor: biruColor,
-                            value: isDisabled,
-                            onChanged: (check) {
-                              setState(() {
-                                isDisabled = check;
-                              });
-                            }),
                       ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: size.height * 00.02,
-                  ),
-                  Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Text(
-                      SetText.deskripsi,
-                      style: defaultStyle,
-                    ),
-                  ),
-                  SizedBox(
-                    height: size.height * 00.02,
-                  ),
-                  TextField(
-                    autocorrect: false,
-                    keyboardType: TextInputType.text,
-                    style: const TextStyle(
-                      fontSize: 20,
-                    ),
-                    decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 14,
-                        color: greyColor,
-                      ),
-                      hintText: "Masukkan deskripsi atau bio",
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(
-                          color: greyColor,
-                        ),
-                      ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                      ),
                     ),
                   ),
                   SizedBox(
@@ -241,8 +202,6 @@ class _EventOnlineState extends State<EventOnline> {
                   TextField(
                     autocorrect: false,
                     keyboardType: TextInputType.text,
-                    maxLines: 3,
-                    // obscureText: _obsecure,
                     style: const TextStyle(
                       fontSize: 20,
                     ),
@@ -254,6 +213,45 @@ class _EventOnlineState extends State<EventOnline> {
                         color: greyColor,
                       ),
                       hintText: "Masukkan nama organisasi",
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: BorderSide(
+                          color: greyColor,
+                        ),
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 00.02,
+                  ),
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Text(
+                      SetText.deskripsi,
+                      style: defaultStyle,
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 00.02,
+                  ),
+                  TextField(
+                    autocorrect: false,
+                    keyboardType: TextInputType.text,
+                    maxLines: 3,
+                    style: const TextStyle(
+                      fontSize: 20,
+                    ),
+                    decoration: InputDecoration(
+                      hintStyle: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 14,
+                        color: greyColor,
+                      ),
+                      hintText: "Masukkan deskripsi atau bio",
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
@@ -285,8 +283,8 @@ class _EventOnlineState extends State<EventOnline> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       image != null
-                          ? Container(
-                              width: size.width * 0.20,
+                          ? SizedBox(
+                              width: size.width * 0.35,
                               height: size.height * 0.20,
                               child: Image.file(
                                 image!,
@@ -297,7 +295,7 @@ class _EventOnlineState extends State<EventOnline> {
                                 await getImage();
                               },
                               child: Container(
-                                width: size.width * 0.30,
+                                width: size.width * 0.35,
                                 height: size.height * 0.20,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(
@@ -379,10 +377,7 @@ class _EventOnlineState extends State<EventOnline> {
                         fontSize: 14,
                         color: greyColor,
                       ),
-
                       hintText: "Masukkan deskripsi atau bio",
-                      // labelText: "Your Password",
-
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
@@ -421,10 +416,7 @@ class _EventOnlineState extends State<EventOnline> {
                         fontSize: 16,
                         color: greyColor,
                       ),
-
                       hintText: "contoh : 0815xxxxxx",
-                      // labelText: "Your Password",
-
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
@@ -453,7 +445,6 @@ class _EventOnlineState extends State<EventOnline> {
                     autocorrect: false,
                     keyboardType: TextInputType.text,
                     maxLines: 3,
-                    // obscureText: _obsecure,
                     style: const TextStyle(
                       fontSize: 20,
                     ),
@@ -464,11 +455,8 @@ class _EventOnlineState extends State<EventOnline> {
                         fontSize: 16,
                         color: greyColor,
                       ),
-
                       hintText:
                           "contoh : Halo, kak. Saya mau daftar\neventkamu, nih. Gimana caranya, ya?",
-                      // labelText: "Your Password",
-
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
@@ -499,7 +487,6 @@ class _EventOnlineState extends State<EventOnline> {
                   TextField(
                     autocorrect: false,
                     keyboardType: TextInputType.text,
-                    // obscureText: _obsecure,
                     style: const TextStyle(
                       fontSize: 20,
                     ),
@@ -510,10 +497,7 @@ class _EventOnlineState extends State<EventOnline> {
                         fontSize: 16,
                         color: greyColor,
                       ),
-
                       hintText: "contoh : facebook.com/eventkamu",
-                      // labelText: "Your Password",
-
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
@@ -551,10 +535,7 @@ class _EventOnlineState extends State<EventOnline> {
                         fontSize: 16,
                         color: greyColor,
                       ),
-
                       hintText: "contoh : instagram.com/eventkamu",
-                      // labelText: "Your Password",
-
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
@@ -570,37 +551,45 @@ class _EventOnlineState extends State<EventOnline> {
                     height: size.height * 00.02,
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 5),
-                    height: size.height * 00.15,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: const Color(0xFFE3F2FD),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      // vertical: 10,
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    height: size.height * 00.1,
+                    decoration: BoxDecoration(
+                      color: biruBgColor,
+                      borderRadius: BorderRadius.circular(
+                        12,
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              SetText.aktifkan_kode,
-                              style: newStyle,
+                              'Aktifkan Kode Unik\nPengaturan kode unik untuk mempermudah\npengecekan jumlah transfer pelanggan',
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: black1Color,
+                              ),
                             ),
-                            Text(
-                              SetText.pengaturan_kode_unik,
-                              style: aktifStyle,
+                            Transform.scale(
+                              scale: 1,
+                              child: Switch(
+                                  focusColor: black1Color,
+                                  activeColor: biruColor,
+                                  value: isDisabled1,
+                                  onChanged: (check) {
+                                    setState(() {
+                                      isDisabled1 = check;
+                                    });
+                                  }),
                             ),
                           ],
                         ),
-                        Switch(
-                            focusColor: black1Color,
-                            activeColor: biruColor,
-                            value: isDisabled,
-                            onChanged: (check) {
-                              setState(() {
-                                isDisabled = check;
-                              });
-                            }),
                       ],
                     ),
                   ),
@@ -608,38 +597,44 @@ class _EventOnlineState extends State<EventOnline> {
                     height: size.height * 00.02,
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 5),
-                    height: size.height * 00.15,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: const Color(0xFFE3F2FD),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      // mainAxisSize: MainAxisSize.min,
+                    height: size.height * 00.1,
+                    decoration: BoxDecoration(
+                      color: biruBgColor,
+                      borderRadius: BorderRadius.circular(
+                        12,
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              SetText.aktifkan_pembayaran,
-                              style: newStyle,
+                              'Aktifkan Pembayaran Otomatis\nPengaturan kode unik untuk mempermudah\npengecekan jumlah transfer pelanggan',
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: black1Color,
+                              ),
                             ),
-                            Text(
-                              SetText.pembayaran_secara_otomatis,
-                              style: aktifStyle,
+                            Transform.scale(
+                              scale: 1,
+                              child: Switch(
+                                  focusColor: black1Color,
+                                  activeColor: biruColor,
+                                  value: isDisabled2,
+                                  onChanged: (check) {
+                                    setState(() {
+                                      isDisabled2 = check;
+                                    });
+                                  }),
                             ),
                           ],
                         ),
-                        Switch(
-                            focusColor: black1Color,
-                            activeColor: biruColor,
-                            value: isDisabled1,
-                            onChanged: (check) {
-                              setState(() {
-                                isDisabled1 = check;
-                              });
-                            }),
                       ],
                     ),
                   ),
@@ -662,13 +657,7 @@ class _EventOnlineState extends State<EventOnline> {
                         height: size.height * 00.068,
                         width: size.width * 0.45,
                         child: ElevatedButton(
-                          onPressed: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //       builder: (context) => const TambahkanAkun()),
-                            // );
-                          },
+                          onPressed: () {},
                           style: ElevatedButton.styleFrom(
                             primary: Colors.white,
                             shape: RoundedRectangleBorder(

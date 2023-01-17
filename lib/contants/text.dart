@@ -34,7 +34,7 @@ class SetText {
   static const String event_online = "Event Online";
   static const String ubah_foto_profil = 'Ubah Foto Profil';
   static const String unggah_gmbr =
-      '   Unggah gambar berukuran resolusi 1 : 1\n   (Maksimum ukuran gambar 1 MB)';
+      'Unggah gambar berukuran resolusi 1 : 1\n(Maksimum ukuran gambar 1 MB)';
   static const String nonberhasil = "Opps!";
   static const String simpan_bdescsuccess = "Ubah Password";
   static const String oke = "Oke";
@@ -73,7 +73,8 @@ class SetText {
   static const String link_ig = "Link Instagram";
   static const String aktifkan_kode = "Aktifkan Kode Unik";
   static const String pengaturan_kode_unik =
-      "        Pengaturan kode unik untuk mempermudah\n        pengecekan jumlah transfer pelanggan";
+      "Pengaturan kode unik untuk mempermudah";
+  static const String pengecekan_jmlh = "pengecekan jumlah transfer pelanggan";
   static const String aktifkan_pembayaran = "Aktifkan Pembayaran Otomatis";
   static const String belumlengkap =
       "Data yang Anda masukkan belum lengkap, Mohon periksa kembali.";

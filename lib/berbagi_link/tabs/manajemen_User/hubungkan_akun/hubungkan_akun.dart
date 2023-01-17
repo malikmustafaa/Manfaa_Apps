@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/manajemen_user.dart';
-import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/tambahkan%20akun/edit_user.dart';
-// import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/tambahkan%20akun/tambahkan_akun1.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
 import 'package:manfaa_apps/contants/text.dart';
-// import 'package:manfaa_apps/widgets/border_container2.dart';
 import 'package:manfaa_apps/widgets/table_daftar_akun_terhubung.dart';
-// import 'package:manfaa_apps/widgets/list_container2.dart';
-// import 'package:manfaa_apps/widgets/listdata2.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
 
 class HubungkanAkun extends StatefulWidget {
   const HubungkanAkun({Key? key}) : super(key: key);
@@ -98,19 +93,12 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
 
   void _hubungkan() async {
     if (_doValidate()) {
+      // ignore: avoid_print
       print("object === >");
       // proses kirim data ke BE
 
     }
   }
-
-  // void _login() async {
-  //   if (_doValidate()) {
-  //     print("object === >");
-  //     // proses kirim data ke BE
-  //     _alert(alertCheck = true);
-  //   }
-  // }
 
   TextEditingController nama = TextEditingController();
   TextEditingController email = TextEditingController();
@@ -129,11 +117,11 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
           children: [
             Row(
               children: [
-                GestureDetector(
-                  onTap: () {
+                IconButton(
+                  onPressed: () {
                     Navigator.of(context).pop(const ManajemenUser());
                   },
-                  child: Image(
+                  icon: Image(
                     image: const AssetImage(
                       'assets/images/iconback.png',
                     ),
@@ -313,6 +301,9 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                       height: size.height * 0.02,
                     ),
                     TextField(
+                      inputFormatters: [
+                        FilteringTextInputFormatter.deny(' '),
+                      ],
                       controller: _emailController,
                       autocorrect: false,
                       keyboardType: TextInputType.text,
@@ -355,6 +346,9 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                       height: size.height * 0.02,
                     ),
                     TextField(
+                      inputFormatters: [
+                        FilteringTextInputFormatter.deny(' '),
+                      ],
                       controller: _passwordController,
                       autocorrect: false,
                       obscureText: isHidden,
@@ -364,7 +358,9 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                       decoration: InputDecoration(
                         suffixIcon: IconButton(
                             icon: (Icon(
-                              Icons.remove_red_eye,
+                              isHidden
+                                  ? Icons.visibility_off
+                                  : Icons.visibility,
                               color: black1Color,
                             )),
                             onPressed: () {
@@ -381,7 +377,6 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                           fontSize: 14,
                           color: greyColor,
                         ),
-
                         hintText: "Masukkan Password",
                         // labelText: "Your Password",
                         errorText: _passError

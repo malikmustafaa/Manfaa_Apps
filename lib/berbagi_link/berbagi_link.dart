@@ -5,7 +5,6 @@ import 'package:manfaa_apps/berbagi_link/tabs/tab_berbagi_link.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/tab_dashboard.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
 import 'package:manfaa_apps/contants/text.dart';
-// ignore: unused_import
 
 class BerbagiLink extends StatefulWidget {
   IconData? icon;
@@ -54,11 +53,14 @@ class _BerbagiLinkState extends State<BerbagiLink>
           children: [
             Row(
               children: [
-                Image(
-                  image: const AssetImage(
-                    'assets/images/iconback.png',
+                IconButton(
+                  onPressed: () {},
+                  icon: Image(
+                    image: const AssetImage(
+                      'assets/images/iconback.png',
+                    ),
+                    color: black1Color,
                   ),
-                  color: black1Color,
                 ),
                 SizedBox(
                   width: size.width * 0.068,
@@ -199,8 +201,6 @@ class _BerbagiLinkState extends State<BerbagiLink>
           ],
         ),
       ),
-
-      //
     );
   }
 
@@ -215,7 +215,6 @@ class _BerbagiLinkState extends State<BerbagiLink>
           SizedBox(
             height: size.height * 000.02,
           ),
-          // ignore: sized_box_for_whitespace
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             width: size.width,

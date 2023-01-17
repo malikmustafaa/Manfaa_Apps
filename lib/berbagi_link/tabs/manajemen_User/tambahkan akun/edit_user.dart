@@ -10,6 +10,9 @@ import 'package:manfaa_apps/contants/color_style.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:manfaa_apps/contants/text.dart';
 
+import '../../../../widgets/custom_list_form_input/apptextfield.dart';
+import '../../../../widgets/custom_list_form_input/dropdown.dart';
+
 class EditUser extends StatefulWidget {
   const EditUser({Key? key}) : super(key: key);
 
@@ -54,11 +57,11 @@ class _EditUserState extends State<EditUser> {
           children: [
             Row(
               children: [
-                GestureDetector(
-                  onTap: () {
+                IconButton(
+                  onPressed: () {
                     Navigator.of(context).pop(const TambahkanAkun());
                   },
-                  child: Image(
+                  icon: Image(
                     image: const AssetImage(
                       'assets/images/iconback.png',
                     ),
@@ -125,32 +128,42 @@ class _EditUserState extends State<EditUser> {
                   SizedBox(
                     height: size.height * 00.02,
                   ),
-                  Row(
+                  Column(
                     children: [
-                      IconButton(
-                        iconSize: 75,
-                        icon: CircleAvatar(
-                          backgroundImage:
-                              const AssetImage("assets/images/orang.png"),
-                          backgroundColor: biruColor,
-                          radius: 100,
-                        ),
-                        onPressed: () {},
-                      ),
-                      Column(
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                              right: 85,
+                          IconButton(
+                            iconSize: 75,
+                            icon: CircleAvatar(
+                              backgroundImage: const AssetImage(
+                                "assets/images/orang.png",
+                              ),
+                              backgroundColor: biruColor,
+                              radius: 100,
                             ),
-                            child: Text(
-                              SetText.ubah_foto_profil,
-                              style: pelajariStyle,
-                            ),
+                            onPressed: () {},
                           ),
-                          Text(
-                            SetText.unggah_gmbr,
-                            style: anak2listStyle,
+                          Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  right: 128,
+                                ),
+                                child: Text(
+                                  SetText.ubah_foto_profil,
+                                  style: pelajariStyle,
+                                ),
+                              ),
+                              Text(
+                                SetText.unggah_gmbr,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: grey1Color,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -277,55 +290,7 @@ class _EditUserState extends State<EditUser> {
                   SizedBox(
                     height: size.height * 00.02,
                   ),
-                  Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Text(
-                      SetText.peran,
-                      style: defaultStyle,
-                    ),
-                  ),
-
-                  SizedBox(
-                    height: size.height * 00.02,
-                  ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                    ),
-                    height: size.height * 0.075,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: greyColor,
-                          spreadRadius: 1.5,
-
-                          // changes position of shadow
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(16),
-                      color: const Color(
-                        0xffffffff,
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Align(
-                          child: Text(
-                            SetText.administrator,
-                            style: alerttextdescStyle,
-                          ),
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.keyboard_arrow_down_outlined,
-                          ),
-                          color: black1Color,
-                        ),
-                      ],
-                    ),
-                  ),
+                  _mainBody(),
                   SizedBox(
                     height: size.height * 00.02,
                   ),
@@ -423,32 +388,32 @@ class _EditUserState extends State<EditUser> {
                                 image!,
                                 fit: BoxFit.fill,
                               ))
-                          : Container(
-                              width: size.width * 10,
-                              height: size.height * 0.30,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(
-                                  15,
+                          : GestureDetector(
+                              onTap: () async {
+                                await getImage();
+                              },
+                              child: Container(
+                                width: size.width * 10,
+                                height: size.height * 0.30,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(
+                                    15,
+                                  ),
+                                  color: biruBgColor,
                                 ),
-                                color: biruBgColor,
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  IconButton(
-                                    onPressed: () async {
-                                      await getImage();
-                                    },
-                                    icon: const Icon(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(
                                       Icons.upload,
                                       size: 30,
                                     ),
-                                  ),
-                                  Text(
-                                    SetText.upload_foto_ktp,
-                                    style: defaultStyle,
-                                  ),
-                                ],
+                                    Text(
+                                      SetText.upload_foto_ktp,
+                                      style: defaultStyle,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                     ],
@@ -508,32 +473,32 @@ class _EditUserState extends State<EditUser> {
                                 image1!,
                                 fit: BoxFit.fill,
                               ))
-                          : Container(
-                              width: size.width * 10,
-                              height: size.height * 0.30,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(
-                                  15,
+                          : GestureDetector(
+                              onTap: () async {
+                                await getImage1();
+                              },
+                              child: Container(
+                                width: size.width * 10,
+                                height: size.height * 0.30,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(
+                                    15,
+                                  ),
+                                  color: biruBgColor,
                                 ),
-                                color: biruBgColor,
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  IconButton(
-                                    onPressed: () async {
-                                      await getImage1();
-                                    },
-                                    icon: const Icon(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(
                                       Icons.upload,
                                       size: 30,
                                     ),
-                                  ),
-                                  Text(
-                                    SetText.upload_foto_paspor,
-                                    style: defaultStyle,
-                                  ),
-                                ],
+                                    Text(
+                                      SetText.upload_foto_paspor,
+                                      style: defaultStyle,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                       SizedBox(
@@ -604,6 +569,41 @@ class _EditUserState extends State<EditUser> {
           ],
         ),
       ),
+    );
+  }
+
+  Widget _mainBody() {
+    Size size = MediaQuery.of(context).size;
+    final List<SelectedListItem> _listProvinsi = [
+      SelectedListItem(false, 'Aceh'),
+      SelectedListItem(false, 'Jakarta'),
+      SelectedListItem(false, 'Bandung'),
+    ];
+
+    /// This is register text field controllers.
+    // ignore: unused_field
+    final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+    final _peranController = TextEditingController();
+
+    @override
+    void dispose() {
+      super.dispose();
+      final _peranController = TextEditingController();
+    }
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        // AppTextField(
+        //   textEditingController: _peranController,
+        //   title: 'Peran',
+        //   hint: ' Administrator',
+        //   isFieldSelected: true,
+        //   isVisibility: false,
+        //   provinsi: _listProvinsi,
+        // ),
+      ],
     );
   }
 }

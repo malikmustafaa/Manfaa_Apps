@@ -26,11 +26,11 @@ class _AfiliasiState extends State<Afiliasi> {
           children: [
             Row(
               children: [
-                GestureDetector(
-                  onTap: () {
+                IconButton(
+                  onPressed: () {
                     Navigator.of(context).pop(const Profile());
                   },
-                  child: Image(
+                  icon: Image(
                     image: const AssetImage(
                       'assets/images/iconback.png',
                     ),
@@ -142,50 +142,60 @@ class _AfiliasiState extends State<Afiliasi> {
                   SizedBox(
                     height: size.height * 00.02,
                   ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                    ),
-                    height: size.height * 00.065,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        16,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const DaftarDownline()),
+                      );
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
                       ),
-                      color: biruBgColor,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.file_copy_outlined,
-                                color: biruColor,
+                      height: size.height * 00.065,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                          16,
+                        ),
+                        color: biruBgColor,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  Icons.file_copy_outlined,
+                                  color: biruColor,
+                                ),
                               ),
-                            ),
-                            Text(
-                              SetText.lihat_daftar_downline,
-                              style: lihatStyle,
-                            ),
-                          ],
-                        ),
-                        IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const DaftarDownline()),
-                            );
-                          },
-                          icon: Icon(
-                            Icons.arrow_forward_ios_outlined,
-                            size: 15,
-                            color: biruColor,
+                              Text(
+                                SetText.lihat_daftar_downline,
+                                style: lihatStyle,
+                              ),
+                            ],
                           ),
-                        ),
-                      ],
+                          IconButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DaftarDownline()),
+                              );
+                            },
+                            icon: Icon(
+                              Icons.arrow_forward_ios_outlined,
+                              size: 15,
+                              color: biruColor,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(

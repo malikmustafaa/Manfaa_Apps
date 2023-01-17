@@ -73,6 +73,7 @@ class _TableDaftarAkunState extends State<TableDaftarAkunTerhubung> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Widget _ListData() {
     Size size = MediaQuery.of(context).size;
     return ListView.builder(
@@ -150,6 +151,7 @@ class _TableDaftarAkunState extends State<TableDaftarAkunTerhubung> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Widget _HeaderListData() {
     Size size = MediaQuery.of(context).size;
     return Container(

@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/tambahkan%20akun/edit_user.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/profile/afiliasi/afiliasi.dart';
-// import 'package:manfaa_apps/berbagi_link/tabs/profile/afiliasi/daftar_downline/List_data.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
-import 'package:manfaa_apps/contants/text.dart';
-
 import '../../../../../widgets/table_daftar_downline.dart';
 
 class DaftarDownline extends StatefulWidget {
@@ -29,11 +25,11 @@ class _DaftarDownlineState extends State<DaftarDownline> {
           children: [
             Row(
               children: [
-                GestureDetector(
-                  onTap: () {
+                IconButton(
+                  onPressed: () {
                     Navigator.of(context).pop(const Afiliasi());
                   },
-                  child: Image(
+                  icon: Image(
                     image: const AssetImage(
                       'assets/images/iconback.png',
                     ),

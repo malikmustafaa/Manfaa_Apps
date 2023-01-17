@@ -55,11 +55,11 @@ class _EditUserState extends State<InformasiPribadi> {
           children: [
             Row(
               children: [
-                GestureDetector(
-                  onTap: () {
+                IconButton(
+                  onPressed: () {
                     Navigator.of(context).pop(const Profile());
                   },
-                  child: Image(
+                  icon: Image(
                     image: const AssetImage(
                       'assets/images/iconback.png',
                     ),
@@ -130,35 +130,42 @@ class _EditUserState extends State<InformasiPribadi> {
                   SizedBox(
                     height: size.height * 00.03,
                   ),
-                  Row(
+                  Column(
                     children: [
-                      IconButton(
-                        iconSize: 75,
-
-                        icon: CircleAvatar(
-                          backgroundImage:
-                              const AssetImage("assets/images/orang.png"),
-                          backgroundColor: biruColor,
-                          radius: 100,
-                        ), //Circl,
-                        onPressed: () {},
-                      ),
-                      Column(
-                        // mainAxisAlignment: MainAxisAlignment.cente,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                              right: 85,
+                          IconButton(
+                            iconSize: 75,
+                            icon: CircleAvatar(
+                              backgroundImage: const AssetImage(
+                                "assets/images/orang.png",
+                              ),
+                              backgroundColor: biruColor,
+                              radius: 100,
                             ),
-                            child: Text(
-                              SetText.ubah_foto_profil,
-                              style: pelajariStyle,
-                              // textAlign: TextAlign.start,
-                            ),
+                            onPressed: () {},
                           ),
-                          Text(
-                            SetText.unggah_gmbr,
-                            style: anak2listStyle,
+                          Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  right: 128,
+                                ),
+                                child: Text(
+                                  SetText.ubah_foto_profil,
+                                  style: pelajariStyle,
+                                ),
+                              ),
+                              Text(
+                                SetText.unggah_gmbr,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: greyColor,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -221,7 +228,6 @@ class _EditUserState extends State<InformasiPribadi> {
                   SizedBox(
                     child: TextField(
                       keyboardType: TextInputType.text,
-                      // obscureText: _obsecure,
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
@@ -233,10 +239,7 @@ class _EditUserState extends State<InformasiPribadi> {
                           fontSize: 16,
                           color: black1Color,
                         ),
-
                         hintText: "0857XXXXXXXX",
-                        // labelText: "Your Password",
-                        // prefixText: 'Ahmad',
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide(

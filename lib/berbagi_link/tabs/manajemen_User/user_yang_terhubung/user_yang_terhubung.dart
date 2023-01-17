@@ -3,10 +3,6 @@ import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/manajemen_user.dart
 import 'package:manfaa_apps/contants/color_style.dart';
 import 'package:manfaa_apps/contants/text.dart';
 import 'package:manfaa_apps/widgets/table_user_terhubung.dart';
-// import 'package:manfaa_apps/widgets/border_container2.dart';
-// import 'package:manfaa_apps/widgets/list_container2.dart';
-// import 'package:manfaa_apps/widgets/listdata2.dart';
-import 'package:manfaa_apps/widgets/user_mengaitkan.dart';
 
 class UserYangTerhubung extends StatefulWidget {
   const UserYangTerhubung({Key? key}) : super(key: key);
@@ -30,11 +26,11 @@ class _UserYangTerhubungState extends State<UserYangTerhubung> {
           children: [
             Row(
               children: [
-                GestureDetector(
-                  onTap: () {
+                IconButton(
+                  onPressed: () {
                     Navigator.of(context).pop(const ManajemenUser());
                   },
-                  child: Image(
+                  icon: Image(
                     image: const AssetImage(
                       'assets/images/iconback.png',
                     ),

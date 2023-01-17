@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/profile/profile.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
 import 'package:manfaa_apps/contants/text.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
 
 class UbahPassword extends StatefulWidget {
   const UbahPassword({Key? key}) : super(key: key);
@@ -29,13 +29,13 @@ class _UbahPasswordState extends State<UbahPassword> {
   String _textPassKonfirmError = "";
 
   bool _doValidate() {
+    // ignore: unused_local_variable
     Pattern pattern =
         r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]"
         r"{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]"
         r"{0,253}[a-zA-Z0-9])?)*$";
 
     RegExp regexPass = RegExp(r'^(?=.*?[a-z])(?=.*?[0-9]).{8,32}$');
-    RegExp regexkonfirmPass = RegExp(r'^(?=.*?[a-z])(?=.*?[0-9]).{8,32}$');
     bool _success = true;
 
     String _pass = _passwordController.text;
@@ -94,6 +94,7 @@ class _UbahPasswordState extends State<UbahPassword> {
 
   void _ubahpassword() async {
     if (_doValidate()) {
+      // ignore: avoid_print
       print("object === >");
     }
   }
@@ -114,11 +115,11 @@ class _UbahPasswordState extends State<UbahPassword> {
           children: [
             Row(
               children: [
-                GestureDetector(
-                  onTap: () {
+                IconButton(
+                  onPressed: () {
                     Navigator.of(context).pop(const Profile());
                   },
-                  child: Image(
+                  icon: Image(
                     image: const AssetImage(
                       'assets/images/iconback.png',
                     ),
@@ -202,6 +203,9 @@ class _UbahPasswordState extends State<UbahPassword> {
                       height: size.height * 00.02,
                     ),
                     TextField(
+                      inputFormatters: [
+                        FilteringTextInputFormatter.deny(' '),
+                      ],
                       controller: _passwordController,
                       autocorrect: false,
                       obscureText: isHidden,
@@ -211,7 +215,9 @@ class _UbahPasswordState extends State<UbahPassword> {
                       decoration: InputDecoration(
                         suffixIcon: IconButton(
                             icon: (Icon(
-                              Icons.remove_red_eye,
+                              isHidden
+                                  ? Icons.visibility_off
+                                  : Icons.visibility,
                               color: black1Color,
                             )),
                             onPressed: () {
@@ -257,6 +263,9 @@ class _UbahPasswordState extends State<UbahPassword> {
                       height: size.height * 00.02,
                     ),
                     TextField(
+                      inputFormatters: [
+                        FilteringTextInputFormatter.deny(' '),
+                      ],
                       controller: _konfirmasiPasswordController,
                       autocorrect: false,
                       obscureText: isHidden,
@@ -266,7 +275,9 @@ class _UbahPasswordState extends State<UbahPassword> {
                       decoration: InputDecoration(
                         suffixIcon: IconButton(
                             icon: (Icon(
-                              Icons.remove_red_eye,
+                              isHidden
+                                  ? Icons.visibility_off
+                                  : Icons.visibility,
                               color: black1Color,
                             )),
                             onPressed: () {
@@ -283,9 +294,7 @@ class _UbahPasswordState extends State<UbahPassword> {
                           fontSize: 14,
                           color: greyColor,
                         ),
-
                         hintText: "Masukkan password baru",
-                        // labelText: "Your Password",
                         errorText: _passKonfirmError
                             ? SetText.konfirmasiPassword +
                                 ' ' +
@@ -340,7 +349,6 @@ class _UbahPasswordState extends State<UbahPassword> {
                         SizedBox(
                           height: size.height * 00.068,
                           width: size.width * 0.45,
-                          // padding: const EdgeInsets.only(left: 10),
                           child: ElevatedButton(
                             onPressed: _ubahpassword,
                             style: ElevatedButton.styleFrom(

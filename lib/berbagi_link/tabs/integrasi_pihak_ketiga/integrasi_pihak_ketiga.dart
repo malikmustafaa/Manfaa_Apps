@@ -24,11 +24,11 @@ class _IntegrasiPihakKetigaState extends State<IntegrasiPihakKetiga> {
           children: [
             Row(
               children: [
-                GestureDetector(
-                  onTap: () {
+                IconButton(
+                  onPressed: () {
                     Navigator.of(context).pop(BerbagiLink());
                   },
-                  child: Image(
+                  icon: Image(
                     image: const AssetImage(
                       'assets/images/iconback.png',
                     ),

@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names, duplicate_ignore
+
 import 'package:flutter/material.dart';
 
 import '../berbagi_link/tabs/manajemen_User/tambahkan akun/edit_user.dart';

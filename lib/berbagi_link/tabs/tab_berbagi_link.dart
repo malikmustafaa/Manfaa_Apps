@@ -1,13 +1,9 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/event_online/event_online.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/integrasi_pihak_ketiga/integrasi_pihak_ketiga.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/manajemen_user.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/profile/profile.dart';
 import 'package:manfaa_apps/widgets/custom_wrap.dart';
-
-import '../../contants/color_style.dart';
 
 class TabBerbagiLink extends StatefulWidget {
   const TabBerbagiLink({Key? key}) : super(key: key);
@@ -17,7 +13,6 @@ class TabBerbagiLink extends StatefulWidget {
 }
 
 class _TabBerbagiLinkState extends State<TabBerbagiLink> {
-  // List<Widget> _generateChildren(int count) {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
