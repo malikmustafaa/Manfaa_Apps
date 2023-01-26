@@ -147,15 +147,11 @@ class _EditUserState extends State<InformasiPribadi> {
                             onPressed: () {},
                           ),
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                  right: 128,
-                                ),
-                                child: Text(
-                                  SetText.ubah_foto_profil,
-                                  style: pelajariStyle,
-                                ),
+                              Text(
+                                SetText.ubah_foto_profil,
+                                style: pelajariStyle,
                               ),
                               Text(
                                 SetText.unggah_gmbr,
@@ -417,32 +413,32 @@ class _EditUserState extends State<InformasiPribadi> {
                                 image!,
                                 fit: BoxFit.fill,
                               ))
-                          : Container(
-                              width: size.width * 10,
-                              height: size.height * 0.30,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(
-                                  15,
+                          : GestureDetector(
+                              onTap: () async {
+                                await getImage();
+                              },
+                              child: Container(
+                                width: size.width * 10,
+                                height: size.height * 0.30,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(
+                                    15,
+                                  ),
+                                  color: biruBgColor,
                                 ),
-                                color: biruBgColor,
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  IconButton(
-                                    onPressed: () async {
-                                      await getImage();
-                                    },
-                                    icon: const Icon(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(
                                       Icons.upload,
                                       size: 30,
                                     ),
-                                  ),
-                                  Text(
-                                    SetText.upload_foto_ktp,
-                                    style: defaultStyle,
-                                  ),
-                                ],
+                                    Text(
+                                      SetText.upload_foto_ktp,
+                                      style: defaultStyle,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                     ],
@@ -498,32 +494,32 @@ class _EditUserState extends State<InformasiPribadi> {
                                 image1!,
                                 fit: BoxFit.fill,
                               ))
-                          : Container(
-                              width: size.width * 10,
-                              height: size.height * 0.30,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(
-                                  15,
+                          : GestureDetector(
+                              onTap: () async {
+                                await getImage1();
+                              },
+                              child: Container(
+                                width: size.width * 10,
+                                height: size.height * 0.30,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(
+                                    15,
+                                  ),
+                                  color: biruBgColor,
                                 ),
-                                color: biruBgColor,
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  IconButton(
-                                    onPressed: () async {
-                                      await getImage1();
-                                    },
-                                    icon: const Icon(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(
                                       Icons.upload,
                                       size: 30,
                                     ),
-                                  ),
-                                  Text(
-                                    SetText.upload_foto_paspor,
-                                    style: defaultStyle,
-                                  ),
-                                ],
+                                    Text(
+                                      SetText.upload_foto_paspor,
+                                      style: defaultStyle,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                       SizedBox(

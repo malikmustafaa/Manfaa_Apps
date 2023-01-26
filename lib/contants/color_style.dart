@@ -117,8 +117,8 @@ var unggahgmbr1Style = const TextStyle(
   fontWeight: FontWeight.w500,
 );
 var aktifStyle = TextStyle(
-  fontWeight: FontWeight.w500,
-  fontSize: 10,
+  fontWeight: FontWeight.w700,
+  fontSize: 12,
   fontStyle: FontStyle.normal,
   color: black2Color,
 );
@@ -191,7 +191,11 @@ var defau = TextStyle(
   fontSize: 16,
   color: biruColor,
 );
-// var Style = 
+var bawahStyle = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  color: black1Color,
+);
 // var Style = 
 // var Style = 
 // var Style = 

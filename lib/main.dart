@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:manfaa_apps/berbagi_link/berbagi_link.dart';
+import 'package:manfaa_apps/berbagi_link/tabs/profile/profile.dart';
+import 'package:manfaa_apps/contants/color_style.dart';
 
 void main() {
   runApp(const MyApp());

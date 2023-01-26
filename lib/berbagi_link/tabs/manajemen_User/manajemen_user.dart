@@ -63,243 +63,241 @@ class _ManajemenUserState extends State<ManajemenUser> {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
-              child: Column(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const TambahkanAkun()),
-                      );
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16),
-                        color: const Color(0xFFE3F2FD),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.note_add_rounded,
-                                color: biruColor,
+      body: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+            child: Column(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TambahkanAkun()),
+                    );
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: const Color(0xFFE3F2FD),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.note_add_rounded,
+                              color: biruColor,
+                              size: 25,
+                            ),
+                            SizedBox(
+                              width: size.width * 0.030,
+                            ),
+                            Text(
+                              SetText.tambahkan_akun,
+                              style: biru1Style,
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                primary: const Color(0xff259AB9),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                    20,
+                                  ),
+                                ),
+                              ),
+                              child: Text(
+                                SetText.neww,
+                                style: newStyle,
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TambahkanAkun()),
+                                );
+                              },
+                              icon: Icon(
+                                Icons.keyboard_arrow_right_rounded,
                                 size: 25,
+                                color: biruColor,
                               ),
-                              SizedBox(
-                                width: size.width * 0.030,
-                              ),
-                              Text(
-                                SetText.tambahkan_akun,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: size.height * 000.02,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HubungkanAkun()),
+                    );
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: const Color(0xFFE3F2FD),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.note_add_rounded,
+                              color: biruColor,
+                              size: 25,
+                            ),
+                            SizedBox(
+                              width: size.width * 0.030,
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Text(
+                                SetText.hubungkan_akun,
                                 style: biru1Style,
                               ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  primary: const Color(0xff259AB9),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(
-                                      20,
-                                    ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                primary: const Color(0xff259AB9),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                    20,
                                   ),
                                 ),
-                                child: Text(
-                                  SetText.neww,
-                                  style: newStyle,
-                                ),
                               ),
-                              IconButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const TambahkanAkun()),
-                                  );
-                                },
-                                icon: Icon(
-                                  Icons.keyboard_arrow_right_rounded,
-                                  size: 25,
-                                  color: biruColor,
-                                ),
+                              child: Text(
+                                SetText.neww,
+                                style: newStyle,
                               ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: size.height * 000.02,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const HubungkanAkun()),
-                      );
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16),
-                        color: const Color(0xFFE3F2FD),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.note_add_rounded,
-                                color: biruColor,
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const HubungkanAkun()),
+                                );
+                              },
+                              icon: Icon(
+                                Icons.keyboard_arrow_right_rounded,
                                 size: 25,
-                              ),
-                              SizedBox(
-                                width: size.width * 0.030,
-                              ),
-                              GestureDetector(
-                                onTap: () {},
-                                child: Text(
-                                  SetText.hubungkan_akun,
-                                  style: biru1Style,
-                                ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  primary: const Color(0xff259AB9),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(
-                                      20,
-                                    ),
-                                  ),
-                                ),
-                                child: Text(
-                                  SetText.neww,
-                                  style: newStyle,
-                                ),
-                              ),
-                              IconButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const HubungkanAkun()),
-                                  );
-                                },
-                                icon: Icon(
-                                  Icons.keyboard_arrow_right_rounded,
-                                  size: 25,
-                                  color: biruColor,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: size.height * 000.02,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const UserYangTerhubung()),
-                      );
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16),
-                        color: const Color(0xFFE3F2FD),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.note_add_rounded,
                                 color: biruColor,
-                                size: 25,
                               ),
-                              SizedBox(
-                                width: size.width * 0.030,
-                              ),
-                              GestureDetector(
-                                onTap: () {},
-                                child: Text(
-                                  SetText.user_yang_terhubung,
-                                  style: biru1Style,
-                                ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  primary: const Color(0xff259AB9),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(
-                                      20,
-                                    ),
-                                  ),
-                                ),
-                                child: Text(
-                                  SetText.neww,
-                                  style: newStyle,
-                                ),
-                              ),
-                              IconButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const UserYangTerhubung()),
-                                  );
-                                },
-                                icon: Icon(
-                                  Icons.keyboard_arrow_right_rounded,
-                                  size: 25,
-                                  color: biruColor,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                ],
-              ),
+                ),
+                SizedBox(
+                  height: size.height * 000.02,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const UserYangTerhubung()),
+                    );
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: const Color(0xFFE3F2FD),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.note_add_rounded,
+                              color: biruColor,
+                              size: 25,
+                            ),
+                            SizedBox(
+                              width: size.width * 0.030,
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Text(
+                                SetText.user_yang_terhubung,
+                                style: biru1Style,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                primary: const Color(0xff259AB9),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                    20,
+                                  ),
+                                ),
+                              ),
+                              child: Text(
+                                SetText.neww,
+                                style: newStyle,
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const UserYangTerhubung()),
+                                );
+                              },
+                              icon: Icon(
+                                Icons.keyboard_arrow_right_rounded,
+                                size: 25,
+                                color: biruColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

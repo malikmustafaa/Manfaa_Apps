@@ -145,15 +145,11 @@ class _EditUserState extends State<EditUser> {
                             onPressed: () {},
                           ),
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                  right: 128,
-                                ),
-                                child: Text(
-                                  SetText.ubah_foto_profil,
-                                  style: pelajariStyle,
-                                ),
+                              Text(
+                                SetText.ubah_foto_profil,
+                                style: pelajariStyle,
                               ),
                               Text(
                                 SetText.unggah_gmbr,
@@ -575,14 +571,13 @@ class _EditUserState extends State<EditUser> {
   Widget _mainBody() {
     Size size = MediaQuery.of(context).size;
     final List<SelectedListItem> _listProvinsi = [
-      SelectedListItem(false, 'Aceh'),
-      SelectedListItem(false, 'Jakarta'),
-      SelectedListItem(false, 'Bandung'),
+      SelectedListItem(false, 'Kartu Tanda Penduduk(KTP)'),
+      SelectedListItem(false, 'Kartu Keluarga(KK)'),
+      SelectedListItem(false, 'Kartu Pelajar(KP)'),
     ];
 
     /// This is register text field controllers.
     // ignore: unused_field
-    final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
     final _peranController = TextEditingController();
 
@@ -595,14 +590,13 @@ class _EditUserState extends State<EditUser> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // AppTextField(
-        //   textEditingController: _peranController,
-        //   title: 'Peran',
-        //   hint: ' Administrator',
-        //   isFieldSelected: true,
-        //   isVisibility: false,
-        //   provinsi: _listProvinsi,
-        // ),
+        AppTextField(
+          textEditingController: _peranController,
+          title: 'Peran',
+          hint: ' Administrator',
+          isFieldSelected: true,
+          provinsi: _listProvinsi,
+        ),
       ],
     );
   }

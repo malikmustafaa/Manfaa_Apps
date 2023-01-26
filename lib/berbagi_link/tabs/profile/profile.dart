@@ -96,87 +96,74 @@ class _ProfileState extends State<Profile> {
                             onPressed: () {},
                           ),
                           Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 30),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      'yoga',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold,
-                                        color: orangeColor,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: size.width * 00.02,
-                                    ),
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 8,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(
-                                          30,
-                                        ),
-                                        color: orangeColor,
-                                      ),
-                                      child: Row(
-                                        children: [
-                                          Image(
-                                            color: whiteColor,
-                                            image: const AssetImage(
-                                                'assets/images/vector.png'),
-                                            width: 25,
-                                          ),
-                                          Text(
-                                            'BUSINESS',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w700,
-                                              fontSize: 12,
-                                              color: whiteColor,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                height: size.height * 00.01,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(right: 35),
-                                child: Text(
-                                  ' Mirza Yoga Pramoda',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                    color: black1Color,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: size.height * 00.01,
-                              ),
                               Row(
                                 children: [
-                                  SizedBox(
-                                    width: size.width * 00.02,
-                                  ),
                                   Text(
-                                    'smirzayogapramoda@gmail.com',
+                                    'yoga',
                                     style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                      color: black1Color,
-                                      fontStyle: FontStyle.italic,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: orangeColor,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: size.width * 00.03,
+                                  ),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 8,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(
+                                        30,
+                                      ),
+                                      color: orangeColor,
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Image(
+                                          color: whiteColor,
+                                          image: const AssetImage(
+                                              'assets/images/vector.png'),
+                                          width: 25,
+                                        ),
+                                        Text(
+                                          'BUSINESS',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 12,
+                                            color: whiteColor,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ],
+                              ),
+                              SizedBox(
+                                height: size.height * 00.01,
+                              ),
+                              Text(
+                                ' Mirza Yoga Pramoda',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: black1Color,
+                                ),
+                              ),
+                              SizedBox(
+                                height: size.height * 00.01,
+                              ),
+                              Text(
+                                'smirzayogapramoda@gmail.com',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w400,
+                                  color: black1Color,
+                                  fontStyle: FontStyle.italic,
+                                ),
                               ),
                             ],
                           ),

@@ -358,25 +358,19 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
     Size size = MediaQuery.of(context).size;
     final List<SelectedListItem> _listProvinsi = [
       SelectedListItem(false, 'Aceh'),
-      SelectedListItem(false, 'Arab'),
-      SelectedListItem(false, 'Argentina'),
-      SelectedListItem(false, 'Addd'),
-      SelectedListItem(false, 'Adddd'),
-      SelectedListItem(false, 'Aceh1'),
       SelectedListItem(false, 'Jakarta'),
       SelectedListItem(false, 'Bandung'),
     ];
 
     /// This is register text field controllers.
     // ignore: unused_field
-    final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
     final _peranController = TextEditingController();
-    final _peran2Controller = TextEditingController();
 
     @override
     void dispose() {
       super.dispose();
+      _peranController.dispose();
     }
 
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -477,14 +471,35 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
             height: size.height * 00.02,
           ),
           AppTextField(
-            validator: isValidator,
             textEditingController: _peranController,
             title: 'Peran',
-            hint: 'Pilih Peran',
-            isFieldSelected: false,
-            isVisibility: false,
-            // provinsi: _listProvinsi,
+            hint: 'Pilih Peran Akun',
+            isFieldSelected: true,
+            provinsi: _listProvinsi,
           ),
+          // AppTextField(
+          //   textEditingController: _peranController,
+          //   title: 'Provinsi',
+          //   hint: 'Pilih Provinsi',
+          //   isFieldSelected: true,
+          //   provinsi: _listProvinsi,
+          // ),
+          // AppTextField(
+          //   textEditingController: _peranController,
+          //   title: "Peran",
+          //   hint: "Pilih Peran",
+          //   isFieldSelected: true,
+          //   provinsi: _listProvinsi,
+          // ),
+          // AppTextField(
+          //   textEditingController: _peranController,
+          //   title: 'Peran',
+          //   hint: 'Pilih Peran',
+          //   isFieldSelected: true,
+          //   provinsi: _listProvinsi,
+
+          // ),
+
           SizedBox(
             height: size.height * 00.02,
           ),
@@ -667,50 +682,6 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
       SizedBox(
         height: size.height * 00.06,
       ),
-      // AppTextField(
-      //       validator: isValidator,
-      //       textEditingController: _peranController,
-      //       title: 'Peran',
-      //       hint: 'Pilih Peran',
-      //       isFieldSelected: false,
-      //       isVisibility: false,
-      //       // provinsi: _listProvinsi,
-      //     ),
-      // AppTextField(
-      //   validator: isValidator,
-      //   textEditingController: _peran2Controller,
-      //   title: 'Peran2',
-      //   hint: 'Pilih Peran2',
-      //   isFieldSelected: false,
-      //   isVisibility: false,
-      //   // provinsi: _listProvinsi,
-      // ),
-      // SizedBox(
-      //   height: size.height * 00.068,
-      //   width: size.width * 0.38,
-      //   child: ElevatedButton(
-      //     // onPressed: _tambahkan,
-      //     onPressed: () {
-      //       setState(() {
-      //         isValidator = true;
-      //       });
-      //       // isValidator = true;
-      //     },
-      //     style: ElevatedButton.styleFrom(
-      //       primary: black1Color,
-      //       shape: RoundedRectangleBorder(
-      //         borderRadius: BorderRadius.circular(
-      //           20,
-      //         ),
-      //       ),
-      //     ),
-      //     child: Text(
-      //       'Loooooogin',
-      //       style: simpanStyle,
-      //       textAlign: TextAlign.center,
-      //     ),
-      //   ),
-      // ),
     ]);
   }
 }

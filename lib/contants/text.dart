@@ -56,13 +56,12 @@ class SetText {
   static const String edit_pengaturan_event = 'Edit Pengaturan Event';
   static const String status_halaman_event = "Status Halaman Event";
   static const String aktifkan_ =
-      "       Aktifkan & matikan Halaman Event dengan sekali klik";
+      "Aktifkan & matikan Halaman Event dengan sekali klik";
   static const String deskripsi = "Deskripsi/Bio";
   static const String nama_organisasi = "Nama Organisasi/Penyelenggara";
   static const String logo_organisasi = "Logo Organisasi/Penyelenggara";
   static const String klik_upload_logo = '   Klik untuk\nUpload Logo';
-  static const String unggah_gmbr1 =
-      '     Unggah gambar berukuran\n     resolusi 1 : 1';
+  static const String unggah_gmbr1 = 'Unggah gambar berukuran';
   static const String hapus_logo = 'Hapus logo';
   static const String upload_foto_ktp = 'Upload Foto Ktp';
   static const String upload_foto_paspor = 'Upload Foto Paspor';

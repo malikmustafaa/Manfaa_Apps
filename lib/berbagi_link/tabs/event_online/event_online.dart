@@ -159,18 +159,30 @@ class _EventOnlineState extends State<EventOnline> {
                       color: const Color(0xFFE3F2FD),
                     ),
                     child: Column(
-                      // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              'Status Halaman Event\nAktifkan & matikan Halaman Event dengan sekali klik',
-                              style: TextStyle(
-                                fontSize: 10,
-                                color: black1Color,
-                                fontWeight: FontWeight.w500,
-                              ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Status Halaman Event',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: black1Color,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                                Text(
+                                  'Aktifkan & matikan Halaman Event dengan sekali klik',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    color: black1Color,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
                             ),
                             Switch(
                                 focusColor: black1Color,
@@ -284,8 +296,8 @@ class _EventOnlineState extends State<EventOnline> {
                     children: [
                       image != null
                           ? SizedBox(
-                              width: size.width * 0.35,
-                              height: size.height * 0.20,
+                              width: size.width * 0.32,
+                              height: size.height * 0.17,
                               child: Image.file(
                                 image!,
                                 fit: BoxFit.cover,
@@ -295,11 +307,11 @@ class _EventOnlineState extends State<EventOnline> {
                                 await getImage();
                               },
                               child: Container(
-                                width: size.width * 0.35,
-                                height: size.height * 0.20,
+                                width: size.width * 0.32,
+                                height: size.height * 0.17,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(
-                                    8,
+                                    15,
                                   ),
                                   color: greyColor,
                                 ),
@@ -318,14 +330,23 @@ class _EventOnlineState extends State<EventOnline> {
                                 ),
                               ),
                             ),
+                      SizedBox(width: size.width * 0.05),
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             SetText.unggah_gmbr1,
                             style: unggahgmbr1Style,
                           ),
                           SizedBox(
-                            height: size.height * 00.019,
+                            height: size.height * 00.007,
+                          ),
+                          Text(
+                            'resolusi 1 : 1',
+                            style: unggahgmbr1Style,
+                          ),
+                          SizedBox(
+                            height: size.height * 00.007,
                           ),
                           GestureDetector(
                             onTap: () {
@@ -335,14 +356,9 @@ class _EventOnlineState extends State<EventOnline> {
                                 },
                               );
                             },
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                right: 55,
-                              ),
-                              child: Text(
-                                SetText.hapus_logo,
-                                style: hapusStyle,
-                              ),
+                            child: Text(
+                              SetText.hapus_logo,
+                              style: hapusStyle,
                             ),
                           ),
                         ],
@@ -568,13 +584,22 @@ class _EventOnlineState extends State<EventOnline> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              'Aktifkan Kode Unik\nPengaturan kode unik untuk mempermudah\npengecekan jumlah transfer pelanggan',
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                                color: black1Color,
-                              ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Aktifkan Kode Unik',
+                                  style: aktifStyle,
+                                ),
+                                Text(
+                                  'Pengaturan kode unik untuk mempermudah',
+                                  style: bawahStyle,
+                                ),
+                                Text(
+                                  'pengecekan jumlah transfer pelanggan',
+                                  style: bawahStyle,
+                                ),
+                              ],
                             ),
                             Transform.scale(
                               scale: 1,
@@ -613,13 +638,22 @@ class _EventOnlineState extends State<EventOnline> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              'Aktifkan Pembayaran Otomatis\nPengaturan kode unik untuk mempermudah\npengecekan jumlah transfer pelanggan',
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                                color: black1Color,
-                              ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Aktifkan Pembayaran Otomatis',
+                                  style: aktifStyle,
+                                ),
+                                Text(
+                                  'Digunakan untuk mempermudah konfirmasi',
+                                  style: bawahStyle,
+                                ),
+                                Text(
+                                  'pembayaran secara otomatis dengan kode unik',
+                                  style: bawahStyle,
+                                ),
+                              ],
                             ),
                             Transform.scale(
                               scale: 1,
