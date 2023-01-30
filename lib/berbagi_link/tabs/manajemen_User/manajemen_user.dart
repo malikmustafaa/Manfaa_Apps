@@ -4,7 +4,8 @@ import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/hubungkan_akun/hubu
 import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/tambahkan%20akun/tambahkan_akun.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/user_yang_terhubung/user_yang_terhubung.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
-import 'package:manfaa_apps/contants/text.dart';
+
+import '../profile/profile.dart';
 
 class ManajemenUser extends StatefulWidget {
   const ManajemenUser({Key? key}) : super(key: key);
@@ -39,11 +40,8 @@ class _ManajemenUserState extends State<ManajemenUser> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
-                  SetText.manajemen_user,
+                  'Manajemen User',
                   style: appbarStyle,
                 ),
               ],
@@ -53,7 +51,12 @@ class _ManajemenUserState extends State<ManajemenUser> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(
@@ -81,7 +84,7 @@ class _ManajemenUserState extends State<ManajemenUser> {
                     padding: const EdgeInsets.symmetric(horizontal: 5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: const Color(0xFFE3F2FD),
+                      color: biruBgColor,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -97,7 +100,7 @@ class _ManajemenUserState extends State<ManajemenUser> {
                               width: size.width * 0.030,
                             ),
                             Text(
-                              SetText.tambahkan_akun,
+                              'Tambahkan Akun',
                               style: biru1Style,
                             ),
                           ],
@@ -107,7 +110,7 @@ class _ManajemenUserState extends State<ManajemenUser> {
                             ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
-                                primary: const Color(0xff259AB9),
+                                primary: biruColor,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
                                     20,
@@ -115,7 +118,7 @@ class _ManajemenUserState extends State<ManajemenUser> {
                                 ),
                               ),
                               child: Text(
-                                SetText.neww,
+                                'NEW',
                                 style: newStyle,
                               ),
                             ),
@@ -155,7 +158,7 @@ class _ManajemenUserState extends State<ManajemenUser> {
                     padding: const EdgeInsets.symmetric(horizontal: 5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: const Color(0xFFE3F2FD),
+                      color: biruBgColor,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -170,12 +173,9 @@ class _ManajemenUserState extends State<ManajemenUser> {
                             SizedBox(
                               width: size.width * 0.030,
                             ),
-                            GestureDetector(
-                              onTap: () {},
-                              child: Text(
-                                SetText.hubungkan_akun,
-                                style: biru1Style,
-                              ),
+                            Text(
+                              'Hubungkan Akun',
+                              style: biru1Style,
                             ),
                           ],
                         ),
@@ -184,7 +184,7 @@ class _ManajemenUserState extends State<ManajemenUser> {
                             ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
-                                primary: const Color(0xff259AB9),
+                                primary: biruColor,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
                                     20,
@@ -192,7 +192,7 @@ class _ManajemenUserState extends State<ManajemenUser> {
                                 ),
                               ),
                               child: Text(
-                                SetText.neww,
+                                'NEW',
                                 style: newStyle,
                               ),
                             ),
@@ -232,7 +232,7 @@ class _ManajemenUserState extends State<ManajemenUser> {
                     padding: const EdgeInsets.symmetric(horizontal: 5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: const Color(0xFFE3F2FD),
+                      color: biruBgColor,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -247,12 +247,9 @@ class _ManajemenUserState extends State<ManajemenUser> {
                             SizedBox(
                               width: size.width * 0.030,
                             ),
-                            GestureDetector(
-                              onTap: () {},
-                              child: Text(
-                                SetText.user_yang_terhubung,
-                                style: biru1Style,
-                              ),
+                            Text(
+                              'User yang Terhubung',
+                              style: biru1Style,
                             ),
                           ],
                         ),
@@ -261,7 +258,7 @@ class _ManajemenUserState extends State<ManajemenUser> {
                             ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
-                                primary: const Color(0xff259AB9),
+                                primary: biruColor,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
                                     20,
@@ -269,7 +266,7 @@ class _ManajemenUserState extends State<ManajemenUser> {
                                 ),
                               ),
                               child: Text(
-                                SetText.neww,
+                                'NEW',
                                 style: newStyle,
                               ),
                             ),

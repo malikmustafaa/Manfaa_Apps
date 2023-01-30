@@ -7,7 +7,7 @@ import 'package:manfaa_apps/contants/color_style.dart';
 import 'dropdown.dart';
 
 // ignore: must_be_immutable
-class AppTextField extends StatefulWidget {
+class Administrator extends StatefulWidget {
   TextEditingController textEditingController = TextEditingController();
   final String title;
   final String hint;
@@ -19,7 +19,7 @@ class AppTextField extends StatefulWidget {
   final List<SelectedListItem>? jeniskelamin;
   final List<SelectedListItem>? statusperkawinan;
   final List<SelectedListItem>? goldarah;
-  AppTextField({
+  Administrator({
     required this.textEditingController,
     required this.title,
     required this.hint,
@@ -35,10 +35,10 @@ class AppTextField extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _AppTextFieldState createState() => _AppTextFieldState();
+  _AdministratorState createState() => _AdministratorState();
 }
 
-class _AppTextFieldState extends State<AppTextField> {
+class _AdministratorState extends State<Administrator> {
   final TextEditingController _searchTextEditingController =
       TextEditingController();
 
@@ -105,7 +105,7 @@ class _AppTextFieldState extends State<AppTextField> {
               : null,
           decoration: InputDecoration(
               hintText: widget.hint,
-              hintStyle: textfieldStyle,
+              hintStyle: defaultStyle,
               focusedBorder: OutlineInputBorder(
                 borderRadius: const BorderRadius.all(Radius.circular(12)),
                 borderSide: BorderSide(

@@ -4,6 +4,8 @@ import 'package:manfaa_apps/contants/color_style.dart';
 import 'package:manfaa_apps/contants/text.dart';
 import 'package:manfaa_apps/widgets/table_user_terhubung.dart';
 
+import '../../profile/profile.dart';
+
 class UserYangTerhubung extends StatefulWidget {
   const UserYangTerhubung({Key? key}) : super(key: key);
 
@@ -37,16 +39,9 @@ class _UserYangTerhubungState extends State<UserYangTerhubung> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.040,
-                ),
                 Text(
-                  SetText.user_yang_terhubung,
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: black1Color,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  'User Terhubung',
+                  style: appbarStyle,
                 ),
               ],
             ),
@@ -55,7 +50,12 @@ class _UserYangTerhubungState extends State<UserYangTerhubung> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(
@@ -76,7 +76,7 @@ class _UserYangTerhubungState extends State<UserYangTerhubung> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        SetText.manajemen_user,
+                        'Manajemen User',
                         style: header1Style,
                       ),
                       SizedBox(
@@ -90,7 +90,7 @@ class _UserYangTerhubungState extends State<UserYangTerhubung> {
                         width: size.width * 0.010,
                       ),
                       Text(
-                        SetText.user_yang_terhubung,
+                        'User yang Terhubung',
                         style: header2Style,
                       ),
                     ],

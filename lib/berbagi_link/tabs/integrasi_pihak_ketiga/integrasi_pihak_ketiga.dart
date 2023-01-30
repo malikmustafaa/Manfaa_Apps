@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:manfaa_apps/berbagi_link/berbagi_link.dart';
+import 'package:manfaa_apps/berbagi_link/tabs/profile/profile.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
+
+import '../../../contants/text.dart';
 
 class IntegrasiPihakKetiga extends StatefulWidget {
   const IntegrasiPihakKetiga({Key? key}) : super(key: key);
@@ -35,14 +38,12 @@ class _IntegrasiPihakKetigaState extends State<IntegrasiPihakKetiga> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
                   'Integrasi Pihak Ketiga',
                   style: TextStyle(
+                    fontFamily: 'Ubuntu',
                     color: black1Color,
-                    fontSize: 22,
+                    fontSize: 20,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -53,7 +54,12 @@ class _IntegrasiPihakKetigaState extends State<IntegrasiPihakKetiga> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(

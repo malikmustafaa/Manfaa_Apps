@@ -29,8 +29,8 @@ class _TableDaftarAkunState extends State<TableUserTerhubung> {
     Size size = MediaQuery.of(context).size;
     return Container(
       height: size.height * 00.075,
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(
             30,
           ),
@@ -38,43 +38,42 @@ class _TableDaftarAkunState extends State<TableUserTerhubung> {
             30,
           ),
         ),
-        color: Color(0xFFE3F2FD),
+        color: biruBgColor,
       ),
-
       child: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: 20,
         ),
-        child:
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Row(
-            children: [
-              Icon(
-                Icons.group,
-                color: biruColor,
-                size: 25,
-              ),
-              SizedBox(
-                width: size.width * 0.030,
-              ),
-              Text(
-                SetText.user_akun_yang_mengaitkan,
-                style: biru2Style,
-              ),
-            ],
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.circle,
-              size: 25,
-              color: biruColor,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                Icon(
+                  Icons.group,
+                  color: biruColor,
+                  size: 25,
+                ),
+                SizedBox(
+                  width: size.width * 0.030,
+                ),
+                Text(
+                  'User Mengaitkan Akun Anda',
+                  style: biru2Style,
+                ),
+              ],
             ),
-          ),
-        ]),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.circle,
+                size: 25,
+                color: biruColor,
+              ),
+            ),
+          ],
+        ),
       ),
-
-      // ),
     );
   }
 
@@ -111,42 +110,43 @@ class _TableDaftarAkunState extends State<TableUserTerhubung> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  SetText.ahmad,
+                  'Ahmad',
                   style: anaklistStyle,
                 ),
                 Text(
-                  SetText.email1,
+                  'ahmadx@gm..',
                   style: anaklistStyle,
                 ),
                 Text(
-                  SetText.status,
+                  'Status',
                   style: anaklistStyle,
                 ),
                 Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (content) => const EditUser(),
-                              ));
-                        },
-                        child: const Icon(
-                          Icons.edit,
-                        ),
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (content) => const EditUser(),
+                            ));
+                      },
+                      child: const Icon(
+                        Icons.edit,
                       ),
-                      SizedBox(
-                        width: size.width * 00.04,
+                    ),
+                    SizedBox(
+                      width: size.width * 00.04,
+                    ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: const Icon(
+                        Icons.delete,
                       ),
-                      GestureDetector(
-                        onTap: () {},
-                        child: const Icon(
-                          Icons.delete,
-                        ),
-                      ),
-                    ]),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -184,19 +184,19 @@ class _TableDaftarAkunState extends State<TableUserTerhubung> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              SetText.nama,
+              'Nama',
               style: newStyle,
             ),
             Text(
-              SetText.email,
+              'Email',
               style: newStyle,
             ),
             Text(
-              SetText.status,
+              'Status',
               style: newStyle,
             ),
             Text(
-              SetText.action,
+              'Action',
               style: newStyle,
             ),
           ],

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/tab_berbagi_link.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/tab_dashboard.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
-import 'package:manfaa_apps/contants/text.dart';
 
 class BerbagiLink extends StatefulWidget {
   IconData? icon;
@@ -62,11 +61,8 @@ class _BerbagiLinkState extends State<BerbagiLink>
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
-                  SetText.berbagilink,
+                  'Berbagi.link',
                   style: appbarStyle,
                 ),
               ],
@@ -115,7 +111,7 @@ class _BerbagiLinkState extends State<BerbagiLink>
                               width: size.width * 0.020,
                             ),
                             Text(
-                              SetText.pelajari,
+                              'Pelajari bagaimana Berbagi.link bekerja',
                               style: pelajariStyle,
                             ),
                           ],
@@ -147,7 +143,7 @@ class _BerbagiLinkState extends State<BerbagiLink>
                   Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      SetText.linkpunyamu,
+                      'Link punyamu',
                       style: linkpunyamuStyle,
                     ),
                   ),
@@ -168,7 +164,7 @@ class _BerbagiLinkState extends State<BerbagiLink>
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          SetText.linkberbagi,
+                          'berbagi.link/yoga',
                           style: berbagiStyle,
                         ),
                         Row(
@@ -222,11 +218,10 @@ class _BerbagiLinkState extends State<BerbagiLink>
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    // color: Color.fromARGB(255, 173, 169, 169),
                     borderRadius: BorderRadius.circular(64),
                     border: Border.all(
-                      color: grey1Color, //color of border
-                      width: 1, //width of border
+                      color: grey1Color,
+                      width: 1,
                     ),
                   ),
                   child: TabBar(
@@ -244,7 +239,7 @@ class _BerbagiLinkState extends State<BerbagiLink>
                         text: 'Dashboard',
                       ),
                       Tab(
-                        text: SetText.menuberbagilink,
+                        text: 'Menu Berbagi.link',
                       ),
                     ],
                   ),

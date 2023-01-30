@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/profile/afiliasi/afiliasi.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
 import '../../../../../widgets/table_daftar_downline.dart';
+import '../../profile.dart';
 
 class DaftarDownline extends StatefulWidget {
   const DaftarDownline({Key? key}) : super(key: key);
@@ -36,16 +37,9 @@ class _DaftarDownlineState extends State<DaftarDownline> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
                   'Daftar Downline',
-                  style: TextStyle(
-                    color: black1Color,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: appbarStyle,
                 ),
               ],
             ),
@@ -54,7 +48,12 @@ class _DaftarDownlineState extends State<DaftarDownline> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(
@@ -100,14 +99,11 @@ class _DaftarDownlineState extends State<DaftarDownline> {
                   SizedBox(
                     height: size.height * 00.03,
                   ),
-                  const Align(
+                  Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
                       'Jumlah Afiliasi : 3',
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w700,
-                      ),
+                      style: appbarStyle,
                     ),
                   ),
                   SizedBox(
@@ -138,20 +134,13 @@ class _DaftarDownlineState extends State<DaftarDownline> {
                             ),
                             Text(
                               'Facebook',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                                color: biruColor,
-                              ),
+                              style: default2tyle,
                             ),
                           ],
                         ),
                         Text(
                           '0',
-                          style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700,
-                              color: biruColor),
+                          style: angkastyle,
                         ),
                       ],
                     ),
@@ -184,20 +173,13 @@ class _DaftarDownlineState extends State<DaftarDownline> {
                             ),
                             Text(
                               'Google+',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                                color: biruColor,
-                              ),
+                              style: default2tyle,
                             ),
                           ],
                         ),
                         Text(
                           '1',
-                          style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700,
-                              color: biruColor),
+                          style: angkastyle,
                         ),
                       ],
                     ),
@@ -230,20 +212,13 @@ class _DaftarDownlineState extends State<DaftarDownline> {
                             ),
                             Text(
                               'Whatsapp',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                                color: biruColor,
-                              ),
+                              style: default2tyle,
                             ),
                           ],
                         ),
                         Text(
                           '2',
-                          style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700,
-                              color: biruColor),
+                          style: angkastyle,
                         ),
                       ],
                     ),

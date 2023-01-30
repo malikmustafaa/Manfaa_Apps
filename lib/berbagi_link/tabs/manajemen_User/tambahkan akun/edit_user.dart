@@ -1,17 +1,14 @@
-// ignore_for_file: non_constant_identifier_names, unnecessary_null_comparison, unused_local_variable
+// ignore_for_file: deprecated_member_use
 
 import 'dart:io';
-
 import 'package:flutter/material.dart';
-// ignore: unused_import
 import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/tambahkan%20akun/tambahkan_akun.dart';
-// import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/tambahkan%20akun/tambahkan_akun1.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:manfaa_apps/contants/text.dart';
-
-import '../../../../widgets/custom_list_form_input/apptextfield.dart';
+import 'package:manfaa_apps/widgets/custom_list_form_input/listdaerah_widget.dart';
 import '../../../../widgets/custom_list_form_input/dropdown.dart';
+import '../../profile/profile.dart';
 
 class EditUser extends StatefulWidget {
   const EditUser({Key? key}) : super(key: key);
@@ -68,11 +65,8 @@ class _EditUserState extends State<EditUser> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
-                  SetText.edit_user,
+                  'Edit User',
                   style: appbarStyle,
                 ),
               ],
@@ -82,7 +76,12 @@ class _EditUserState extends State<EditUser> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(
@@ -106,7 +105,7 @@ class _EditUserState extends State<EditUser> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        SetText.tambahkan_akun,
+                        'Tambahkan Akun',
                         style: header1Style,
                       ),
                       SizedBox(
@@ -120,7 +119,7 @@ class _EditUserState extends State<EditUser> {
                         width: size.width * 0.010,
                       ),
                       Text(
-                        SetText.edit_user,
+                        'Edit User',
                         style: header2Style,
                       ),
                     ],
@@ -148,16 +147,16 @@ class _EditUserState extends State<EditUser> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                SetText.ubah_foto_profil,
+                                'Ubah Foto Profil',
                                 style: pelajariStyle,
                               ),
                               Text(
-                                SetText.unggah_gmbr,
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w500,
-                                  color: grey1Color,
-                                ),
+                                'Unggah gambar berukuran resolusi 1 : 1',
+                                style: unggStyle,
+                              ),
+                              Text(
+                                '(Maksimum ukuran gambar 1 MB)',
+                                style: unggStyle,
                               ),
                             ],
                           ),
@@ -172,29 +171,18 @@ class _EditUserState extends State<EditUser> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.nama,
+                      'Nama',
                       style: defaultStyle,
                     ),
                   ),
-
                   SizedBox(
                     height: size.height * 00.02,
                   ),
                   SizedBox(
                     child: TextField(
                       keyboardType: TextInputType.text,
-                      // obscureText: _obsecure,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                      ),
                       decoration: InputDecoration(
-                        hintStyle: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                          fontSize: 16,
-                          color: black1Color,
-                        ),
+                        hintStyle: header1Style,
                         hintText: "Ahmad",
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -208,35 +196,25 @@ class _EditUserState extends State<EditUser> {
                       ),
                     ),
                   ),
-
                   SizedBox(
                     height: size.height * 00.02,
                   ),
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.nomor_telepon,
+                      'Nomor Telepon',
                       style: defaultStyle,
                     ),
                   ),
-
                   SizedBox(
                     height: size.height * 00.02,
                   ),
                   TextField(
                     keyboardType: TextInputType.text,
                     // obscureText: _obsecure,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
+
                     decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 16,
-                        color: greyColor,
-                      ),
+                      hintStyle: textfieldStyle,
                       hintText: "contoh : 0857XXXXXXXX",
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -249,14 +227,13 @@ class _EditUserState extends State<EditUser> {
                       ),
                     ),
                   ),
-
                   SizedBox(
                     height: size.height * 00.02,
                   ),
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.email,
+                      'Email',
                       style: defaultStyle,
                     ),
                   ),
@@ -277,7 +254,7 @@ class _EditUserState extends State<EditUser> {
                     child: Row(
                       children: [
                         Text(
-                          SetText.email2,
+                          'ahmadxxxxxx@gmail.com',
                           style: constStyle,
                         ),
                       ],
@@ -293,11 +270,10 @@ class _EditUserState extends State<EditUser> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.alamat,
+                      'Alamat',
                       style: defaultStyle,
                     ),
                   ),
-
                   SizedBox(
                     height: size.height * 00.02,
                   ),
@@ -305,18 +281,8 @@ class _EditUserState extends State<EditUser> {
                     child: TextField(
                       keyboardType: TextInputType.text,
                       maxLines: 4,
-                      // obscureText: _obsecure,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                      ),
                       decoration: InputDecoration(
-                        hintStyle: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                          fontSize: 16,
-                          color: greyColor,
-                        ),
+                        hintStyle: textfieldStyle,
                         hintText: "Masukkan Alamat",
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -336,28 +302,17 @@ class _EditUserState extends State<EditUser> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.nomor_ktp,
+                      'Nomor KTP',
                       style: defaultStyle,
                     ),
                   ),
-
                   SizedBox(
                     height: size.height * 00.02,
                   ),
-
                   TextField(
                     keyboardType: TextInputType.text,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
                     decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 16,
-                        color: greyColor,
-                      ),
+                      hintStyle: textfieldStyle,
                       hintText: "contoh : 33XXXXXXXXXXXXXX",
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -373,7 +328,6 @@ class _EditUserState extends State<EditUser> {
                   SizedBox(
                     height: size.height * 00.02,
                   ),
-
                   Column(
                     children: [
                       image != null
@@ -405,7 +359,7 @@ class _EditUserState extends State<EditUser> {
                                       size: 30,
                                     ),
                                     Text(
-                                      SetText.upload_foto_ktp,
+                                      'Upload Foto Ktp',
                                       style: defaultStyle,
                                     ),
                                   ],
@@ -420,28 +374,17 @@ class _EditUserState extends State<EditUser> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.nomor_paspor,
+                      'Nomor Paspor',
                       style: defaultStyle,
                     ),
                   ),
-
                   SizedBox(
                     height: size.height * 00.02,
                   ),
-
                   TextField(
                     keyboardType: TextInputType.text,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
                     decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 16,
-                        color: greyColor,
-                      ),
+                      hintStyle: textfieldStyle,
                       hintText: "contoh : 1A23XXXXXXXXXXXX",
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -457,8 +400,6 @@ class _EditUserState extends State<EditUser> {
                   SizedBox(
                     height: size.height * 00.02,
                   ),
-
-                  //
                   Column(
                     children: [
                       image1 != null
@@ -490,7 +431,7 @@ class _EditUserState extends State<EditUser> {
                                       size: 30,
                                     ),
                                     Text(
-                                      SetText.upload_foto_paspor,
+                                      'Upload Foto Paspor',
                                       style: defaultStyle,
                                     ),
                                   ],
@@ -515,18 +456,14 @@ class _EditUserState extends State<EditUser> {
                             ),
                             height: size.height * 00.068,
                             width: size.width * 0.45,
-                            child: ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                    20,
-                                  ),
-                                ),
+                            child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
                               ),
+                              onPressed: () {},
+                              color: whiteColor,
                               child: Text(
-                                SetText.batal,
+                                'Batal',
                                 style: batalStyle,
                                 textAlign: TextAlign.center,
                               ),
@@ -590,13 +527,13 @@ class _EditUserState extends State<EditUser> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        AppTextField(
+        Administrator(
           textEditingController: _peranController,
           title: 'Peran',
           hint: ' Administrator',
           isFieldSelected: true,
           provinsi: _listProvinsi,
-        ),
+        )
       ],
     );
   }

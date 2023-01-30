@@ -37,16 +37,9 @@ class _StatusState extends State<Status> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
                   'Status',
-                  style: TextStyle(
-                    color: black1Color,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: appbarStyle,
                 ),
               ],
             ),
@@ -55,7 +48,12 @@ class _StatusState extends State<Status> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(
@@ -123,11 +121,11 @@ class _StatusState extends State<Status> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  SetText.status_langganan,
+                  'Status Langganan',
                   style: secondaryStyle,
                 ),
                 Text(
-                  SetText.business,
+                  'BUSINESS',
                   style: bnykStyle,
                 ),
               ],
@@ -139,11 +137,11 @@ class _StatusState extends State<Status> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  SetText.expired_data,
+                  'Expired Date',
                   style: secondaryStyle,
                 ),
                 Text(
-                  SetText.tanggal_pukul,
+                  '07 Nov 2022, 08:16 WIB',
                   style: bnykStyle,
                 ),
               ],
@@ -155,11 +153,11 @@ class _StatusState extends State<Status> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  SetText.harga,
+                  'Harga',
                   style: secondaryStyle,
                 ),
                 Text(
-                  SetText.rp_150,
+                  'Rp150.000',
                   style: bnykStyle,
                 ),
               ],
@@ -189,7 +187,7 @@ class _StatusState extends State<Status> {
             ),
           ),
           child: Text(
-            SetText.simpan,
+            'Simpan',
             style: simpanStyle,
             textAlign: TextAlign.center,
           ),

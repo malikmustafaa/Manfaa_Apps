@@ -66,11 +66,15 @@ class MITMenuContainer extends StatelessWidget {
                     width: image.width ?? 50,
                     color: color,
                   ),
+                  SizedBox(
+                    height: size.height * 0.01,
+                  ),
                   Text(
                     text,
                     style: TextStyle(
-                        fontFamily: 'Rubik',
+                        fontFamily: 'Ubuntu',
                         color: color ?? Colors.black,
+                        fontWeight: FontWeight.w400,
                         fontSize:
                             Theme.of(context).textTheme.caption!.fontSize),
                     textAlign: TextAlign.center,

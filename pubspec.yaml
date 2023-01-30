@@ -61,27 +61,27 @@ flutter:
     - assets/images/
   #   - images/a_dot_ham.jpeg
 
-  # fonts:
-  #   - family: Ubuntu
-  #     fonts:
-  #       - asset: packages/ubuntu_font_flutter/Ubuntu-R.ttf
-  #       - asset: packages/ubuntu_font_flutter/Ubuntu-RI.ttf
-  #         style: italic
-  #       - asset: packages/ubuntu_font_flutter/Ubuntu-B.ttf
-  #         weight: 700
-  #       - asset: packages/ubuntu_font_flutter/Ubuntu-BI.ttf
-  #         weight: 700
-  #         style: italic
-  #       - asset: packages/ubuntu_font_flutter/Ubuntu-L.ttf
-  #         weight: 300
-  #       - asset: packages/ubuntu_font_flutter/Ubuntu-LI.ttf
-  #         weight: 300
-  #         style: italic
-  #       - asset: packages/ubuntu_font_flutter/Ubuntu-M.ttf
-  #         weight: 500
-  #       - asset: packages/ubuntu_font_flutter/Ubuntu-MI.ttf
-  #         weight: 500
-  #         style: italic
+  fonts:
+    - family: Ubuntu
+      fonts:
+        - asset: assets/Ubuntu/Ubuntu-Bold.ttf
+        - asset: assets/Ubuntu/Ubuntu-BoldItalic.ttf
+          style: italic
+        - asset: assets/Ubuntu/Ubuntu-Italic.ttf
+          weight: 700
+        - asset: assets/Ubuntu/Ubuntu-Light.ttf
+          weight: 700
+          style: italic
+        - asset: assets/Ubuntu/Ubuntu-LightItalic.ttf
+          weight: 300
+        - asset: assets/Ubuntu/Ubuntu-Medium.ttf
+          weight: 300
+          style: italic
+        - asset: assets/Ubuntu/Ubuntu-MediumItalic.ttf
+          weight: 500
+        - asset: assets/Ubuntu/Ubuntu-Regular.ttf
+          weight: 500
+          style: italic
 
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic

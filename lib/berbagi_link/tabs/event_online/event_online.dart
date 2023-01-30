@@ -8,6 +8,8 @@ import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:manfaa_apps/contants/text.dart';
 
+import '../profile/profile.dart';
+
 class EventOnline extends StatefulWidget {
   const EventOnline({Key? key}) : super(key: key);
 
@@ -54,11 +56,8 @@ class _EventOnlineState extends State<EventOnline> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
-                  SetText.event_online,
+                  'Event Online',
                   style: appbarStyle,
                 ),
               ],
@@ -68,7 +67,12 @@ class _EventOnlineState extends State<EventOnline> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(
@@ -91,7 +95,7 @@ class _EventOnlineState extends State<EventOnline> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.link_event,
+                      'Link Event Anda',
                       style: simpanStyle,
                     ),
                   ),
@@ -101,7 +105,7 @@ class _EventOnlineState extends State<EventOnline> {
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(24),
-                      color: const Color(0xFFE3F2FD),
+                      color: biruBgColor,
                     ),
                     child: Container(
                       padding: const EdgeInsets.symmetric(
@@ -111,7 +115,7 @@ class _EventOnlineState extends State<EventOnline> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            SetText.linkberbagi2,
+                            'berbagi.link/yoga/event',
                             style: berbagiStyle,
                           ),
                           Row(
@@ -144,7 +148,7 @@ class _EventOnlineState extends State<EventOnline> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.edit_pengaturan_event,
+                      'Edit Pengaturan Event',
                       style: simpanStyle,
                     ),
                   ),
@@ -156,7 +160,7 @@ class _EventOnlineState extends State<EventOnline> {
                         const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: const Color(0xFFE3F2FD),
+                      color: biruBgColor,
                     ),
                     child: Column(
                       children: [
@@ -168,19 +172,11 @@ class _EventOnlineState extends State<EventOnline> {
                               children: [
                                 Text(
                                   'Status Halaman Event',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: black1Color,
-                                    fontWeight: FontWeight.w700,
-                                  ),
+                                  style: listcontainerStyle,
                                 ),
                                 Text(
                                   'Aktifkan & matikan Halaman Event dengan sekali klik',
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                    color: black1Color,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                                  style: listaktifStyle,
                                 ),
                               ],
                             ),
@@ -204,7 +200,7 @@ class _EventOnlineState extends State<EventOnline> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.nama_organisasi,
+                      'Nama Organisasi/Penyelenggara',
                       style: defaultStyle,
                     ),
                   ),
@@ -214,16 +210,8 @@ class _EventOnlineState extends State<EventOnline> {
                   TextField(
                     autocorrect: false,
                     keyboardType: TextInputType.text,
-                    style: const TextStyle(
-                      fontSize: 20,
-                    ),
                     decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 14,
-                        color: greyColor,
-                      ),
+                      hintStyle: textfieldStyle,
                       hintText: "Masukkan nama organisasi",
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -253,16 +241,8 @@ class _EventOnlineState extends State<EventOnline> {
                     autocorrect: false,
                     keyboardType: TextInputType.text,
                     maxLines: 3,
-                    style: const TextStyle(
-                      fontSize: 20,
-                    ),
                     decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 14,
-                        color: greyColor,
-                      ),
+                      hintStyle: textfieldStyle,
                       hintText: "Masukkan deskripsi atau bio",
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -278,14 +258,11 @@ class _EventOnlineState extends State<EventOnline> {
                   SizedBox(
                     height: size.height * 00.02,
                   ),
-                  const Align(
+                  Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
                       SetText.logo_organisasi,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 14,
-                      ),
+                      style: defaultStyle,
                     ),
                   ),
                   SizedBox(
@@ -323,7 +300,11 @@ class _EventOnlineState extends State<EventOnline> {
                                       size: 40,
                                     ),
                                     Text(
-                                      SetText.klik_upload_logo,
+                                      'Klik untuk',
+                                      style: klikStyle,
+                                    ),
+                                    Text(
+                                      'Upload Logo',
                                       style: klikStyle,
                                     ),
                                   ],
@@ -335,7 +316,7 @@ class _EventOnlineState extends State<EventOnline> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            SetText.unggah_gmbr1,
+                            'Unggah gambar berukuran',
                             style: unggahgmbr1Style,
                           ),
                           SizedBox(
@@ -357,7 +338,7 @@ class _EventOnlineState extends State<EventOnline> {
                               );
                             },
                             child: Text(
-                              SetText.hapus_logo,
+                              'Hapus logo',
                               style: hapusStyle,
                             ),
                           ),
@@ -371,7 +352,7 @@ class _EventOnlineState extends State<EventOnline> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.alamat,
+                      'Alamat',
                       style: defaultStyle,
                     ),
                   ),
@@ -382,17 +363,8 @@ class _EventOnlineState extends State<EventOnline> {
                     autocorrect: false,
                     keyboardType: TextInputType.text,
                     maxLines: 3,
-                    // obscureText: _obsecure,
-                    style: const TextStyle(
-                      fontSize: 20,
-                    ),
                     decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 14,
-                        color: greyColor,
-                      ),
+                      hintStyle: textfieldStyle,
                       hintText: "Masukkan deskripsi atau bio",
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -411,7 +383,7 @@ class _EventOnlineState extends State<EventOnline> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.nomor_wa_bio,
+                      'Nomor WhatsApp',
                       style: defaultStyle,
                     ),
                   ),
@@ -421,17 +393,8 @@ class _EventOnlineState extends State<EventOnline> {
                   TextField(
                     autocorrect: false,
                     keyboardType: TextInputType.text,
-                    // obscureText: _obsecure,
-                    style: const TextStyle(
-                      fontSize: 20,
-                    ),
                     decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 16,
-                        color: greyColor,
-                      ),
+                      hintStyle: textfieldStyle,
                       hintText: "contoh : 0815xxxxxx",
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -450,7 +413,7 @@ class _EventOnlineState extends State<EventOnline> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.isi_chat_otomatis,
+                      'Isi Chat Otomatis Whatsapp oleh Pelanggan',
                       style: defaultStyle,
                     ),
                   ),
@@ -461,16 +424,8 @@ class _EventOnlineState extends State<EventOnline> {
                     autocorrect: false,
                     keyboardType: TextInputType.text,
                     maxLines: 3,
-                    style: const TextStyle(
-                      fontSize: 20,
-                    ),
                     decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 16,
-                        color: greyColor,
-                      ),
+                      hintStyle: textfieldStyle,
                       hintText:
                           "contoh : Halo, kak. Saya mau daftar\neventkamu, nih. Gimana caranya, ya?",
                       enabledBorder: OutlineInputBorder(
@@ -487,14 +442,11 @@ class _EventOnlineState extends State<EventOnline> {
                   SizedBox(
                     height: size.height * 00.02,
                   ),
-                  const Align(
+                  Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.link_fb,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 14,
-                      ),
+                      'Link Facebook',
+                      style: defaultStyle,
                     ),
                   ),
                   SizedBox(
@@ -503,16 +455,8 @@ class _EventOnlineState extends State<EventOnline> {
                   TextField(
                     autocorrect: false,
                     keyboardType: TextInputType.text,
-                    style: const TextStyle(
-                      fontSize: 20,
-                    ),
                     decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 16,
-                        color: greyColor,
-                      ),
+                      hintStyle: textfieldStyle,
                       hintText: "contoh : facebook.com/eventkamu",
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -531,7 +475,7 @@ class _EventOnlineState extends State<EventOnline> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.link_ig,
+                      'Link Instagram',
                       style: defaultStyle,
                     ),
                   ),
@@ -541,16 +485,8 @@ class _EventOnlineState extends State<EventOnline> {
                   TextField(
                     autocorrect: false,
                     keyboardType: TextInputType.text,
-                    style: const TextStyle(
-                      fontSize: 20,
-                    ),
                     decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 16,
-                        color: greyColor,
-                      ),
+                      hintStyle: textfieldStyle,
                       hintText: "contoh : instagram.com/eventkamu",
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -569,7 +505,6 @@ class _EventOnlineState extends State<EventOnline> {
                   Container(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 10,
-                      // vertical: 10,
                     ),
                     height: size.height * 00.1,
                     decoration: BoxDecoration(

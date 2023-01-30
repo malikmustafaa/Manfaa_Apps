@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:manfaa_apps/widgets/table_daftar_akun.dart';
@@ -7,6 +9,7 @@ import 'package:manfaa_apps/contants/text.dart';
 
 import '../../../../widgets/custom_list_form_input/apptextfield.dart';
 import '../../../../widgets/custom_list_form_input/dropdown.dart';
+import '../../profile/profile.dart';
 
 class TambahkanAkun extends StatefulWidget {
   const TambahkanAkun({Key? key}) : super(key: key);
@@ -193,11 +196,8 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
-                  SetText.tambahkan_akun,
+                  'Tambahkan Akun',
                   style: appbarStyle,
                 ),
               ],
@@ -207,7 +207,12 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(
@@ -229,7 +234,7 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        SetText.manajemen_user,
+                        'Manajemen User',
                         style: header1Style,
                       ),
                       SizedBox(
@@ -243,7 +248,7 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
                         width: size.width * 0.010,
                       ),
                       Text(
-                        SetText.tambahkan_akun,
+                        'Tambahkan Akun',
                         style: header2Style,
                       ),
                     ],
@@ -298,7 +303,7 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
                 Padding(
                   padding: const EdgeInsets.only(left: 10.0),
                   child: Text(
-                    SetText.tambahkan_akun,
+                    'Tambahkan Akun',
                     style: biru2Style,
                   ),
                 ),
@@ -315,7 +320,7 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
                 ),
               ),
               child: Text(
-                SetText.neww,
+                'NEW',
                 style: newStyle,
               ),
             ),
@@ -323,9 +328,9 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
         ),
         children: <Widget>[
           Container(
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              border: Border(
+            decoration: BoxDecoration(
+              color: whiteColor,
+              border: const Border(
                 left: BorderSide(
                   color: Colors.black,
                   width: 1,
@@ -379,7 +384,7 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
           Align(
             alignment: Alignment.bottomLeft,
             child: Text(
-              SetText.nama,
+              'Nama',
               style: defaultStyle,
             ),
           ),
@@ -402,13 +407,8 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
               fontSize: 20,
             ),
             decoration: InputDecoration(
-              hintStyle: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontStyle: FontStyle.normal,
-                fontSize: 14,
-                color: greyColor,
-              ),
-              hintText: SetText.nama,
+              hintStyle: textfieldStyle,
+              hintText: 'Masukkan Nama Akun',
               errorText:
                   _namaError ? SetText.nama + ' ' + _textNamaError : null,
               enabledBorder: OutlineInputBorder(
@@ -428,7 +428,7 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
           Align(
             alignment: Alignment.bottomLeft,
             child: Text(
-              SetText.email,
+              'Email',
               style: defaultStyle,
             ),
           ),
@@ -443,17 +443,10 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
             autocorrect: false,
             keyboardType: TextInputType.text,
             // obscureText: _obsecure,
-            style: const TextStyle(
-              fontSize: 20,
-            ),
+
             decoration: InputDecoration(
-              hintStyle: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontStyle: FontStyle.normal,
-                fontSize: 14,
-                color: greyColor,
-              ),
-              hintText: SetText.email,
+              hintStyle: textfieldStyle,
+              hintText: 'Masukkan Email',
               errorText:
                   _emailError ? SetText.email + ' ' + _textEmailError : null,
               enabledBorder: OutlineInputBorder(
@@ -472,41 +465,18 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
           ),
           AppTextField(
             textEditingController: _peranController,
-            title: 'Peran',
+            title: 'Peran Akun',
             hint: 'Pilih Peran Akun',
             isFieldSelected: true,
             provinsi: _listProvinsi,
           ),
-          // AppTextField(
-          //   textEditingController: _peranController,
-          //   title: 'Provinsi',
-          //   hint: 'Pilih Provinsi',
-          //   isFieldSelected: true,
-          //   provinsi: _listProvinsi,
-          // ),
-          // AppTextField(
-          //   textEditingController: _peranController,
-          //   title: "Peran",
-          //   hint: "Pilih Peran",
-          //   isFieldSelected: true,
-          //   provinsi: _listProvinsi,
-          // ),
-          // AppTextField(
-          //   textEditingController: _peranController,
-          //   title: 'Peran',
-          //   hint: 'Pilih Peran',
-          //   isFieldSelected: true,
-          //   provinsi: _listProvinsi,
-
-          // ),
-
           SizedBox(
             height: size.height * 00.02,
           ),
           Align(
             alignment: Alignment.bottomLeft,
             child: Text(
-              SetText.password,
+              'Password',
               style: defaultStyle,
             ),
           ),
@@ -521,11 +491,6 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
             autocorrect: false,
             obscureText: isHidden,
             keyboardType: TextInputType.text,
-            // obscureText: _obsecure,
-            style: const TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-            ),
             decoration: InputDecoration(
               suffixIcon: IconButton(
                   icon: (Icon(
@@ -540,12 +505,7 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
                     }
                     setState(() {});
                   }),
-              hintStyle: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontStyle: FontStyle.normal,
-                fontSize: 14,
-                color: greyColor,
-              ),
+              hintStyle: textfieldStyle,
               hintText: "Masukkan Password",
               errorText:
                   _passError ? SetText.password + ' ' + _textPassError : null,
@@ -566,7 +526,7 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
           Align(
             alignment: Alignment.bottomLeft,
             child: Text(
-              SetText.konfirmasiPassword,
+              'Konfirmasi Password',
               style: defaultStyle,
             ),
           ),
@@ -581,10 +541,7 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
             autocorrect: false,
             obscureText: isHidden,
             keyboardType: TextInputType.text,
-            style: const TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-            ),
+            style: textfieldStyle,
             decoration: InputDecoration(
               suffixIcon: IconButton(
                   icon: (Icon(
@@ -599,12 +556,7 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
                     }
                     setState(() {});
                   }),
-              hintStyle: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontStyle: FontStyle.normal,
-                fontSize: 14,
-                color: greyColor,
-              ),
+              hintStyle: textfieldStyle,
               hintText: "Ulangi Pssword",
               errorText: _passKonfirmError
                   ? SetText.konfirmasiPassword + ' ' + _textPassKonfirmError
@@ -638,18 +590,14 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
                 ),
                 height: size.height * 00.068,
                 width: size.width * 0.38,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(
-                        20,
-                      ),
-                    ),
+                child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
                   ),
+                  onPressed: () {},
+                  color: whiteColor,
                   child: Text(
-                    SetText.batal,
+                    'Batal',
                     style: batalStyle,
                     textAlign: TextAlign.center,
                   ),
@@ -669,7 +617,7 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
                     ),
                   ),
                   child: Text(
-                    SetText.simpan,
+                    'Simpan',
                     style: simpanStyle,
                     textAlign: TextAlign.center,
                   ),

@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names, unnecessary_null_comparison, unused_local_variable
+// ignore_for_file: non_constant_identifier_names, unnecessary_null_comparison, unused_local_variable, deprecated_member_use
 
 import 'dart:io';
 
@@ -66,16 +66,9 @@ class _EditUserState extends State<InformasiPribadi> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
                   'Informasi Pribadi',
-                  style: TextStyle(
-                    color: black1Color,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: appbarStyle,
                 ),
               ],
             ),
@@ -84,7 +77,12 @@ class _EditUserState extends State<InformasiPribadi> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(
@@ -108,7 +106,7 @@ class _EditUserState extends State<InformasiPribadi> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        SetText.profil,
+                        'Profil',
                         style: header1Style,
                       ),
                       SizedBox(
@@ -150,16 +148,16 @@ class _EditUserState extends State<InformasiPribadi> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                SetText.ubah_foto_profil,
+                                'Ubah Foto Profil',
                                 style: pelajariStyle,
                               ),
                               Text(
-                                SetText.unggah_gmbr,
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w500,
-                                  color: greyColor,
-                                ),
+                                'Unggah gambar berukuran resolusi 1 : 1',
+                                style: unggStyle,
+                              ),
+                              Text(
+                                '(Maksimum ukuran gambar 1 MB)',
+                                style: unggStyle,
                               ),
                             ],
                           ),
@@ -173,7 +171,7 @@ class _EditUserState extends State<InformasiPribadi> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.nama,
+                      'Nama',
                       style: defaultStyle,
                     ),
                   ),
@@ -183,18 +181,8 @@ class _EditUserState extends State<InformasiPribadi> {
                   SizedBox(
                     child: TextField(
                       keyboardType: TextInputType.text,
-                      // obscureText: _obsecure,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                      ),
                       decoration: InputDecoration(
-                        hintStyle: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                          fontSize: 16,
-                          color: black1Color,
-                        ),
+                        hintStyle: defaultStyle,
                         hintText: "Mirza Yoga Pramoda",
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -214,7 +202,7 @@ class _EditUserState extends State<InformasiPribadi> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.nomor_telepon,
+                      'Nomor Telepon',
                       style: defaultStyle,
                     ),
                   ),
@@ -224,17 +212,8 @@ class _EditUserState extends State<InformasiPribadi> {
                   SizedBox(
                     child: TextField(
                       keyboardType: TextInputType.text,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                      ),
                       decoration: InputDecoration(
-                        hintStyle: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                          fontSize: 16,
-                          color: black1Color,
-                        ),
+                        hintStyle: defaultStyle,
                         hintText: "0857XXXXXXXX",
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -254,7 +233,7 @@ class _EditUserState extends State<InformasiPribadi> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.username,
+                      'Username',
                       style: defaultStyle,
                     ),
                   ),
@@ -264,17 +243,8 @@ class _EditUserState extends State<InformasiPribadi> {
                   SizedBox(
                     child: TextField(
                       keyboardType: TextInputType.text,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                      ),
                       decoration: InputDecoration(
-                        hintStyle: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                          fontSize: 16,
-                          color: black1Color,
-                        ),
+                        hintStyle: defaultStyle,
                         hintText: "yoga",
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -294,7 +264,7 @@ class _EditUserState extends State<InformasiPribadi> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.email,
+                      'Email',
                       style: defaultStyle,
                     ),
                   ),
@@ -315,7 +285,7 @@ class _EditUserState extends State<InformasiPribadi> {
                     child: Row(
                       children: [
                         Text(
-                          SetText.email3,
+                          'mirzayogapramoda@gmail.com',
                           style: constStyle,
                         ),
                       ],
@@ -327,7 +297,7 @@ class _EditUserState extends State<InformasiPribadi> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.alamat,
+                      'Alamat',
                       style: defaultStyle,
                     ),
                   ),
@@ -337,18 +307,9 @@ class _EditUserState extends State<InformasiPribadi> {
                   SizedBox(
                     child: TextField(
                       keyboardType: TextInputType.text,
-                      maxLines: 4,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                      ),
+                      maxLines: 3,
                       decoration: InputDecoration(
-                        hintStyle: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                          fontSize: 16,
-                          color: greyColor,
-                        ),
+                        hintStyle: textfieldStyle,
                         hintText: "Masukkan Alamat",
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -368,7 +329,7 @@ class _EditUserState extends State<InformasiPribadi> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.nomor_ktp,
+                      'Nomor KTP',
                       style: defaultStyle,
                     ),
                   ),
@@ -377,17 +338,8 @@ class _EditUserState extends State<InformasiPribadi> {
                   ),
                   TextField(
                     keyboardType: TextInputType.text,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
                     decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 16,
-                        color: greyColor,
-                      ),
+                      hintStyle: textfieldStyle,
                       hintText: "contoh : 33XXXXXXXXXXXXXX",
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -434,7 +386,7 @@ class _EditUserState extends State<InformasiPribadi> {
                                       size: 30,
                                     ),
                                     Text(
-                                      SetText.upload_foto_ktp,
+                                      'Upload Foto Ktp',
                                       style: defaultStyle,
                                     ),
                                   ],
@@ -449,7 +401,7 @@ class _EditUserState extends State<InformasiPribadi> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      SetText.nomor_paspor,
+                      'Nomor Paspor',
                       style: defaultStyle,
                     ),
                   ),
@@ -458,17 +410,8 @@ class _EditUserState extends State<InformasiPribadi> {
                   ),
                   TextField(
                     keyboardType: TextInputType.text,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
                     decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 16,
-                        color: greyColor,
-                      ),
+                      hintStyle: textfieldStyle,
                       hintText: "contoh : 1A23XXXXXXXXXXXX",
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -515,7 +458,7 @@ class _EditUserState extends State<InformasiPribadi> {
                                       size: 30,
                                     ),
                                     Text(
-                                      SetText.upload_foto_paspor,
+                                      'Upload Foto Paspor',
                                       style: defaultStyle,
                                     ),
                                   ],
@@ -540,18 +483,14 @@ class _EditUserState extends State<InformasiPribadi> {
                             ),
                             height: size.height * 00.068,
                             width: size.width * 0.45,
-                            child: ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                    20,
-                                  ),
-                                ),
+                            child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
                               ),
+                              onPressed: () {},
+                              color: whiteColor,
                               child: Text(
-                                SetText.batal,
+                                'Batal',
                                 style: batalStyle,
                                 textAlign: TextAlign.center,
                               ),

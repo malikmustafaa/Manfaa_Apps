@@ -55,7 +55,7 @@ class _TableDaftarAkunState extends State<TableDaftarAkunTerhubung> {
                 width: size.width * 0.030,
               ),
               Text(
-                SetText.daftar_Akun_yang_terhubung,
+                'Daftar Akun yang Terhubung',
                 style: biru2Style,
               ),
             ],
@@ -107,11 +107,11 @@ class _TableDaftarAkunState extends State<TableDaftarAkunTerhubung> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  SetText.ahmad,
+                  'Ahmad',
                   style: anaklistStyle,
                 ),
                 Text(
-                  SetText.email1,
+                  'ahmadx@gm..',
                   style: anaklistStyle,
                 ),
                 Text(
@@ -182,19 +182,19 @@ class _TableDaftarAkunState extends State<TableDaftarAkunTerhubung> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              SetText.nama,
+              'Nama',
               style: newStyle,
             ),
             Text(
-              SetText.email,
+              'Email',
               style: newStyle,
             ),
             Text(
-              SetText.status,
+              'Status',
               style: newStyle,
             ),
             Text(
-              SetText.action,
+              'Action',
               style: newStyle,
             ),
           ],

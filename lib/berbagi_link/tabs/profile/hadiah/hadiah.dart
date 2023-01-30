@@ -26,27 +26,20 @@ class _HadiahState extends State<Hadiah> {
           children: [
             Row(
               children: [
-                GestureDetector(
-                  onTap: () {
+                IconButton(
+                  onPressed: () {
                     Navigator.of(context).pop(const Profile());
                   },
-                  child: Image(
+                  icon: Image(
                     image: const AssetImage(
                       'assets/images/iconback.png',
                     ),
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
                   'Hadiah',
-                  style: TextStyle(
-                    color: black1Color,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: appbarStyle,
                 ),
               ],
             ),
@@ -55,7 +48,12 @@ class _HadiahState extends State<Hadiah> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(
@@ -94,13 +92,7 @@ class _HadiahState extends State<Hadiah> {
         width: size.width * 0.48,
         padding: const EdgeInsets.only(bottom: 20),
         child: ElevatedButton(
-          onPressed: () {
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(
-            //       builder: (context) => const TambahkanAkun()),
-            // );
-          },
+          onPressed: () {},
           style: ElevatedButton.styleFrom(
             primary: black1Color,
             shape: RoundedRectangleBorder(
@@ -110,7 +102,7 @@ class _HadiahState extends State<Hadiah> {
             ),
           ),
           child: Text(
-            SetText.simpan,
+            'Simpan',
             style: simpanStyle,
             textAlign: TextAlign.center,
           ),
@@ -150,7 +142,7 @@ class _HadiahState extends State<Hadiah> {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
-          SetText.profil,
+          'Profil',
           style: header1Style,
         ),
         SizedBox(

@@ -4,10 +4,7 @@ class SetText {
 // static const String title = "Flutter Challenge (Malik)";
   static const String batal = "Batal";
   static const String simpan = "Simpan";
-  static String berbagilink = 'Berbagi.link';
-  static const String pelajari = "Pelajari bagaimana Berbagi.link bekerja";
-  static const String linkpunyamu = "Link punyamu";
-  static const String linkberbagi = "berbagi.link/yoga";
+
   static const String linkberbagi2 = "berbagi.link/yoga/event";
   static const String menuberbagilink = 'Menu Berbagi.link';
   static const String menudashboard = 'Dashboard';
@@ -25,10 +22,9 @@ class SetText {
   static const String erortext = 'Silahkan diisi';
   static const String berhasil = "BERHASIL!!!";
   static const String manajemen_user = "Manajemen User";
-  static const String tambahkan_akun = "Tambahkan Akun";
-  static const String hubungkan_akun = "Hubungkan Akun";
+
   static const String daftar_Akun_yang_terhubung = "Daftar Akun yang Terhubung";
-  static const String user_yang_terhubung = "User yang Terhubung";
+
   static const String user_akun_yang_mengaitkan = "User Mengaitkan Akun Anda";
   static const String edit_user = "Edit User";
   static const String event_online = "Event Online";
@@ -60,7 +56,7 @@ class SetText {
   static const String deskripsi = "Deskripsi/Bio";
   static const String nama_organisasi = "Nama Organisasi/Penyelenggara";
   static const String logo_organisasi = "Logo Organisasi/Penyelenggara";
-  static const String klik_upload_logo = '   Klik untuk\nUpload Logo';
+  static const String klik_upload_logo = 'Klik untuk\nUpload Logo';
   static const String unggah_gmbr1 = 'Unggah gambar berukuran';
   static const String hapus_logo = 'Hapus logo';
   static const String upload_foto_ktp = 'Upload Foto Ktp';

@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/profile/profile.dart';
@@ -126,16 +128,9 @@ class _UbahPasswordState extends State<UbahPassword> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
                   'Ubah Password',
-                  style: TextStyle(
-                    color: black1Color,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: appbarStyle,
                 ),
               ],
             ),
@@ -144,7 +139,12 @@ class _UbahPasswordState extends State<UbahPassword> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(
@@ -170,7 +170,7 @@ class _UbahPasswordState extends State<UbahPassword> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          SetText.profil,
+                          'Profil',
                           style: header1Style,
                         ),
                         SizedBox(
@@ -210,8 +210,6 @@ class _UbahPasswordState extends State<UbahPassword> {
                       autocorrect: false,
                       obscureText: isHidden,
                       keyboardType: TextInputType.text,
-                      style: const TextStyle(
-                          fontSize: 14, fontWeight: FontWeight.w400),
                       decoration: InputDecoration(
                         suffixIcon: IconButton(
                             icon: (Icon(
@@ -228,12 +226,7 @@ class _UbahPasswordState extends State<UbahPassword> {
                               }
                               setState(() {});
                             }),
-                        hintStyle: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                          fontSize: 14,
-                          color: greyColor,
-                        ),
+                        hintStyle: textfieldStyle,
                         hintText: "Masukkan password baru",
                         errorText: _passError
                             ? SetText.password + ' ' + _textPassError
@@ -270,8 +263,6 @@ class _UbahPasswordState extends State<UbahPassword> {
                       autocorrect: false,
                       obscureText: isHidden,
                       keyboardType: TextInputType.text,
-                      style: const TextStyle(
-                          fontSize: 14, fontWeight: FontWeight.w400),
                       decoration: InputDecoration(
                         suffixIcon: IconButton(
                             icon: (Icon(
@@ -288,12 +279,7 @@ class _UbahPasswordState extends State<UbahPassword> {
                               }
                               setState(() {});
                             }),
-                        hintStyle: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                          fontSize: 14,
-                          color: greyColor,
-                        ),
+                        hintStyle: textfieldStyle,
                         hintText: "Masukkan password baru",
                         errorText: _passKonfirmError
                             ? SetText.konfirmasiPassword +
@@ -329,18 +315,14 @@ class _UbahPasswordState extends State<UbahPassword> {
                           ),
                           height: size.height * 00.068,
                           width: size.width * 0.45,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(
-                                  20,
-                                ),
-                              ),
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
                             ),
+                            onPressed: () {},
+                            color: whiteColor,
                             child: Text(
-                              SetText.batal,
+                              'Batal',
                               style: batalStyle,
                               textAlign: TextAlign.center,
                             ),

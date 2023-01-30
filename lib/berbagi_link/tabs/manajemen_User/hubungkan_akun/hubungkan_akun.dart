@@ -1,9 +1,13 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/manajemen_User/manajemen_user.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
 import 'package:manfaa_apps/contants/text.dart';
 import 'package:manfaa_apps/widgets/table_daftar_akun_terhubung.dart';
+
+import '../../profile/profile.dart';
 
 class HubungkanAkun extends StatefulWidget {
   const HubungkanAkun({Key? key}) : super(key: key);
@@ -128,11 +132,8 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
-                  SetText.hubungkan_akun,
+                  'Hubungkan Akun',
                   style: appbarStyle,
                 ),
               ],
@@ -142,7 +143,12 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(
@@ -164,7 +170,7 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        SetText.manajemen_user,
+                        'Manajemen User',
                         style: header1Style,
                       ),
                       SizedBox(
@@ -178,7 +184,7 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                         width: size.width * 0.010,
                       ),
                       Text(
-                        SetText.hubungkan_akun,
+                        'Hubungkan Akun',
                         style: header2Style,
                       ),
                     ],
@@ -208,24 +214,20 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
   Widget _buildtambahAkunIconBack() {
     Size size = MediaQuery.of(context).size;
     return Container(
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.all(
           Radius.circular(
             10,
           ),
         ),
-        color: Color(
-          0xFFE3F2FD,
-        ),
+        color: biruBgColor,
       ),
       child: ExpansionTile(
         collapsedIconColor: Colors.blue,
         title: Container(
           transform: Matrix4.translationValues(8, 0, 10),
-          decoration: const BoxDecoration(
-            color: Color(
-              0xFFE3F2FD,
-            ),
+          decoration: BoxDecoration(
+            color: biruBgColor,
           ),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
@@ -239,7 +241,7 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                 Padding(
                   padding: const EdgeInsets.only(left: 10.0),
                   child: Text(
-                    SetText.hubungkan_akun,
+                    'Hubungkan Akun',
                     style: biru2Style,
                   ),
                 ),
@@ -256,7 +258,7 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                 ),
               ),
               child: Text(
-                SetText.neww,
+                'NEW',
                 style: newStyle,
               ),
             ),
@@ -264,9 +266,9 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
         ),
         children: <Widget>[
           Container(
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              border: Border(
+            decoration: BoxDecoration(
+              color: whiteColor,
+              border: const Border(
                 left: BorderSide(
                   color: Colors.black,
                   width: 1,
@@ -293,7 +295,7 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                     Align(
                       alignment: Alignment.bottomLeft,
                       child: Text(
-                        SetText.email,
+                        'Email',
                         style: defaultStyle,
                       ),
                     ),
@@ -307,16 +309,8 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                       controller: _emailController,
                       autocorrect: false,
                       keyboardType: TextInputType.text,
-                      style: const TextStyle(
-                        fontSize: 20,
-                      ),
                       decoration: InputDecoration(
-                        hintStyle: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                          fontSize: 14,
-                          color: greyColor,
-                        ),
+                        hintStyle: textfieldStyle,
                         hintText: "Masukkan Email",
                         errorText: _emailError
                             ? SetText.email + ' ' + _textEmailError
@@ -338,7 +332,7 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                     Align(
                       alignment: Alignment.bottomLeft,
                       child: Text(
-                        SetText.password,
+                        'Password',
                         style: defaultStyle,
                       ),
                     ),
@@ -353,8 +347,6 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                       autocorrect: false,
                       obscureText: isHidden,
                       keyboardType: TextInputType.text,
-                      style: const TextStyle(
-                          fontSize: 14, fontWeight: FontWeight.w400),
                       decoration: InputDecoration(
                         suffixIcon: IconButton(
                             icon: (Icon(
@@ -371,12 +363,7 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                               }
                               setState(() {});
                             }),
-                        hintStyle: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                          fontSize: 14,
-                          color: greyColor,
-                        ),
+                        hintStyle: textfieldStyle,
                         hintText: "Masukkan Password",
                         // labelText: "Your Password",
                         errorText: _passError
@@ -411,18 +398,14 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                           ),
                           height: size.height * 00.068,
                           width: size.width * 0.38,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(
-                                  20,
-                                ),
-                              ),
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
                             ),
+                            onPressed: () {},
+                            color: whiteColor,
                             child: Text(
-                              SetText.batal,
+                              'Batal',
                               style: batalStyle,
                               textAlign: TextAlign.center,
                             ),
@@ -431,7 +414,6 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                         SizedBox(
                           height: size.height * 00.068,
                           width: size.width * 0.38,
-                          // padding: const EdgeInsets.only(left: 10),
                           child: ElevatedButton(
                             onPressed: _hubungkan,
                             style: ElevatedButton.styleFrom(
@@ -443,7 +425,7 @@ class _HubungkanAkunState extends State<HubungkanAkun> {
                               ),
                             ),
                             child: Text(
-                              SetText.simpan,
+                              'Simpan',
                               style: simpanStyle,
                               textAlign: TextAlign.center,
                             ),

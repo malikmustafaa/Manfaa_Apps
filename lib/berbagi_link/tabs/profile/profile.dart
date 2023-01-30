@@ -45,11 +45,8 @@ class _ProfileState extends State<Profile> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
-                  SetText.profil,
+                  'Profile Berbagi.link',
                   style: appbarStyle,
                 ),
               ],
@@ -102,11 +99,7 @@ class _ProfileState extends State<Profile> {
                                 children: [
                                   Text(
                                     'yoga',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      color: orangeColor,
-                                    ),
+                                    style: orangeStyle,
                                   ),
                                   SizedBox(
                                     width: size.width * 00.03,
@@ -131,11 +124,7 @@ class _ProfileState extends State<Profile> {
                                         ),
                                         Text(
                                           'BUSINESS',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 12,
-                                            color: whiteColor,
-                                          ),
+                                          style: whiteStyle,
                                         ),
                                       ],
                                     ),
@@ -147,23 +136,14 @@ class _ProfileState extends State<Profile> {
                               ),
                               Text(
                                 ' Mirza Yoga Pramoda',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: black1Color,
-                                ),
+                                style: blackStyle,
                               ),
                               SizedBox(
                                 height: size.height * 00.01,
                               ),
                               Text(
                                 'smirzayogapramoda@gmail.com',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w400,
-                                  color: black1Color,
-                                  fontStyle: FontStyle.italic,
-                                ),
+                                style: emailStyle,
                               ),
                             ],
                           ),
@@ -189,12 +169,7 @@ class _ProfileState extends State<Profile> {
                       children: [
                         Text(
                           "berbagi.link/yoga",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                            fontStyle: FontStyle.normal,
-                            color: biruColor,
-                          ),
+                          style: berbagiStyle,
                         ),
                         Row(
                           children: [
@@ -263,11 +238,7 @@ class _ProfileState extends State<Profile> {
                                   ),
                                   Text(
                                     'Edit Informasi Pribadi',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: biruColor,
-                                    ),
+                                    style: default2tyle,
                                   ),
                                 ],
                               ),
@@ -322,11 +293,7 @@ class _ProfileState extends State<Profile> {
                                   ),
                                   Text(
                                     'Ubah Password',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: biruColor,
-                                    ),
+                                    style: default2tyle,
                                   ),
                                 ],
                               ),
@@ -381,11 +348,7 @@ class _ProfileState extends State<Profile> {
                                   ),
                                   Text(
                                     'Status',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: biruColor,
-                                    ),
+                                    style: default2tyle,
                                   ),
                                 ],
                               ),
@@ -439,11 +402,7 @@ class _ProfileState extends State<Profile> {
                                   ),
                                   Text(
                                     'Hadiah',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: biruColor,
-                                    ),
+                                    style: default2tyle,
                                   ),
                                 ],
                               ),
@@ -497,11 +456,7 @@ class _ProfileState extends State<Profile> {
                                   ),
                                   Text(
                                     'Voucher',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: biruColor,
-                                    ),
+                                    style: default2tyle,
                                   ),
                                 ],
                               ),
@@ -555,11 +510,7 @@ class _ProfileState extends State<Profile> {
                                   ),
                                   Text(
                                     'Afiliasi',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: biruColor,
-                                    ),
+                                    style: default2tyle,
                                   ),
                                 ],
                               ),
@@ -607,11 +558,7 @@ class _ProfileState extends State<Profile> {
                                   ),
                                   Text(
                                     'Mutasibank',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: biruColor,
-                                    ),
+                                    style: default2tyle,
                                   ),
                                 ],
                               ),
@@ -627,13 +574,9 @@ class _ProfileState extends State<Profile> {
                                         ),
                                       ),
                                     ),
-                                    child: const Text(
+                                    child: Text(
                                       "NEW",
-                                      style: TextStyle(
-                                        fontStyle: FontStyle.normal,
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 10,
-                                      ),
+                                      style: newStyle,
                                     ),
                                   ),
                                   IconButton(

@@ -29,8 +29,8 @@ class _TableDaftarAkunState extends State<TableDaftarAkun> {
     Size size = MediaQuery.of(context).size;
     return Container(
       height: size.height * 00.075,
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(
             30,
           ),
@@ -38,7 +38,7 @@ class _TableDaftarAkunState extends State<TableDaftarAkun> {
             30,
           ),
         ),
-        color: Color(0xFFE3F2FD),
+        color: biruBgColor,
       ),
       child: Container(
         padding: const EdgeInsets.symmetric(
@@ -57,7 +57,7 @@ class _TableDaftarAkunState extends State<TableDaftarAkun> {
                 width: size.width * 0.030,
               ),
               Text(
-                SetText.daftar_akun,
+                'Daftar Akun',
                 style: biru2Style,
               ),
             ],
@@ -108,15 +108,15 @@ class _TableDaftarAkunState extends State<TableDaftarAkun> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  SetText.ahmad,
+                  'Ahmad',
                   style: anaklistStyle,
                 ),
                 Text(
-                  SetText.email1,
+                  "ahmadx@gm..",
                   style: anaklistStyle,
                 ),
                 Text(
-                  SetText.admin,
+                  'Admin',
                   style: anaklistStyle,
                 ),
                 Row(
@@ -181,19 +181,19 @@ class _TableDaftarAkunState extends State<TableDaftarAkun> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              SetText.nama,
+              'Nama',
               style: newStyle,
             ),
             Text(
-              SetText.email,
+              'Email',
               style: newStyle,
             ),
             Text(
-              SetText.peran,
+              'Peran',
               style: newStyle,
             ),
             Text(
-              SetText.action,
+              'Action',
               style: newStyle,
             ),
           ],

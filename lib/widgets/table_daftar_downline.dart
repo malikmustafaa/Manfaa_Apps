@@ -29,8 +29,8 @@ class _TableDaftarDownlineState extends State<TableDaftarDownline> {
     Size size = MediaQuery.of(context).size;
     return Container(
       height: size.height * 00.075,
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(
             30,
           ),
@@ -38,7 +38,7 @@ class _TableDaftarDownlineState extends State<TableDaftarDownline> {
             30,
           ),
         ),
-        color: Color(0xFFE3F2FD),
+        color: biruBgColor,
       ),
 
       child: Container(
@@ -113,14 +113,14 @@ class _TableDaftarDownlineState extends State<TableDaftarDownline> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      SetText.ahmad,
+                      'Ahmad',
                       style: anaklistStyle,
                     ),
                     SizedBox(
                       width: size.width * 00.1,
                     ),
                     Text(
-                      SetText.email2,
+                      'ahmadxxxxxx@gmail.com',
                       style: anaklistStyle,
                     ),
                     SizedBox(
@@ -132,10 +132,11 @@ class _TableDaftarDownlineState extends State<TableDaftarDownline> {
                           GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (content) => const EditUser(),
-                                  ));
+                                context,
+                                MaterialPageRoute(
+                                  builder: (content) => const EditUser(),
+                                ),
+                              );
                             },
                             child: const Icon(
                               Icons.edit,
@@ -187,15 +188,15 @@ class _TableDaftarDownlineState extends State<TableDaftarDownline> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              SetText.nama,
+              'Nama',
               style: newStyle,
             ),
             Text(
-              SetText.email,
+              'Email',
               style: newStyle,
             ),
             Text(
-              SetText.action,
+              'Action',
               style: newStyle,
             ),
           ],

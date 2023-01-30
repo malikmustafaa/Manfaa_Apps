@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/profile/afiliasi/daftar_downline/daftar_downline.dart';
 import 'package:manfaa_apps/berbagi_link/tabs/profile/profile.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
-import 'package:manfaa_apps/contants/text.dart';
 
 class Afiliasi extends StatefulWidget {
   const Afiliasi({Key? key}) : super(key: key);
@@ -37,16 +36,9 @@ class _AfiliasiState extends State<Afiliasi> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
                   'Afiliasi',
-                  style: TextStyle(
-                    color: black1Color,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: appbarStyle,
                 ),
               ],
             ),
@@ -55,7 +47,12 @@ class _AfiliasiState extends State<Afiliasi> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(
@@ -79,7 +76,7 @@ class _AfiliasiState extends State<Afiliasi> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        SetText.profil,
+                        'Profil',
                         style: header1Style,
                       ),
                       SizedBox(
@@ -104,7 +101,7 @@ class _AfiliasiState extends State<Afiliasi> {
                   Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      SetText.kode_voucher_anda,
+                      'Kode Voucher Anda',
                       style: simpanStyle,
                     ),
                   ),
@@ -126,13 +123,13 @@ class _AfiliasiState extends State<Afiliasi> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          SetText.kode_voucher,
+                          'LDOMSXUR',
                           style: const2Style,
                         ),
                         IconButton(
                           onPressed: () {},
                           icon: Icon(
-                            Icons.circle,
+                            Icons.ads_click,
                             color: biruColor,
                           ),
                         ),
@@ -174,7 +171,7 @@ class _AfiliasiState extends State<Afiliasi> {
                                 ),
                               ),
                               Text(
-                                SetText.lihat_daftar_downline,
+                                'Lihat Daftar Downline',
                                 style: lihatStyle,
                               ),
                             ],
@@ -206,7 +203,7 @@ class _AfiliasiState extends State<Afiliasi> {
                       Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
-                          SetText.dapatkan_voucher,
+                          '**Dapatkan voucher berupa potongan harga untuk',
                           style: afiliasiStyle,
                         ),
                       ),
@@ -216,7 +213,7 @@ class _AfiliasiState extends State<Afiliasi> {
                       Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
-                          SetText.langganan_berbagi_link,
+                          'langganan Berbagi.link senilai 5% untuk pengguna yang',
                           style: afiliasiStyle,
                         ),
                       ),
@@ -226,7 +223,7 @@ class _AfiliasiState extends State<Afiliasi> {
                       Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
-                          SetText.memiliki_10_downline,
+                          'memiliki 10 downline & 10% untuk pengguna yang',
                           style: afiliasiStyle,
                         ),
                       ),
@@ -236,7 +233,7 @@ class _AfiliasiState extends State<Afiliasi> {
                       Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
-                          SetText.memiliki_20_downline,
+                          'memiliki 20 downline.',
                           style: afiliasiStyle,
                         ),
                       ),
@@ -246,7 +243,7 @@ class _AfiliasiState extends State<Afiliasi> {
                       Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
-                          SetText.ayo_ajak_tmnmu,
+                          '**Ayo ajak temanmu sebanyak-banyaknya untuk',
                           style: afiliasiStyle,
                         ),
                       ),
@@ -256,7 +253,7 @@ class _AfiliasiState extends State<Afiliasi> {
                       Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
-                          SetText.dapatkan_voucher_yg,
+                          'dapatkan voucher yang menarik!',
                           style: afiliasiStyle,
                         ),
                       ),
@@ -268,7 +265,7 @@ class _AfiliasiState extends State<Afiliasi> {
                   Column(
                     children: [
                       Text(
-                        SetText.undang_tmn,
+                        'Undang Teman',
                         style: undangtmnStyle,
                       ),
                       SizedBox(

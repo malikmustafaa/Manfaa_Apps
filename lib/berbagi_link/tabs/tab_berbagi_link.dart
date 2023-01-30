@@ -19,7 +19,6 @@ class _TabBerbagiLinkState extends State<TabBerbagiLink> {
         body: SizedBox(
       width: double.infinity,
       child: Container(
-        // color: Colors.amber,
         padding: const EdgeInsets.symmetric(
           horizontal: 6,
           vertical: 20,

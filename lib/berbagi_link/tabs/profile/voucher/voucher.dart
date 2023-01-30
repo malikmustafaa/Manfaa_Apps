@@ -36,16 +36,9 @@ class _VoucherState extends State<Voucher> {
                     color: black1Color,
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.068,
-                ),
                 Text(
                   'Voucher',
-                  style: TextStyle(
-                    color: black1Color,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: appbarStyle,
                 ),
               ],
             ),
@@ -54,7 +47,12 @@ class _VoucherState extends State<Voucher> {
         actions: [
           IconButton(
             iconSize: 65,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile()),
+              );
+            },
             icon: CircleAvatar(
               backgroundColor: biruBgColor,
               backgroundImage: const AssetImage(
@@ -128,7 +126,7 @@ class _VoucherState extends State<Voucher> {
             ),
           ),
           child: Text(
-            SetText.simpan,
+            'Simpan',
             style: simpanStyle,
             textAlign: TextAlign.center,
           ),
@@ -143,7 +141,7 @@ class _VoucherState extends State<Voucher> {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
-          SetText.profil,
+          'Profil',
           style: header1Style,
         ),
         SizedBox(
