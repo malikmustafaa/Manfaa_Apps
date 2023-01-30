@@ -105,7 +105,7 @@ class _AppTextFieldState extends State<AppTextField> {
               : null,
           decoration: InputDecoration(
               hintText: widget.hint,
-              hintStyle: textfieldStyle,
+              hintStyle: defaultStyle,
               focusedBorder: OutlineInputBorder(
                 borderRadius: const BorderRadius.all(Radius.circular(12)),
                 borderSide: BorderSide(
