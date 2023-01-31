@@ -14,192 +14,170 @@ class TableDaftarAkunTerhubung extends StatefulWidget {
 class _TableDaftarAkunState extends State<TableDaftarAkunTerhubung> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Column(
       children: [
-        _buildDaftarList(),
-        _HeaderListData(),
-        _ListData(),
-      ],
-    );
-  }
-
-  Widget _buildDaftarList() {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      height: size.height * 00.075,
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(
-            30,
-          ),
-          topRight: Radius.circular(
-            30,
-          ),
-        ),
-        color: Color(0xFFE3F2FD),
-      ),
-      child: Container(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 20,
-        ),
-        child:
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Row(
-            children: [
-              Icon(
-                Icons.group,
-                color: biruColor,
-                size: 25,
-              ),
-              SizedBox(
-                width: size.width * 0.030,
-              ),
-              Text(
-                'Daftar Akun yang Terhubung',
-                style: biru2Style,
-              ),
-            ],
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.circle,
-              size: 25,
-              color: biruColor,
-            ),
-          ),
-        ]),
-      ),
-    );
-  }
-
-  // ignore: non_constant_identifier_names
-  Widget _ListData() {
-    Size size = MediaQuery.of(context).size;
-    return ListView.builder(
-      scrollDirection: Axis.vertical,
-      shrinkWrap: true,
-      itemCount: 8,
-      itemBuilder: (context, index) {
-        return Container(
-          height: size.height * 00.05,
+        Container(
+          height: size.height * 00.075,
           decoration: const BoxDecoration(
-            border: Border(
-              left: BorderSide(
-                color: Colors.black,
-                width: 1,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(
+                30,
               ),
-              right: BorderSide(
-                color: Colors.black,
-                width: 1,
-              ),
-              bottom: BorderSide(
-                color: Colors.black,
-                width: 1,
+              topRight: Radius.circular(
+                30,
               ),
             ),
+            color: Color(0xFFE3F2FD),
           ),
           child: Container(
             padding: const EdgeInsets.symmetric(
-              horizontal: 15,
+              horizontal: 20,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  'Ahmad',
-                  style: anaklistStyle,
-                ),
-                Text(
-                  'ahmadx@gm..',
-                  style: anaklistStyle,
-                ),
-                Text(
-                  SetText.status,
-                  style: anaklistStyle,
-                ),
                 Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (content) => const EditUser(),
-                              ));
-                        },
-                        child: const Icon(
-                          Icons.edit,
-                        ),
-                      ),
-                      SizedBox(
-                        width: size.width * 00.04,
-                      ),
-                      GestureDetector(
-                        onTap: () {},
-                        child: const Icon(
-                          Icons.delete,
-                        ),
-                      ),
-                    ]),
+                  children: [
+                    Icon(
+                      Icons.group,
+                      color: biruColor,
+                      size: 25,
+                    ),
+                    SizedBox(
+                      width: size.width * 0.030,
+                    ),
+                    Text(
+                      'Daftar Akun yang Terhubung',
+                      style: biru2Style,
+                    ),
+                  ],
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.circle,
+                    size: 25,
+                    color: biruColor,
+                  ),
+                ),
               ],
             ),
           ),
-        );
-      },
+        ),
+        Container(
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                color: black1Color,
+                width: 1,
+              ),
+              left: BorderSide(
+                color: black1Color,
+                width: 1,
+              ),
+              right: BorderSide(
+                color: black1Color,
+                width: 1,
+              ),
+            ),
+            // color: i % 2 == 1 ? greyColor : null,
+          ),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: greyColor,
+                      width: 1.5,
+                    ),
+                  ),
+                ),
+                height: size.height * 00.05,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Nama',
+                      style: newStyle,
+                    ),
+                    Text(
+                      'Email',
+                      style: newStyle,
+                    ),
+                    Text(
+                      'Status',
+                      style: newStyle,
+                    ),
+                    Text(
+                      'Action',
+                      style: newStyle,
+                    ),
+                  ],
+                ),
+              ),
+              for (int i = 0; i < 8; i++)
+                Container(
+                  height: size.height * 00.05,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 15,
+                  ),
+                  color: i % 2 == 1 ? greyColor : null,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Ahmad',
+                        style: anaklistStyle,
+                      ),
+                      Text(
+                        "ahmadx@gm..",
+                        style: anaklistStyle,
+                      ),
+                      Text(
+                        'Status',
+                        style: anaklistStyle,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (content) => const EditUser(),
+                                  ));
+                            },
+                            child: const Icon(
+                              Icons.edit,
+                            ),
+                          ),
+                          SizedBox(
+                            width: size.width * 00.04,
+                          ),
+                          GestureDetector(
+                            onTap: () {},
+                            child: const Icon(
+                              Icons.delete,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 
   // ignore: non_constant_identifier_names
-  Widget _HeaderListData() {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      height: size.height * 00.05,
-      decoration: const BoxDecoration(
-        border: Border(
-          left: BorderSide(
-            color: Colors.black,
-            width: 1,
-          ),
-          right: BorderSide(
-            color: Colors.black,
-            width: 1,
-          ),
-          bottom: BorderSide(
-            color: Colors.black,
-            width: 1,
-          ),
-        ),
-      ),
 
-      // height: 50,
-      child: Container(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 20,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'Nama',
-              style: newStyle,
-            ),
-            Text(
-              'Email',
-              style: newStyle,
-            ),
-            Text(
-              'Status',
-              style: newStyle,
-            ),
-            Text(
-              'Action',
-              style: newStyle,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 }

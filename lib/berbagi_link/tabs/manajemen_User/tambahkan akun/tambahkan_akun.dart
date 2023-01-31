@@ -10,6 +10,7 @@ import 'package:manfaa_apps/contants/text.dart';
 import '../../../../widgets/custom_list_form_input/apptextfield.dart';
 import '../../../../widgets/custom_list_form_input/dropdown.dart';
 import '../../profile/profile.dart';
+import 'edit_user.dart';
 
 class TambahkanAkun extends StatefulWidget {
   const TambahkanAkun({Key? key}) : super(key: key);
@@ -222,57 +223,57 @@ class _TambahkanAkunState extends State<TambahkanAkun> {
           ),
         ],
       ),
-      body: SingleChildScrollView(
+      body: ListView(
         scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Manajemen User',
-                        style: header1Style,
-                      ),
-                      SizedBox(
-                        width: size.width * 0.010,
-                      ),
-                      const Icon(
-                        Icons.arrow_forward_ios,
-                        size: 15,
-                      ),
-                      SizedBox(
-                        width: size.width * 0.010,
-                      ),
-                      Text(
-                        'Tambahkan Akun',
-                        style: header2Style,
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: size.height * 0.03,
-                  ),
-                  Container(child: _buildtambahAkunIconBack()),
-                  SizedBox(
-                    height: size.height * 00.03,
-                  ),
-                  Column(
-                    children: const [
-                      TableDaftarAkun(),
-                    ],
-                  ),
+        shrinkWrap: true,
+        children: [
+          Column(
+            children: [
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Manajemen User',
+                          style: header1Style,
+                        ),
+                        SizedBox(
+                          width: size.width * 0.010,
+                        ),
+                        const Icon(
+                          Icons.arrow_forward_ios,
+                          size: 15,
+                        ),
+                        SizedBox(
+                          width: size.width * 0.010,
+                        ),
+                        Text(
+                          'Tambahkan Akun',
+                          style: header2Style,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: size.height * 0.03,
+                    ),
+                    Container(child: _buildtambahAkunIconBack()),
+                    SizedBox(
+                      height: size.height * 00.03,
+                    ),
+                    const TableDaftarAkun(),
 
-                  SizedBox(height: size.height * 0.3)
-                  //
-                ],
+                    SizedBox(height: size.height * 0.3)
+                    //
+                  ],
+                ),
               ),
-            ),
-          ],
-        ),
+            ],
+          ),
+        ],
       ),
     );
   }
