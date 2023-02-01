@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:manfaa_apps/berbagi_link/berbagi_link.dart';
-import 'package:manfaa_apps/berbagi_link/tabs/profile/profile.dart';
-import 'package:manfaa_apps/contants/color_style.dart';
+import 'views/pages/berbagilink_page/berbagi_link_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BerbagiLink(),
+      home: BerbagilinkPage(),
     );
   }
 }
