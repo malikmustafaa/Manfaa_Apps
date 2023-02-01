@@ -481,7 +481,7 @@ class _EditUserPageState extends State<EditUserPage> {
                                 ),
                               ),
                               child: Text(
-                                SetText.simpan,
+                                'Simpan',
                                 style: simpanStyle,
                                 textAlign: TextAlign.center,
                               ),

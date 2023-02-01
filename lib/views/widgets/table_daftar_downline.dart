@@ -143,18 +143,8 @@ class _TableDaftarDownlineState extends State<TableDaftarDownlineWidget> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (content) => const EditUserPage(),
-                                ),
-                              );
-                            },
-                            child: const Icon(
-                              Icons.edit,
-                            ),
+                          const Icon(
+                            Icons.edit,
                           ),
                           GestureDetector(
                             onTap: () {},

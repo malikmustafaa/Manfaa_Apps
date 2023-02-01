@@ -504,7 +504,7 @@ class _EditUserState extends State<InformasiPribadiPage> {
                                 ),
                               ),
                               child: Text(
-                                SetText.simpan,
+                                'Simpan',
                                 style: simpanStyle,
                                 textAlign: TextAlign.center,
                               ),

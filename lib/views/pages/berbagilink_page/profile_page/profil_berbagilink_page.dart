@@ -45,7 +45,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 ),
                 Text(
-                  'ProfilePage Berbagi.link',
+                  'Profile Berbagi.link',
                   style: appbarStyle,
                 ),
               ],

@@ -343,7 +343,7 @@ class _UbahPasswordState extends State<UbahPasswordPage> {
                               ),
                             ),
                             child: Text(
-                              SetText.simpan,
+                              'Simpan',
                               style: simpanStyle,
                               textAlign: TextAlign.center,
                             ),

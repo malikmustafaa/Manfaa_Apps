@@ -144,11 +144,8 @@ class _TableDaftarAkunState extends State<TableDaftarAkunTerhubungWidget> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          GestureDetector(
-                            onTap: () {},
-                            child: const Icon(
-                              Icons.edit,
-                            ),
+                          const Icon(
+                            Icons.edit,
                           ),
                           SizedBox(
                             width: size.width * 00.04,

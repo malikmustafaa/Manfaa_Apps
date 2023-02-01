@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:manfaa_apps/contants/color_style.dart';
 import 'package:manfaa_apps/views/pages/berbagilink_page/profile_page/profil_berbagilink_page.dart';
-import 'package:manfaa_apps/views/pages/manajemen_user_page/manajemen_page.dart';
+
 import 'package:manfaa_apps/views/widgets/table_user_terhubung.dart';
+
+import '../manajemen_user_page.dart';
 
 class UserYangTerhubungPage extends StatefulWidget {
   const UserYangTerhubungPage({Key? key}) : super(key: key);

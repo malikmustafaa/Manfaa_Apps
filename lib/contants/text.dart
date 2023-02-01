@@ -1,9 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 class SetText {
-  static const String batal = "Batal";
-  static const String simpan = "Simpan";
-  static const String tabdashboard = 'Tab Dashboard';
+  // static const String tabdashboard = 'Tab Dashboard';
   static const String nama = 'Nama';
   static const String email = 'Email';
   static const String password = 'Password';

@@ -634,7 +634,7 @@ class _EventOnlineState extends State<EventOnlinePage> {
                             ),
                           ),
                           child: Text(
-                            SetText.batal,
+                            'Batal',
                             style: batalStyle,
                             textAlign: TextAlign.center,
                           ),
@@ -655,7 +655,7 @@ class _EventOnlineState extends State<EventOnlinePage> {
                             ),
                           ),
                           child: Text(
-                            SetText.simpan,
+                            'Batal',
                             style: simpanStyle,
                             textAlign: TextAlign.center,
                           ),
