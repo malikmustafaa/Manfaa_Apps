@@ -368,12 +368,6 @@ class _TambahkanAkunPageState extends State<TambahkanAkunPage> {
 
     final _peranController = TextEditingController();
 
-    @override
-    void dispose() {
-      super.dispose();
-      _peranController.dispose();
-    }
-
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Column(
         children: [

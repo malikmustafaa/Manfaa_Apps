@@ -40,6 +40,7 @@ var batalStyle = TextStyle(
   fontSize: 16,
   color: black1Color,
 );
+
 var simpanStyle = const TextStyle(
   fontFamily: 'Ubuntu',
   fontWeight: FontWeight.w700,

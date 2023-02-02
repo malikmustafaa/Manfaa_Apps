@@ -238,7 +238,7 @@ class _BerbagilinkPageState extends State<BerbagilinkPage>
                     controller: tabController,
                     tabs: const [
                       Tab(
-                        text: 'Dashboard',
+                        text: 'Menu Dashboard',
                       ),
                       Tab(
                         text: 'Menu Berbagi.link',
