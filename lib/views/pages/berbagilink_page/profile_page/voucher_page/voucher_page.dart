@@ -117,7 +117,7 @@ class _VoucherState extends State<VoucherPage> {
         child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
-            primary: black1Color,
+            backgroundColor: black1Color,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(
                 20,

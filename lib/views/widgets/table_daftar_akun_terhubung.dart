@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
-import 'package:manfaa_apps/views/pages/berbagilink_page/manajemen_user_page/tambahkan_akun_page/edit_user_page.dart';
 
 class TableDaftarAkunTerhubungWidget extends StatefulWidget {
   const TableDaftarAkunTerhubungWidget({Key? key}) : super(key: key);
@@ -169,5 +168,4 @@ class _TableDaftarAkunState extends State<TableDaftarAkunTerhubungWidget> {
   }
 
   // ignore: non_constant_identifier_names
-
 }

@@ -2,9 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
-import 'package:manfaa_apps/contants/text.dart';
-
-import '../pages/berbagilink_page/manajemen_user_page/tambahkan_akun_page/edit_user_page.dart';
 
 class TableUserTerhubungWidget extends StatefulWidget {
   const TableUserTerhubungWidget({Key? key}) : super(key: key);

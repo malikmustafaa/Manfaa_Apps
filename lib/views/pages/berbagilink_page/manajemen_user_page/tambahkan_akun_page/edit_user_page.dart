@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:manfaa_apps/contants/text.dart';
 import 'package:manfaa_apps/views/pages/berbagilink_page/manajemen_user_page/tambahkan_akun_page/tambahkan_akun_page.dart';
 import 'package:manfaa_apps/views/pages/berbagilink_page/profile_page/profil_berbagilink_page.dart';
 import '../../../../widgets/custom_list_form_input/dropdown.dart';
@@ -21,6 +20,7 @@ class _EditUserPageState extends State<EditUserPage> {
 
   Future getImage() async {
     final ImagePicker _picker = ImagePicker();
+    // ignore: non_constant_identifier_names
     final XFile? ImagePicked =
         await _picker.pickImage(source: ImageSource.gallery);
     image = File(ImagePicked!.path);
@@ -30,6 +30,7 @@ class _EditUserPageState extends State<EditUserPage> {
 
   Future getImage1() async {
     final ImagePicker _picker = ImagePicker();
+    // ignore: non_constant_identifier_names
     final XFile? ImagePicked =
         await _picker.pickImage(source: ImageSource.gallery);
     image1 = File(ImagePicked!.path);
@@ -209,8 +210,6 @@ class _EditUserPageState extends State<EditUserPage> {
                   ),
                   TextField(
                     keyboardType: TextInputType.text,
-                    // obscureText: _obsecure,
-
                     decoration: InputDecoration(
                       hintStyle: textfieldStyle,
                       hintText: "contoh : 0857XXXXXXXX",
@@ -454,16 +453,24 @@ class _EditUserPageState extends State<EditUserPage> {
                             ),
                             height: size.height * 00.068,
                             width: size.width * 0.45,
-                            child: RaisedButton(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              onPressed: () {},
-                              color: whiteColor,
-                              child: Text(
-                                'Batal',
-                                style: batalStyle,
-                                textAlign: TextAlign.center,
+                            child: SizedBox(
+                              height: size.height * 00.068,
+                              width: size.width * 0.45,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: whiteColor,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                      20,
+                                    ),
+                                  ),
+                                ),
+                                child: Text(
+                                  'Batal',
+                                  style: batalStyle,
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
                             ),
                           ),
@@ -473,7 +480,7 @@ class _EditUserPageState extends State<EditUserPage> {
                             child: ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
-                                primary: black1Color,
+                                backgroundColor: black1Color,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
                                     20,
@@ -504,23 +511,13 @@ class _EditUserPageState extends State<EditUserPage> {
   }
 
   Widget _mainBody() {
-    Size size = MediaQuery.of(context).size;
     final List<SelectedListItem> _listProvinsi = [
       SelectedListItem(false, 'Kartu Tanda Penduduk(KTP)'),
       SelectedListItem(false, 'Kartu Keluarga(KK)'),
       SelectedListItem(false, 'Kartu Pelajar(KP)'),
     ];
 
-    /// This is register text field controllers.
-    // ignore: unused_field
-
     final _peranController = TextEditingController();
-
-    @override
-    void dispose() {
-      super.dispose();
-      final _peranController = TextEditingController();
-    }
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -533,6 +530,45 @@ class _EditUserPageState extends State<EditUserPage> {
           provinsi: _listProvinsi,
         )
       ],
+    );
+  }
+}
+
+// ignore: must_be_immutable
+class NamaSaya extends StatefulWidget {
+  String? text1;
+  String? text2;
+  Image? image;
+  Icon? icon;
+
+  NamaSaya({
+    Key? key,
+    this.text1,
+    this.text2,
+    this.image,
+    this.icon,
+  }) : super(key: key);
+
+  @override
+  State<NamaSaya> createState() => _NamaSayaState();
+}
+
+class _NamaSayaState extends State<NamaSaya> {
+  bool? teks;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          for (int i = 0; i < 10; i++)
+            Container(
+              color: i / 2 == 0 ? Colors.amber : Colors.blue,
+              height: 50,
+              width: 357,
+              child: Text('${widget.text1}'),
+            ),
+        ],
+      ),
     );
   }
 }

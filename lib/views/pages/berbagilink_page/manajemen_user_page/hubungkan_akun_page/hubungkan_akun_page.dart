@@ -99,7 +99,6 @@ class _HubungkanAkunState extends State<HubungkanAkunPage> {
       // ignore: avoid_print
       print("object === >");
       // proses kirim data ke BE
-
     }
   }
 
@@ -397,16 +396,24 @@ class _HubungkanAkunState extends State<HubungkanAkunPage> {
                           ),
                           height: size.height * 00.068,
                           width: size.width * 0.38,
-                          child: RaisedButton(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            onPressed: () {},
-                            color: whiteColor,
-                            child: Text(
-                              'Batal',
-                              style: batalStyle,
-                              textAlign: TextAlign.center,
+                          child: SizedBox(
+                            height: size.height * 00.068,
+                            width: size.width * 0.45,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                primary: whiteColor,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                    20,
+                                  ),
+                                ),
+                              ),
+                              child: Text(
+                                'Batal',
+                                style: batalStyle,
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ),
                         ),

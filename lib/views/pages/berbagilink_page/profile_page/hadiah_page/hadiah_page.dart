@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:manfaa_apps/contants/color_style.dart';
-import 'package:manfaa_apps/contants/text.dart';
 import 'package:manfaa_apps/views/pages/berbagilink_page/profile_page/profil_berbagilink_page.dart';
 
 class HadiahPage extends StatefulWidget {
@@ -95,7 +94,7 @@ class _HadiahPageState extends State<HadiahPage> {
         child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
-            primary: black1Color,
+            backgroundColor: black1Color,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(
                 20,

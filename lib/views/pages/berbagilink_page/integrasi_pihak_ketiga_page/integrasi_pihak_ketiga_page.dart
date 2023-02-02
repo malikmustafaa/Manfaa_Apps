@@ -15,7 +15,6 @@ class IntegrasiPihakKetigaPage extends StatefulWidget {
 class _IntegrasiPihakKetigaPageState extends State<IntegrasiPihakKetigaPage> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,

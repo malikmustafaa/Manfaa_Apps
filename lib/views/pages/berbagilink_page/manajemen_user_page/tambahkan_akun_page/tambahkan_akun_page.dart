@@ -19,8 +19,6 @@ class TambahkanAkunPage extends StatefulWidget {
 }
 
 class _TambahkanAkunPageState extends State<TambahkanAkunPage> {
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-
   final _namaController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -164,7 +162,6 @@ class _TambahkanAkunPageState extends State<TambahkanAkunPage> {
       // ignore: avoid_print
       print("object === >");
       // proses kirim data ke BE
-
     }
   }
 
@@ -278,7 +275,6 @@ class _TambahkanAkunPageState extends State<TambahkanAkunPage> {
   }
 
   Widget _buildtambahAkunIconBack() {
-    Size size = MediaQuery.of(context).size;
     return Container(
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -590,16 +586,24 @@ class _TambahkanAkunPageState extends State<TambahkanAkunPage> {
                 ),
                 height: size.height * 00.068,
                 width: size.width * 0.38,
-                child: RaisedButton(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  onPressed: () {},
-                  color: whiteColor,
-                  child: Text(
-                    'Batal',
-                    style: batalStyle,
-                    textAlign: TextAlign.center,
+                child: SizedBox(
+                  height: size.height * 00.068,
+                  width: size.width * 0.45,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      primary: whiteColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(
+                          20,
+                        ),
+                      ),
+                    ),
+                    child: Text(
+                      'Batal',
+                      style: batalStyle,
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),

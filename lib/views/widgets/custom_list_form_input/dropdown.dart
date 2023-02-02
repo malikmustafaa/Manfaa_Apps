@@ -2,8 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
 
-import 'apptextfield.dart';
-
 class DropDown {
   /// This gives the button text or it sets default text as 'click me'.
   final String? buttonText;

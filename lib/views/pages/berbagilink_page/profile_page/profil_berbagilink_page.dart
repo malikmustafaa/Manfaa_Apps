@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:manfaa_apps/contants/color_style.dart';
-import 'package:manfaa_apps/contants/text.dart';
 import 'package:manfaa_apps/views/pages/berbagilink_page/profile_page/edit_informasi_pribadi_page/informasi_pribadi_page.dart';
 import 'package:manfaa_apps/views/pages/berbagilink_page/profile_page/status_page/status_page.dart';
 import 'package:manfaa_apps/views/pages/berbagilink_page/profile_page/ubah_password_page/ubah_password_page.dart';
@@ -571,7 +570,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                      primary: const Color(0xff259AB9),
+                                      backgroundColor: const Color(0xff259AB9),
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(
                                           20,

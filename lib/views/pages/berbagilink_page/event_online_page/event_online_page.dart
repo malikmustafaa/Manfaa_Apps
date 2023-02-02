@@ -626,7 +626,7 @@ class _EventOnlineState extends State<EventOnlinePage> {
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
+                            backgroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(
                                 20,
@@ -647,7 +647,7 @@ class _EventOnlineState extends State<EventOnlinePage> {
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            primary: black1Color,
+                            backgroundColor: black1Color,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(
                                 20,
@@ -655,7 +655,7 @@ class _EventOnlineState extends State<EventOnlinePage> {
                             ),
                           ),
                           child: Text(
-                            'Batal',
+                            'Simpan',
                             style: simpanStyle,
                             textAlign: TextAlign.center,
                           ),

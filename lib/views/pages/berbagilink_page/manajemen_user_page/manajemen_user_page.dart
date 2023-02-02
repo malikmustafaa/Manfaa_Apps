@@ -109,7 +109,7 @@ class _ManajemenUserPageState extends State<ManajemenUserPage> {
                             ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
-                                primary: biruColor,
+                                backgroundColor: biruColor,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
                                     20,
@@ -183,7 +183,7 @@ class _ManajemenUserPageState extends State<ManajemenUserPage> {
                             ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
-                                primary: biruColor,
+                                backgroundColor: biruColor,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
                                     20,
@@ -257,7 +257,7 @@ class _ManajemenUserPageState extends State<ManajemenUserPage> {
                             ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
-                                primary: biruColor,
+                                backgroundColor: biruColor,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
                                     20,

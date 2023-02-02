@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:manfaa_apps/contants/color_style.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:manfaa_apps/contants/text.dart';
 import 'package:manfaa_apps/views/pages/berbagilink_page/profile_page/profil_berbagilink_page.dart';
 
 class InformasiPribadiPage extends StatefulWidget {
@@ -18,6 +17,7 @@ class _EditUserState extends State<InformasiPribadiPage> {
 
   Future getImage() async {
     final ImagePicker _picker = ImagePicker();
+    // ignore: non_constant_identifier_names
     final XFile? ImagePicked =
         await _picker.pickImage(source: ImageSource.gallery);
     image = File(ImagePicked!.path);
@@ -27,6 +27,7 @@ class _EditUserState extends State<InformasiPribadiPage> {
 
   Future getImage1() async {
     final ImagePicker _picker = ImagePicker();
+    // ignore: non_constant_identifier_names
     final XFile? ImagePicked =
         await _picker.pickImage(source: ImageSource.gallery);
     image1 = File(ImagePicked!.path);
@@ -477,16 +478,24 @@ class _EditUserState extends State<InformasiPribadiPage> {
                             ),
                             height: size.height * 00.068,
                             width: size.width * 0.45,
-                            child: RaisedButton(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              onPressed: () {},
-                              color: whiteColor,
-                              child: Text(
-                                'Batal',
-                                style: batalStyle,
-                                textAlign: TextAlign.center,
+                            child: SizedBox(
+                              height: size.height * 00.068,
+                              width: size.width * 0.45,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: whiteColor,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                      20,
+                                    ),
+                                  ),
+                                ),
+                                child: Text(
+                                  'Batal',
+                                  style: batalStyle,
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
                             ),
                           ),
@@ -496,7 +505,7 @@ class _EditUserState extends State<InformasiPribadiPage> {
                             child: ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
-                                primary: black1Color,
+                                backgroundColor: black1Color,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
                                     20,

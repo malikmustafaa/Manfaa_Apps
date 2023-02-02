@@ -316,16 +316,24 @@ class _UbahPasswordState extends State<UbahPasswordPage> {
                           ),
                           height: size.height * 00.068,
                           width: size.width * 0.45,
-                          child: RaisedButton(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            onPressed: () {},
-                            color: whiteColor,
-                            child: Text(
-                              'Batal',
-                              style: batalStyle,
-                              textAlign: TextAlign.center,
+                          child: SizedBox(
+                            height: size.height * 00.068,
+                            width: size.width * 0.45,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                primary: whiteColor,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                    20,
+                                  ),
+                                ),
+                              ),
+                              child: Text(
+                                'Batal',
+                                style: batalStyle,
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ),
                         ),

@@ -76,7 +76,7 @@ class MITMenuContainer extends StatelessWidget {
                         color: color ?? Colors.black,
                         fontWeight: FontWeight.w400,
                         fontSize:
-                            Theme.of(context).textTheme.caption!.fontSize),
+                            Theme.of(context).textTheme.bodySmall!.fontSize),
                     textAlign: TextAlign.center,
                   )
                 ],

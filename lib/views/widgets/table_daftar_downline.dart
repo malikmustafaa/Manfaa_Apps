@@ -1,7 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, duplicate_ignore
 
 import 'package:flutter/material.dart';
-import 'package:manfaa_apps/views/pages/berbagilink_page/manajemen_user_page/tambahkan_akun_page/edit_user_page.dart';
 
 import '../../contants/color_style.dart';
 
