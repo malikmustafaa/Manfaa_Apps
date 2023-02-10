@@ -310,7 +310,7 @@ class _AfiliasiState extends State<AfiliasiPage> {
                               width: size.width * 00.15,
                               child: const Image(
                                 image: AssetImage(
-                                  'assets/images/wa.png',
+                                  'assets/images/wwada.png',
                                 ),
                               ),
                             ),

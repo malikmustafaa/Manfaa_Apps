@@ -44,7 +44,7 @@ class MITMenuContainer extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       padding: const EdgeInsets.only(bottom: 10),
-      width: (size.width - 16) / 4,
+      width: (size.width - 10) / 4,
       child: Material(
         color: Colors.transparent,
         shadowColor: Colors.transparent,

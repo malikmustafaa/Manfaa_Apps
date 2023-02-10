@@ -202,7 +202,7 @@ class _BerbagilinkPageState extends State<BerbagilinkPage>
     );
   }
 
-  Container _tabsWidget() {
+  Widget _tabsWidget() {
     Size size = MediaQuery.of(context).size;
 
     // ignore: sized_box_for_whitespace

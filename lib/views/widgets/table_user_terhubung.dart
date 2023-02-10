@@ -95,7 +95,7 @@ class _TableDaftarAkunState extends State<TableUserTerhubungWidget> {
                 ),
                 height: size.height * 00.05,
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
+                  horizontal: 15,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

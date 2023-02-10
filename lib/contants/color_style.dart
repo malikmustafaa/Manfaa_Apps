@@ -13,6 +13,14 @@ Color grey1Color = const Color(0xff979797);
 Color downloadColor = const Color(0xffE83E48);
 Color black1Color = const Color(0xff013135);
 Color black2Color = const Color(0xff1c1c1c);
+Color primaryColorText = const Color.fromARGB(255, 37, 154, 185);
+Color primaryColor = const Color.fromARGB(42, 37, 154, 185);
+Color secondaryColor = const Color.fromARGB(120, 197, 255, 192);
+Color secondaryColorText = const Color.fromARGB(255, 37, 185, 132);
+Color disableColor = const Color.fromARGB(255, 217, 217, 217);
+// static Color buttonColor = const Color.fromARGB(160, 254, 242, 219);
+Color buttonColor = const Color.fromARGB(42, 247, 171, 27);
+Color buttonColorText = const Color.fromARGB(255, 247, 171, 27);
 
 var berbagilinkStyle = TextStyle(
   fontFamily: 'Ubuntu',

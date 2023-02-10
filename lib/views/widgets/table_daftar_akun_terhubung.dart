@@ -30,7 +30,7 @@ class _TableDaftarAkunState extends State<TableDaftarAkunTerhubungWidget> {
           ),
           child: Container(
             padding: const EdgeInsets.symmetric(
-              horizontal: 20,
+              horizontal: 15,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -51,13 +51,10 @@ class _TableDaftarAkunState extends State<TableDaftarAkunTerhubungWidget> {
                     ),
                   ],
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.circle,
-                    size: 25,
-                    color: biruColor,
-                  ),
+                Icon(
+                  Icons.circle,
+                  size: 25,
+                  color: biruColor,
                 ),
               ],
             ),
@@ -94,7 +91,7 @@ class _TableDaftarAkunState extends State<TableDaftarAkunTerhubungWidget> {
                 ),
                 height: size.height * 00.05,
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
+                  horizontal: 15,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -166,8 +163,4 @@ class _TableDaftarAkunState extends State<TableDaftarAkunTerhubungWidget> {
       ],
     );
   }
-
-  // ignore: non_constant_identifier_names
 }
-
-

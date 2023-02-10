@@ -17,165 +17,168 @@ class _TableDaftarAkunWidgetState extends State<TableDaftarAkunWidget> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Column(
-      children: [
-        Container(
-          height: size.height * 00.075,
-          decoration: BoxDecoration(
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(
-                30,
-              ),
-              topRight: Radius.circular(
-                30,
-              ),
-            ),
-            color: biruBgColor,
-          ),
-          child: Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 20,
-            ),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.group,
-                        color: biruColor,
-                        size: 25,
-                      ),
-                      SizedBox(
-                        width: size.width * 0.030,
-                      ),
-                      Text(
-                        'Daftar Akun',
-                        style: biru2Style,
-                      ),
-                    ],
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.circle,
-                      size: 25,
-                      color: biruColor,
-                    ),
-                  ),
-                ]),
-          ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-            border: Border(
-              bottom: BorderSide(
-                color: black1Color,
-                width: 1,
-              ),
-              left: BorderSide(
-                color: black1Color,
-                width: 1,
-              ),
-              right: BorderSide(
-                color: black1Color,
-                width: 1,
-              ),
-            ),
-            // color: i % 2 == 1 ? greyColor : null,
-          ),
-          child: Column(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: greyColor,
-                      width: 1.5,
-                    ),
-                  ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          Container(
+            height: size.height * 00.075,
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(
+                  30,
                 ),
-                height: size.height * 00.05,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
+                topRight: Radius.circular(
+                  30,
                 ),
-                child: Row(
+              ),
+              color: biruBgColor,
+            ),
+            child: Container(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 15,
+              ),
+              child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      'Nama',
-                      style: newStyle,
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.group,
+                          color: biruColor,
+                          size: 25,
+                        ),
+                        SizedBox(
+                          width: size.width * 0.030,
+                        ),
+                        Text(
+                          'Daftar Akun',
+                          style: biru2Style,
+                        ),
+                      ],
                     ),
-                    Text(
-                      'Email',
-                      style: newStyle,
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.circle,
+                        size: 25,
+                        color: biruColor,
+                      ),
                     ),
-                    Text(
-                      'Peran',
-                      style: newStyle,
-                    ),
-                    Text(
-                      'Action',
-                      style: newStyle,
-                    ),
-                  ],
+                  ]),
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: black1Color,
+                  width: 1,
+                ),
+                left: BorderSide(
+                  color: black1Color,
+                  width: 1,
+                ),
+                right: BorderSide(
+                  color: black1Color,
+                  width: 1,
                 ),
               ),
-              for (int i = 0; i < 8; i++)
+            ),
+            child: Column(
+              children: [
                 Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: greyColor,
+                        width: 1.5,
+                      ),
+                    ),
+                  ),
                   height: size.height * 00.05,
                   padding: const EdgeInsets.symmetric(
                     horizontal: 15,
                   ),
-                  color: i % 2 == 1 ? greyColor : null,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Ahmad',
-                        style: anaklistStyle,
+                        'Nama',
+                        style: newStyle,
                       ),
                       Text(
-                        "ahmadx@gm..",
-                        style: anaklistStyle,
+                        'Email',
+                        style: newStyle,
                       ),
                       Text(
-                        'Admin',
-                        style: anaklistStyle,
+                        'Peran',
+                        style: newStyle,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (content) => const EditUserPage(),
-                                  ));
-                            },
-                            child: const Icon(
-                              Icons.edit,
-                            ),
-                          ),
-                          SizedBox(
-                            width: size.width * 00.04,
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: const Icon(
-                              Icons.delete,
-                            ),
-                          ),
-                        ],
+                      Text(
+                        'Action',
+                        style: newStyle,
                       ),
                     ],
                   ),
                 ),
-            ],
+                for (int i = 0; i < 8; i++)
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15,
+                    ),
+                    height: size.height * 00.05,
+                    color: i % 2 == 1 ? greyColor : null,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Ahmad',
+                          style: anaklistStyle,
+                        ),
+                        Text(
+                          "ahmadx@gm..",
+                          style: anaklistStyle,
+                        ),
+                        Text(
+                          'Admin',
+                          style: anaklistStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (content) =>
+                                          const EditUserPage(),
+                                    ));
+                              },
+                              child: const Icon(
+                                Icons.edit,
+                              ),
+                            ),
+                            SizedBox(
+                              width: size.width * 00.04,
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: const Icon(
+                                Icons.delete,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
