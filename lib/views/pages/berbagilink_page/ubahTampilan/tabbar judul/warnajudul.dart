@@ -132,7 +132,7 @@ class _tab2State extends State<tab2> {
                     ),
                   ),
                   height: size.height * 00.068,
-                  width: size.width * 0.40,
+                  width: size.width * 0.37,
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
@@ -152,7 +152,7 @@ class _tab2State extends State<tab2> {
                 ),
                 SizedBox(
                   height: size.height * 00.068,
-                  width: size.width * 0.40,
+                  width: size.width * 0.37,
                   // padding: const EdgeInsets.only(left: 10),
                   child: ElevatedButton(
                     onPressed: () {},

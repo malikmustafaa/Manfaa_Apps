@@ -233,7 +233,7 @@ var defau = TextStyle(
 );
 var bawahStyle = TextStyle(
   fontFamily: 'Ubuntu',
-  fontSize: 12,
+  fontSize: 11,
   fontWeight: FontWeight.w500,
   color: black1Color,
 );

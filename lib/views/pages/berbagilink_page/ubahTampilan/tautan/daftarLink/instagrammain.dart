@@ -114,18 +114,18 @@ class _DaftarLink extends State<DaftarLink>
               children: [
                 Container(
                   decoration: const BoxDecoration(),
+                  
                   child: TabBar(
+                     indicator: const UnderlineTabIndicator(
+                        borderSide: BorderSide(width: 5, color: Colors.black)),
                     isScrollable: true,
                     unselectedLabelColor: Colors.black,
-                    // labelColor: Colors.black,
-                    // indicatorColor: Colors.black,
-                    // indicatorWeight: 02,
+                    
+                    labelColor: Colors.black,
+                    indicatorColor: Colors.black,
+                    indicatorWeight: 02,
 
-                    indicator: BoxDecoration(
-                      color: Colors.black,
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(1),
-                    ),
+        
                     controller: tabController,
 
                     tabs: const [

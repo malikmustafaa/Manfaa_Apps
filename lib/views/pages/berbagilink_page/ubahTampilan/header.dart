@@ -42,13 +42,15 @@ class HeaderPage extends StatelessWidget {
                           'Ubah Foto Profil',
                           style: pelajariStyle,
                         ),
-                        Text(
+                        const Text(
                           'Unggah gambar berukuran resolusi 1 : 1',
-                          style: unggStyle,
+                          style: TextStyle(fontSize: 11,color: Colors.black26,
+                          fontFamily: 'ubuntu'),
                         ),
-                        Text(
+                        const Text(
                           '(Maksimum ukuran gambar 1 MB)',
-                          style: unggStyle,
+                          style:  TextStyle(fontSize: 11,color: Colors.black26,
+                          fontFamily: 'ubuntu'),
                         ),
                       ],
                     ),

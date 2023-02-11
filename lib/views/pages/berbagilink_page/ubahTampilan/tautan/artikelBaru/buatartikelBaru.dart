@@ -36,37 +36,37 @@ class _artikelbaruState extends State<buatArtikelbaru> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(
+      decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(
             Radius.circular(
               13,
             ),
           ),
-          color: Color.fromARGB(225, 37, 154, 185)),
-      margin: const EdgeInsets.only(left: 13, right: 13, bottom: 13, top: 13),
+          color:biruBgColor),
+      margin: const EdgeInsets.only(left: 5, right: 5, bottom: 13, top: 13),
       child: ExpansionTile(
         collapsedIconColor: const Color.fromARGB(255, 0, 0, 0),
         title: Container(
           transform: Matrix4.translationValues(8, 0, 10),
           decoration:
-              const BoxDecoration(color: Color.fromRGBO(37, 154, 185, 0.1)),
+               BoxDecoration(color: biruBgColor),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Row(
-              children: const [
+              children:  [
                 Icon(
                   Icons.file_copy_outlined,
                   // color: biruColor,
                   size: 25,
-                  color: Colors.black,
+                  color: biruColor
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Text(
                   'Buat Artikel Baru',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: biruColor,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -196,69 +196,69 @@ class _artikelbaruState extends State<buatArtikelbaru> {
                   ),
 
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  image != null
+                      ? SizedBox(
+                          width: 375,
+                          height: size.height * 0.15,
+                          child: Image.file(
+                            image!,
+                            fit: BoxFit.cover,
+                          ))
+                      : GestureDetector(
+                          onTap: () async {
+                            await getImage();
+                          },
+                          child: Container(
+                            width: 270,
+                            height: size.height * 0.15,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(
+                                8,
+                              ),
+                              color: greyColor,
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Icon(
+                                  Icons.upload,
+                                  size: 40,
+                                ),
+                                Text(
+                                  "Upload Logo Anda",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                  Column(
                     children: [
-                      image != null
-                          ? SizedBox(
-                              width: 375,
-                              height: size.height * 0.15,
-                              child: Image.file(
-                                image!,
-                                fit: BoxFit.cover,
-                              ))
-                          : GestureDetector(
-                              onTap: () async {
-                                await getImage();
-                              },
-                              child: Container(
-                                width: 375,
-                                height: size.height * 0.15,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(
-                                    8,
-                                  ),
-                                  color: greyColor,
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const [
-                                    Icon(
-                                      Icons.upload,
-                                      size: 40,
-                                    ),
-                                    Text(
-                                      "Upload Logo Anda",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 15),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            height: size.height * 00.019,
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              setState(
-                                () {
-                                  image = null;
-                                },
-                              );
+                      SizedBox(
+                        height: size.height * 00.019,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          setState(
+                            () {
+                              image = null;
                             },
-                            child: const Padding(
-                              padding: EdgeInsets.only(
-                                right: 0,
-                              ),
-                            ),
+                          );
+                        },
+                        child: const Padding(
+                          padding: EdgeInsets.only(
+                            right: 0,
                           ),
-                        ],
+                        ),
                       ),
                     ],
                   ),
+                ],
+              ),
 
                   const SizedBox(
                     height: 15,
@@ -322,7 +322,7 @@ class _artikelbaruState extends State<buatArtikelbaru> {
                           ),
                         ),
                         height: size.height * 00.068,
-                        width: size.width * 0.40,
+                        width: size.width * 0.37,
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
@@ -342,7 +342,7 @@ class _artikelbaruState extends State<buatArtikelbaru> {
                       ),
                       SizedBox(
                         height: size.height * 00.068,
-                        width: size.width * 0.40,
+                        width: size.width * 0.37,
                         // padding: const EdgeInsets.only(left: 10),
                         child: ElevatedButton(
                           onPressed: () {},

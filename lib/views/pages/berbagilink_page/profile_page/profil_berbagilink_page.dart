@@ -43,9 +43,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     color: black1Color,
                   ),
                 ),
-                Text(
+                const Text(
                   'Profile Berbagi.link',
-                  style: appbarStyle,
+               style: TextStyle(fontSize: 20,color: Colors.black, fontWeight: FontWeight.bold,fontFamily: 'ubuntu'),
                 ),
               ],
             ),

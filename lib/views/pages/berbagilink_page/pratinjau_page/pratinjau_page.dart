@@ -36,9 +36,9 @@ class _PratinjauPageState extends State<PratinjauPage> {
                     color: black1Color,
                   ),
                 ),
-                Text(
+                const Text(
                   'Pratinjau/Preview',
-                  style: appbarStyle,
+                  style: TextStyle(fontSize: 20,color: Colors.black, fontWeight: FontWeight.bold,fontFamily: 'ubuntu'),
                 ),
               ],
             ),

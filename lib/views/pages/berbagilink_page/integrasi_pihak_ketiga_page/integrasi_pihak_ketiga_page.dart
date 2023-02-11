@@ -37,14 +37,13 @@ class _IntegrasiPihakKetigaPageState extends State<IntegrasiPihakKetigaPage> {
                     color: black1Color,
                   ),
                 ),
-                Text(
+                const Text(
                   'Integrasi Pihak Ketiga',
                   style: TextStyle(
-                    fontFamily: 'Ubuntu',
-                    color: black1Color,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                  ),
+                      fontSize: 18.5,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'ubuntu'),
                 ),
               ],
             ),

@@ -203,7 +203,7 @@ class _daftarLinkState extends State<tab3> {
             ),
 
             const SizedBox(
-              height: 65,
+              height: 55,
             ),
 
             Row(
@@ -220,7 +220,7 @@ class _daftarLinkState extends State<tab3> {
                     ),
                   ),
                   height: size.height * 00.068,
-                  width: size.width * 0.40,
+                  width: size.width * 0.38,
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
@@ -240,7 +240,7 @@ class _daftarLinkState extends State<tab3> {
                 ),
                 SizedBox(
                   height: size.height * 00.068,
-                  width: size.width * 0.40,
+                  width: size.width * 0.38,
                   // padding: const EdgeInsets.only(left: 10),
                   child: ElevatedButton(
                     onPressed: () {},
@@ -261,6 +261,7 @@ class _daftarLinkState extends State<tab3> {
                 ),
               ],
             ),
+ 
           ],
         ),
       ),

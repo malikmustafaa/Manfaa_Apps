@@ -48,7 +48,7 @@ class _instagram extends State<whatsapp> with SingleTickerProviderStateMixin {
           borderRadius: const BorderRadius.only(
               bottomLeft: Radius.circular(10),
               bottomRight: Radius.circular(10)),
-          border: Border.all(color: Colors.black),
+          border: Border.all(color: biruColor),
         ),
         child: Container(
           padding: const EdgeInsets.symmetric(
@@ -363,7 +363,7 @@ class _instagram extends State<whatsapp> with SingleTickerProviderStateMixin {
                       ),
                     ),
                     height: size.height * 00.068,
-                    width: size.width * 0.35,
+                    width: size.width * 0.33,
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
@@ -383,7 +383,7 @@ class _instagram extends State<whatsapp> with SingleTickerProviderStateMixin {
                   ),
                   SizedBox(
                     height: size.height * 00.068,
-                    width: size.width * 0.35,
+                    width: size.width * 0.33,
                     // padding: const EdgeInsets.only(left: 10),
                     child: ElevatedButton(
                       onPressed: () {},

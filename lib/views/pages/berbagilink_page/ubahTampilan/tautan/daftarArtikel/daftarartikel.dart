@@ -31,30 +31,30 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(
+      decoration:BoxDecoration(
+          borderRadius: const BorderRadius.all(
             Radius.circular(
               15,
             ),
           ),
-          color: Color.fromARGB(225, 37, 154, 185)),
+          color: biruBgColor),
       margin: const EdgeInsets.only(left: 13, right: 13, bottom: 13, top: 13),
       child: ExpansionTile(
         collapsedIconColor: const Color.fromARGB(255, 0, 0, 0),
         title: Container(
           transform: Matrix4.translationValues(8, 0, 10),
           decoration:
-              const BoxDecoration(color: Color.fromRGBO(37, 154, 185, 0.1)),
+             BoxDecoration(color:biruBgColor),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Row(
-              children: const [
+              children:  [
                 Icon(
                   Icons.file_copy_outlined,
-                  color: Colors.black,
+                  color: biruColor,
                   // color: biruColor,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Text('Lihat Daftar Artikel',
@@ -62,7 +62,7 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'ubuntu',
-                        color: Colors.black)),
+                        color: biruColor)),
               ],
             ),
           ]),
@@ -74,7 +74,7 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
               borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(10),
                   bottomRight: Radius.circular(10)),
-              border: Border.all(color: Colors.black),
+     border: Border.all(color: biruColor),
             ),
             child: Container(
               padding: const EdgeInsets.symmetric(
@@ -101,8 +101,8 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                         Row(
                           children: [
                             Container(
-                              height: 85,
-                              width: 85,
+                              height: 65,
+                              width: 65,
                               decoration: BoxDecoration(
                                   color:
                                       const Color.fromARGB(225, 37, 154, 185),
@@ -117,7 +117,7 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                                 Text(
                                   'Lorem Ipsum Dolor\nSit Amet',
                                   style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.bold),
                                 )
                               ],
@@ -265,7 +265,7 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                       Container(
                         padding: const EdgeInsets.all(10),
                         height: 265,
-                        width: 480,
+                        width: 265,
                         decoration: BoxDecoration(
                             // ignore: prefer_const_constructors
                             color: Color.fromARGB(225, 37, 154, 185),
@@ -276,7 +276,7 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                             Text(
                               'Lorem ipsum dolor sit amet\nconsectetur adipiscing elit. Aenean et\nsapien imperdiet, gravida massa eu\npellentesque orci. Nam eleifend\nporttitor ligula nec imperdiet.\nSuspendisse quis luctus dolor.\n\nNullam bibendum ultricies orci a\nsuscipit. Nulla non sollicitudin est,\negestas dictum est. Proin ac neque\nlacus.',
                               style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.w700),
+                                  fontSize: 14, fontWeight: FontWeight.w700),
                             )
                           ],
                         ),
@@ -300,7 +300,7 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                           ),
                         ),
                         height: size.height * 00.068,
-                        width: size.width * 0.40,
+                        width: size.width * 0.37,
                         child: SizedBox(
                           height: size.height * 00.068,
                           width: size.width * 0.40,
@@ -324,7 +324,7 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                       ),
                       SizedBox(
                         height: size.height * 00.068,
-                        width: size.width * 0.40,
+                        width: size.width * 0.37,
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
@@ -348,7 +348,7 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                     height: size.height * 00.03,
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     decoration: BoxDecoration(
                         color: Colors.orange,
                         borderRadius: BorderRadius.circular(15)),
@@ -359,8 +359,8 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                         Row(
                           children: [
                             Container(
-                              height: 85,
-                              width: 85,
+                              height: 55,
+                              width: 55,
                               decoration: BoxDecoration(
                                   color:
                                       const Color.fromARGB(225, 37, 154, 185),
@@ -375,7 +375,7 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                                 Text(
                                   'Lorem Ipsum Dolor\nSit Amet',
                                   style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 10,
                                       fontWeight: FontWeight.bold),
                                 )
                               ],
@@ -389,12 +389,14 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                                 icon: const Icon(
                                   Icons.edit_square,
                                   color: Colors.black,
+                          
                                 )),
                             IconButton(
                                 onPressed: () {},
                                 icon: const Icon(
                                   Icons.keyboard_double_arrow_up_sharp,
                                   color: Colors.black,
+                               
                                 )),
                           ],
                         ),
@@ -405,7 +407,7 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                     height: size.height * 00.03,
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     decoration: BoxDecoration(
                         color: Colors.orange,
                         borderRadius: BorderRadius.circular(15)),
@@ -416,8 +418,8 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                         Row(
                           children: [
                             Container(
-                              height: 85,
-                              width: 85,
+                              height: 55,
+                              width: 55,
                               decoration: BoxDecoration(
                                   color:
                                       const Color.fromARGB(225, 37, 154, 185),
@@ -432,7 +434,7 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                                 Text(
                                   'Lorem Ipsum Dolor\nSit Amet',
                                   style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 10,
                                       fontWeight: FontWeight.bold),
                                 )
                               ],
@@ -446,12 +448,14 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                                 icon: const Icon(
                                   Icons.edit_square,
                                   color: Colors.black,
+                          
                                 )),
                             IconButton(
                                 onPressed: () {},
                                 icon: const Icon(
                                   Icons.keyboard_double_arrow_up_sharp,
                                   color: Colors.black,
+                       
                                 )),
                           ],
                         ),

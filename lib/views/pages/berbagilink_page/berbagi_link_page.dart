@@ -112,9 +112,9 @@ class _BerbagilinkPageState extends State<BerbagilinkPage>
                             SizedBox(
                               width: size.width * 0.020,
                             ),
-                            Text(
+                            const Text(
                               'Pelajari bagaimana Berbagi.link bekerja',
-                              style: pelajariStyle,
+                              style: TextStyle(fontSize: 12)
                             ),
                           ],
                         ),

@@ -1,6 +1,7 @@
 // ignore: camel_case_types
 import 'package:flutter/material.dart';
 
+import '../../../../../../contants/color_style.dart';
 import '../../tabbar judul/judul.dart';
 import '../../tabbar judul/posisi.dart';
 import '../../tabbar judul/warnajudul.dart';
@@ -57,42 +58,42 @@ class _judulbaruState extends State<judulbaru>
     // ignore: unused_local_variable
     Size size = MediaQuery.of(context).size;
     return Container(
-      decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(
+      decoration:  BoxDecoration(
+          borderRadius: const BorderRadius.all(
             Radius.circular(
               10,
             ),
           ),
-          color: Color.fromARGB(225, 37, 154, 185)),
-      margin: const EdgeInsets.only(left: 13, right: 13, bottom: 13, top: 13),
+          color: biruBgColor),
+      margin: const EdgeInsets.only(left: 5, right: 5, bottom: 13, top: 13),
       child: ExpansionTile(
         collapsedIconColor: const Color.fromARGB(255, 0, 0, 0),
         title: Container(
           transform: Matrix4.translationValues(8, 0, 10),
           decoration:
-              const BoxDecoration(color: Color.fromRGBO(37, 154, 185, 0.1)),
+               BoxDecoration(color: biruBgColor),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Row(
-              children: const [
+              children: [
                 Icon(
                   Icons.file_copy_outlined,
                   // color: biruColor,
                   size: 25,
-                  color: Colors.black,
+                  color: biruColor,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Text('Buat Judul Baru',
                     style: TextStyle(
-                        color: Colors.black, fontWeight: FontWeight.bold)),
+                        color: biruColor, fontWeight: FontWeight.bold)),
               ],
             ),
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+                backgroundColor:biruColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(
                     20,
@@ -112,7 +113,7 @@ class _judulbaruState extends State<judulbaru>
               borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(10),
                   bottomRight: Radius.circular(10)),
-              border: Border.all(color: Colors.black),
+              border: Border.all(color: biruColor),
             ),
             child: Column(
               children: [
@@ -143,7 +144,7 @@ class _judulbaruState extends State<judulbaru>
                     labelColor: Colors.black,
                     unselectedLabelColor: Colors.black,
                     indicator: const UnderlineTabIndicator(
-                        borderSide: BorderSide(width: 2, color: Colors.black)),
+                        borderSide: BorderSide(width: 5, color: Colors.black)),
                     controller: tabController,
                     tabs: const [
                       Tab(

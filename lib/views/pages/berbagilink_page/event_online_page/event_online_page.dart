@@ -578,13 +578,15 @@ class _EventOnlineState extends State<EventOnlinePage> {
                                   'Aktifkan Pembayaran Otomatis',
                                   style: aktifStyle,
                                 ),
-                                Text(
+                                 Text(
                                   'Digunakan untuk mempermudah konfirmasi',
-                                  style: bawahStyle,
+                                  style:  TextStyle(fontSize: 11,color: black1Color,
+                          fontFamily: 'ubuntu'),
                                 ),
-                                Text(
+                                 Text(
                                   'pembayaran secara otomatis dengan kode unik',
-                                  style: bawahStyle,
+                                  style:  TextStyle(fontSize: 11,color: black1Color,
+                          fontFamily: 'ubuntu'),
                                 ),
                               ],
                             ),

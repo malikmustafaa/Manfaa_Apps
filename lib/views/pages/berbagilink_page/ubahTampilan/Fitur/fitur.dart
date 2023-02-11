@@ -30,25 +30,29 @@ class _DatePickerState extends State<Fitur> {
           ),
           Container(
             margin:
-                const EdgeInsets.only(left: 13, right: 13, bottom: 13, top: 13),
+                const EdgeInsets.only(left: 5, right: 5, bottom: 13, top: 13),
             height: 48,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: const Color.fromARGB(225, 37, 154, 185)),
+                borderRadius: BorderRadius.circular(15), color: biruBgColor),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // Padding(padding: EdgeInsets.only(left: 10)),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
-                    Padding(padding: EdgeInsets.only(left: 25)),
-                    Icon(Icons.file_copy),
-                    Padding(padding: EdgeInsets.only(left: 20)),
+                  children: [
+                    const Padding(padding: EdgeInsets.only(left: 25)),
+                    Icon(
+                      Icons.file_copy,
+                      color: biruColor,
+                    ),
+                    const Padding(padding: EdgeInsets.only(left: 20)),
                     Text(
                       "Buat Event",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: biruColor),
                     ),
                   ],
                 ),
@@ -60,38 +64,46 @@ class _DatePickerState extends State<Fitur> {
                           builder: (context) => const EventOnlinePage()),
                     );
                   },
-                  icon: const Icon(Icons.arrow_forward_sharp),
+                  icon: Icon(Icons.arrow_forward_sharp,color: biruColor,),
                 )
               ],
             ),
           ),
           Container(
             margin:
-                const EdgeInsets.only(left: 13, right: 13, bottom: 13, top: 13),
+                const EdgeInsets.only(left: 5, right: 5, bottom: 13, top: 13),
             height: 48,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: const Color.fromARGB(225, 37, 154, 185)),
+                borderRadius: BorderRadius.circular(15), color: biruBgColor),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // Padding(padding: EdgeInsets.only(left: 10)),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
+                  children: [
+                    // ignore: prefer_const_constructors
                     Padding(padding: EdgeInsets.only(left: 25)),
-                    Icon(Icons.file_copy),
-                    Padding(padding: EdgeInsets.only(left: 20)),
+                    Icon(
+                      Icons.file_copy,
+                      color: biruColor,
+                    ),
+                    const Padding(padding: EdgeInsets.only(left: 20)),
                     Text(
                       "Buat Produk",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: biruColor),
                     ),
                   ],
                 ),
                 IconButton(
                   onPressed: (() {}),
-                  icon: const Icon(Icons.arrow_forward_sharp),
+                  icon: Icon(
+                    Icons.arrow_forward_sharp,
+                    color: biruColor,
+                  ),
                 )
               ],
             ),
@@ -106,31 +118,30 @@ class _DatePickerState extends State<Fitur> {
   Widget _buildtambahAkunIconBack() {
     Size size = MediaQuery.of(context).size;
     return Container(
-      decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(
+      decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(
             Radius.circular(
               15,
             ),
           ),
-          color: Color.fromARGB(225, 37, 154, 185)),
-      margin: const EdgeInsets.only(left: 13, right: 13, bottom: 13, top: 13),
+          color: biruBgColor),
+      margin: const EdgeInsets.only(left: 5, right: 5, bottom: 13, top: 13),
       child: ExpansionTile(
         collapsedIconColor: const Color.fromARGB(255, 0, 0, 0),
         title: Container(
           transform: Matrix4.translationValues(8, 0, 10),
-          decoration:
-              const BoxDecoration(color: Color.fromARGB(225, 37, 154, 185)),
+          decoration: BoxDecoration(color: biruBgColor),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Row(
-              children: const [
+              children: [
                 Icon(
                   Icons.image,
                   // color: biruColor,
                   size: 25,
-                  color: Colors.black,
+                  color: biruColor,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Text(
@@ -138,7 +149,7 @@ class _DatePickerState extends State<Fitur> {
                   style: TextStyle(
                       fontFamily: 'ubuntu',
                       fontSize: 13,
-                      color: Colors.black,
+                      color: biruColor,
                       fontWeight: FontWeight.bold),
                 ),
               ],
@@ -146,7 +157,7 @@ class _DatePickerState extends State<Fitur> {
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+                backgroundColor: biruColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(
                     20,
@@ -166,7 +177,7 @@ class _DatePickerState extends State<Fitur> {
               borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(10),
                   bottomRight: Radius.circular(10)),
-              border: Border.all(color: Colors.black),
+              border: Border.all(color: biruColor),
             ),
             child: Container(
               padding: const EdgeInsets.symmetric(
@@ -296,7 +307,7 @@ class _DatePickerState extends State<Fitur> {
                           ),
                         ),
                         height: size.height * 00.068,
-                        width: size.width * 0.40,
+                        width: size.width * 0.37,
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
@@ -317,7 +328,7 @@ class _DatePickerState extends State<Fitur> {
                       ),
                       SizedBox(
                         height: size.height * 00.068,
-                        width: size.width * 0.40,
+                        width: size.width * 0.37,
                         // padding: const EdgeInsets.only(left: 10),
                         child: ElevatedButton(
                           onPressed: () {},

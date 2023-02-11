@@ -58,7 +58,7 @@ class _Tabs1State extends State<ikonLinkBaru>
         color: Colors.white,
         borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
-        border: Border.all(color: Colors.black),
+       border: Border.all(color: biruColor),
       ),
       child: Container(
         padding: const EdgeInsets.symmetric(
@@ -82,11 +82,13 @@ class _Tabs1State extends State<ikonLinkBaru>
               height: 30,
             ),
             Row(
+              
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                const SizedBox(width: 25,),
                 image != null
                     ? SizedBox(
-                        width: 375,
+                        width: 400,
                         height: size.height * 0.15,
                         child: Image.file(
                           image!,
@@ -97,7 +99,7 @@ class _Tabs1State extends State<ikonLinkBaru>
                           await getImage();
                         },
                         child: Container(
-                          width: 375,
+                          width:220,
                           height: size.height * 0.15,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(
@@ -162,7 +164,7 @@ class _Tabs1State extends State<ikonLinkBaru>
                     ),
                   ),
                   height: size.height * 00.068,
-                  width: size.width * 0.40,
+                  width: size.width * 0.37,
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
@@ -182,7 +184,7 @@ class _Tabs1State extends State<ikonLinkBaru>
                 ),
                 SizedBox(
                   height: size.height * 00.068,
-                  width: size.width * 0.40,
+                  width: size.width * 0.37,
                   // padding: const EdgeInsets.only(left: 10),
                   child: ElevatedButton(
                     onPressed: () {},

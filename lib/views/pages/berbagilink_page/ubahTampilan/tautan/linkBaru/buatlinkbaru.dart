@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manfaa_apps/contants/color_style.dart';
 import 'package:manfaa_apps/views/pages/berbagilink_page/ubahTampilan/tautan/linkBaru/tabs_linkbaru/animasi.dart';
 import 'package:manfaa_apps/views/pages/berbagilink_page/ubahTampilan/tautan/linkBaru/tabs_linkbaru/arahkan.dart';
 import 'package:manfaa_apps/views/pages/berbagilink_page/ubahTampilan/tautan/linkBaru/tabs_linkbaru/ikonlinkbaru.dart';
@@ -55,37 +56,37 @@ class _LinkbaruState extends State<Linkbaru>
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(
+      decoration:  BoxDecoration(
+        borderRadius: const BorderRadius.all(
           Radius.circular(
             10,
           ),
         ),
-        color: Color.fromARGB(225, 37, 154, 185),
+        color: biruBgColor,
       ),
-      margin: const EdgeInsets.only(left: 13, right: 13, bottom: 13, top: 13),
+      margin: const EdgeInsets.only(left: 5, right: 5, bottom: 13, top: 13),
       child: ExpansionTile(
         collapsedIconColor: const Color.fromARGB(255, 0, 0, 0),
         title: Container(
           transform: Matrix4.translationValues(8, 0, 10),
           decoration:
-              const BoxDecoration(color: Color.fromRGBO(37, 154, 185, 0.1)),
+              BoxDecoration(color:biruBgColor),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Row(
-              children: const [
+              children: [
                 Icon(
                   Icons.file_copy_outlined,
                   // color: biruColor,
                   size: 25,
-                  color: Colors.black,
+                  color: biruColor,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Text('Buat Link Baru',
                     style: TextStyle(
-                        color: Colors.black, fontWeight: FontWeight.bold)),
+                        color:biruColor, fontWeight: FontWeight.bold)),
               ],
             ),
           ]),
@@ -97,7 +98,7 @@ class _LinkbaruState extends State<Linkbaru>
               borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(10),
                   bottomRight: Radius.circular(10)),
-              border: Border.all(color: Colors.black),
+              border: Border.all(color: biruColor),
             ),
             child: Column(
               children: [
@@ -132,7 +133,7 @@ class _LinkbaruState extends State<Linkbaru>
                     // indicatorWeight: 02,
                     labelColor: Colors.black,
                     indicator: const UnderlineTabIndicator(
-                        borderSide: BorderSide(width: 2, color: Colors.black)),
+                        borderSide: BorderSide(width: 5, color: Colors.black)),
                     controller: tabController,
 
                     tabs: const [

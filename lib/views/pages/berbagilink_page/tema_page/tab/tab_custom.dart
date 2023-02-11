@@ -143,7 +143,7 @@ class _CustomState extends State<Custom> {
           children: [
             SizedBox(
               height: 45,
-              width: 110,
+              width: 100,
               child: ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor:
@@ -165,7 +165,7 @@ class _CustomState extends State<Custom> {
             ),
             SizedBox(
               height: 45,
-              width: 110,
+              width: 100,
               child: ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor:
@@ -188,7 +188,7 @@ class _CustomState extends State<Custom> {
             ),
             SizedBox(
               height: 45,
-              width: 110,
+              width: 100,
               child: ElevatedButton(
                   style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(
@@ -237,7 +237,7 @@ class _CustomState extends State<Custom> {
           children: [
             SizedBox(
               height: 45,
-              width: 110,
+              width: 100,
               child: TextButton(
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsets>(
@@ -258,7 +258,7 @@ class _CustomState extends State<Custom> {
             ),
             SizedBox(
               height: 45,
-              width: 110,
+              width: 100,
               child: TextButton(
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsets>(
@@ -279,7 +279,7 @@ class _CustomState extends State<Custom> {
             ),
             SizedBox(
               height: 45,
-              width: 110,
+              width: 100,
               child: TextButton(
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsets>(
@@ -579,7 +579,7 @@ class _CustomState extends State<Custom> {
                   borderRadius: BorderRadius.all(Radius.circular(12))),
               child: SizedBox(
                 height: 160,
-                width: 104,
+                width: 100,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
